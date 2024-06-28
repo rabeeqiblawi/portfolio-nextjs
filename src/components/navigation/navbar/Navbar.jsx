@@ -7,7 +7,7 @@ import styles from './navbar.module.css';
 import { config } from '@/config.js';
 import { FaBars } from 'react-icons/fa';
 import { useState } from 'react';
-import NavigationStore from '../navigation_store.mobx.js';
+import NavigationStore from '../NavigationStore.js/index.js';
 
 
 import { observer } from 'mobx-react';
