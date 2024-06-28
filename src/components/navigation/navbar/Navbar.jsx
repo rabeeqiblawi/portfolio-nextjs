@@ -1,11 +1,23 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import links from '../links.js';
 import styles from './navbar.module.css';
+import { config } from '@/config.js';
+import { FaBars } from 'react-icons/fa';
+import { useState } from 'react';
+import NavigationStore from '../navigation_store.mobx.js';
 
-const Navbar = () => {
+
+import { observer } from 'mobx-react';
+
+const Navbar = observer(() => {
     return (
         <div className={styles.container}>
+            <div className={styles.burgerMenu} onClick={() => { NavigationStore.openSidebar() }} >
+                <FaBars />
+            </div>
             <div className={styles.logo}>
                 LOGO
             </div>
@@ -21,6 +33,6 @@ const Navbar = () => {
             </nav>
         </div>
     );
-};
+});
 
 export default Navbar;
