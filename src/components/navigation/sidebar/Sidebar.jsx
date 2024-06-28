@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
-import NavigationStore from '../NavigationStore.js/index.js';
+import NavigationStore from '../NavigationStore.js';
 import { IoMdClose } from "react-icons/io";
 import links from '../links.js'; // Import links
 

@@ -7,7 +7,7 @@ import styles from './navbar.module.css';
 import { config } from '@/config.js';
 import { FaBars } from 'react-icons/fa';
 import { useState } from 'react';
-import NavigationStore from '../NavigationStore.js/index.js';
+import NavigationStore from '../NavigationStore.js';
 
 
 import { observer } from 'mobx-react';
@@ -19,7 +19,7 @@ const Navbar = observer(() => {
                 <FaBars />
             </div>
             <div className={styles.logo}>
-                LOGO
+                Choroid
             </div>
             <nav>
                 <ul>
