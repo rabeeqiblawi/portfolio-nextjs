@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import NavigationStore from '../NavigationStore.js';
@@ -11,7 +12,7 @@ const Sidebar = ({ logo, children }) => {
     useEffect(() => {
         console.log(NavigationStore.isSidebarOpen);
         setIsSidebarOpen(NavigationStore.isSidebarOpen);
-    }, [NavigationStore.isSidebarOpen]); 
+    }, [NavigationStore.isSidebarOpen]);
 
     const handleSidebarClose = () => {
         NavigationStore.closeSidebar();
