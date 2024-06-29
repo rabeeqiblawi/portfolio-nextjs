@@ -1,0 +1,35 @@
+.container{
+    min-height: calc(100vh - var(--navigationBarHight));
+    /* text-align: -webkit-center; */
+}
+
+.mainSection{
+    height: calc(100vh - var(--navigationBarHight)); ;
+    color: var(--text-light);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.mainSectionCol h1{
+    font-size: 50px;
+    transition: all 0.75s;
+}
+.mainSectionCol h1:hover{
+    transform: scale(1.05);
+}
+
+.mainSectionEmptyCol{
+    width: 80%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .mainSectionEmptyCol{
+        display: none;
+    }
+
+}

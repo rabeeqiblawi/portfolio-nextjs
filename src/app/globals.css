@@ -4,6 +4,7 @@
   --bg: #121180;
   --text-light: #ffffff;
   --text-dark: #000000;
+  --navigationBarHight: 15vh;
 }
 
 * {

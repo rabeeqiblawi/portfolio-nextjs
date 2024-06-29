@@ -1,10 +1,10 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px 0px;
-    width: 1200px;
-    margin: 0px auto;
+    width: 100%;
+    height: var(--navigationBarHight);
     z-index: 10;
 }
 
@@ -31,17 +31,30 @@
     width: 100%;
 }
 
-.logo {
-    margin-right: 30px;
+.logoDiv {
+    width: 40vh;
 }
 
-.logo h1 {
+.logoLink{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.imgLogo{
+    width: 10vh;
+    height: 100%;
+}
+
+.logoLink h1 {
     color: var(--text-light);
 }
 
 .links {
     display: flex;
     gap: 10px;
+    margin-right: 5vh;
 }
 
 .links a {
@@ -50,6 +63,7 @@
     font-size: 18px;
     padding: 5px 10px;
     border-radius: 5px;
+    transition: all 0.25s;
 }
 
 .links a:hover {
@@ -70,9 +84,9 @@
     font-size: 15px;
 }
 
-.bigButtons button:hover {
+/* .bigButtons button:hover {
     
-}
+} */
 
 .bigButtons button:last-child {
     background: #4945ff;
@@ -81,6 +95,9 @@
 
 .burgerMenu {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -88,4 +105,8 @@
         display: block;
         cursor: pointer;
     }
+    .links{
+        display: none;
+    }
+
 }

@@ -1,4 +1,10 @@
 export const config = {
+    content:{
+        logo:"",
+        brand:"",
+        heroHeadLine:"Transfoming visions Into Immersive experiences"
+
+    },
     screenSizes: {
         small: 768,
         medium: 1024,
@@ -35,11 +41,16 @@ export const config = {
     socialLinks: {
         github: "",
         linkedin: "",
-        twitter: "",
-        facebook: "",
-        instagram: "",
+        twitter: "https://twitter.com",
+        facebook: "https://facebook.com",
+        instagram: "https://instgram.com",
         tiktok: "",
         youtube: "",
+    },
+    contact:{
+        phone:"+1 234 567 890",
+        mail:"info@example.com",
+        location:"123 Street Name, City, Country"
     },
     featureFlags: {
     },

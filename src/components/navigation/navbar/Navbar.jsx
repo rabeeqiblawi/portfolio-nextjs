@@ -8,6 +8,7 @@ import { FaBars } from 'react-icons/fa';
 import NavigationStore from '../NavigationStore.js';
 
 import { observer } from 'mobx-react';
+import Image from 'next/image';
 
 const Navbar = observer(() => {
     return (
@@ -20,8 +21,11 @@ const Navbar = observer(() => {
                 <div className={styles.burgerMenu} onClick={() => { NavigationStore.openSidebar() }} >
                     <FaBars />
                 </div>
-                <div className={styles.logo}>
-                    <h1>choroid</h1>
+                <div className={styles.logoDiv}>
+                    <Link href="/" className={styles.logoLink}>
+                        <Image src="/choroidLogo.jpg" alt="" width={20} height={20} className={styles.imgLogo}/>
+                        <h1>Choroid</h1>
+                    </Link>
                 </div>
                 <div className={styles.links}>
                     {links.map((link) => (
