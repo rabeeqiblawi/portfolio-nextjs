@@ -28,10 +28,6 @@ const Navbar = observer(() => {
                         <Link href={link.path} key={link.path}>{link.title}</Link>
                     ))}
                 </div>
-                <div className={styles.bigButtons}>
-                    <button>View Our Work</button>
-                    <button>Hire Us</button>
-                </div>
             </div>
         </>
     );
