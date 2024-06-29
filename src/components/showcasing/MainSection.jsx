@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './mainSection.module.css'
+import { config as websiteInformation } from '@/config'
 
 const MainSection = () => {
     return (
@@ -7,8 +8,7 @@ const MainSection = () => {
             <section className={styles.mainSection}>
                 <div className={styles.mainSectionCol}>
                     <h1>
-                        Transfoming visions 
-                        Into Immersive experiences
+                        {websiteInformation.content.heroHeadLine}
                     </h1>
                 </div>
                 <div className={`${styles.mainSectionCol} ${styles.mainSectionEmptyCol}`}>

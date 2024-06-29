@@ -9,6 +9,8 @@ import NavigationStore from '../NavigationStore.js';
 
 import { observer } from 'mobx-react';
 import Image from 'next/image';
+import { config as websiteInformation } from '@/config'
+
 
 const Navbar = observer(() => {
     return (
@@ -23,8 +25,8 @@ const Navbar = observer(() => {
                 </div>
                 <div className={styles.logoDiv}>
                     <Link href="/" className={styles.logoLink}>
-                        <Image src="/choroidLogo.jpg" alt="" width={20} height={20} className={styles.imgLogo}/>
-                        <h1>Choroid</h1>
+                        <Image src={websiteInformation.content.logo} alt="" width={20} height={20} className={styles.imgLogo}/>
+                        <h1>{websiteInformation.content.brand}</h1>
                     </Link>
                 </div>
                 <div className={styles.links}>

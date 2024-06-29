@@ -1,7 +1,7 @@
 export const config = {
     content:{
-        logo:"",
-        brand:"",
+        logo:"/choroidLogo.jpg",
+        brand:"Choroid",
         heroHeadLine:"Transfoming visions Into Immersive experiences"
 
     },
