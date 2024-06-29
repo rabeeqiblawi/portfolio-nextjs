@@ -12,7 +12,8 @@ export default function Home() {
             imageUrl="/images/placeholder.png"
             title="Card Title"
             description="Card Description Card Description Card Description Card Description"
-          />    <ResponsiveMediaCard
+          />    
+          <ResponsiveMediaCard
             imageUrl="/images/placeholder.png"
             title="Card Title"
             description="Card Description"

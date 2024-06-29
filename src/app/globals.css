@@ -2,9 +2,11 @@
 
 :root {
   --bg: #121180;
-  --text-light: #ffffff;
+  /* --text-light: #ffffff; */
+  --text-light: #dfdfdf;
   --text-dark: #000000;
   --navigationBarHight: 15vh;
+  --logoAbundantColor: red;
 }
 
 * {
