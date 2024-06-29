@@ -1,11 +1,13 @@
 import React from 'react'
 
 import styles from './Footer.module.css'
-import { FaEnvelope, FaFacebook, FaInstagram, FaMapMarker, FaPhone, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaMapMarker, FaPhone, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa'
 import Image from 'next/image'
 import { config as websiteInformation } from '@/config'
 
 const Footer = () => {
+  const filteredSocialLinks = Object.entries(websiteInformation.socialLinks).filter(([key, value]) => value !== '');
+
   return (
     <div className={styles.container}>
         <div className={styles.logo}>
@@ -30,7 +32,7 @@ const Footer = () => {
           </div>
           <div className={styles.footerCol}>
             <h2>Follow Us</h2>
-            <div className={styles.footerColBox}>
+            {/* <div className={styles.footerColBox}>
               <FaFacebook className={styles.icon} />
               <a href={websiteInformation.socialLinks.facebook} target="_blank">Facebook</a>
             </div>
@@ -41,7 +43,21 @@ const Footer = () => {
             <div className={styles.footerColBox}>
               <FaInstagram className={styles.icon} />
               <a href={websiteInformation.socialLinks.instagram} target="_blank">Instagram</a>
-            </div>
+            </div> */}
+            {filteredSocialLinks.map(([key, value]) => (
+              <div key={key} className={styles.footerColBox}>
+                {key === 'facebook' && <FaFacebook className={styles.icon} />}
+                {key === 'twitter' && <FaTwitter className={styles.icon} />}
+                {key === 'instagram' && <FaInstagram className={styles.icon} />}
+                {key === 'github' && <FaGithub className={styles.icon} />}
+                {key === 'linkedin' && <FaLinkedin className={styles.icon} />}
+                {key === 'tiktok' && <FaTiktok className={styles.icon} />}
+                {key === 'youtube' && <FaYoutube className={styles.icon} />}
+                <a href={value} target="_blank" rel="noopener noreferrer">
+                  {key.charAt(0).toUpperCase() + key.slice(1)} {/* Capitalize the platform name */}
+                </a>
+              </div>
+            ))}
           </div>
           {/* <div className={styles.footerCol}></div>
           <div className={styles.footerCol}></div> */}

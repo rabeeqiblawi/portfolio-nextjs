@@ -27,6 +27,12 @@
 }
 
 
+@media screen and (max-width: 1440px) {
+    .mainSectionCol h1{
+        font-size: 62px;
+    }
+
+}
 @media screen and (max-width: 768px) {
     .mainSectionEmptyCol{
         display: none;
