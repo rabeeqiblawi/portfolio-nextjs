@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <div className={styles.container}>
         <div className={styles.logo}>
-          <Image src="/choroidLogo.jpg" alt="" width={20} height={20} className={styles.imgLogo}/>
-          <h1>Choroid</h1>
+          <Image src={websiteInformation.content.logo} alt="" width={20} height={20} className={styles.imgLogo}/>
+          <h1>{websiteInformation.content.brand}</h1>
         </div>
         <div className={styles.footerRow}>
           <div className={styles.footerCol}>
