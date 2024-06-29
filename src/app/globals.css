@@ -4,8 +4,9 @@
   --bg: #121180;
   /* --text-light: #ffffff; */
   --text-light: #dfdfdf;
-  --text-dark: #000000;
-  --navigationBarHight: 15vh;
+  --text-dark: #222222;
+  --text-gray: #797979;
+  /* --navigationBarHight: 15vh; */
   --logoAbundantColor: red;
 }
 
@@ -20,3 +21,11 @@ body {
   background: #fff;
 }
 
+.responsiveContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 1200px;
+    margin: 20px auto;
+}

@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div className={styles.container}>
         <div className={styles.logo}>
-          <Image src={websiteInformation.content.logo} alt="" width={20} height={20} className={styles.imgLogo}/>
+          <Image src={websiteInformation.content.logo} alt="" width={40} height={40} className={styles.imgLogo}/>
           <h1>{websiteInformation.content.brand}</h1>
         </div>
         <div className={styles.footerRow}>
@@ -44,8 +44,6 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          {/* <div className={styles.footerCol}></div>
-          <div className={styles.footerCol}></div> */}
         </div>
         <br />
           <hr />

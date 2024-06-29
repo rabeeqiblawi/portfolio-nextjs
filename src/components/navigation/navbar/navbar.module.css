@@ -15,8 +15,8 @@
     z-index: -1;
 }
 
-.blueOverlay {
-    background: #121180;
+.overlayColor {
+    background: #fff;
     width: 100%;
     height: 950px;
     position: fixed;
@@ -35,20 +35,20 @@
     width: 40vh;
 }
 
-.logoLink{
+.logoLink {
     display: flex;
     align-items: center;
     gap: 20px;
     text-decoration: none;
 }
 
-.imgLogo{
-    width: 10vh;
+.imgLogo {
+    width: 60px;
     height: 100%;
 }
 
 .logoLink h1 {
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .links {
@@ -59,7 +59,7 @@
 
 .links a {
     text-decoration: none;
-    color: var(--text-light);
+    color: var(--text-dark);
     font-size: 18px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -68,6 +68,7 @@
 
 .links a:hover {
     background: #29294f;
+    color: var(--text-light);
 }
 
 .bigButtons {
@@ -105,7 +106,8 @@
         display: block;
         cursor: pointer;
     }
-    .links{
+
+    .links {
         display: none;
     }
 

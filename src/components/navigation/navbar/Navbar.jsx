@@ -18,7 +18,7 @@ const Navbar = observer(() => {
             <div className={styles.topPageVectors}>
                 <img src="/topPageVectors.png" alt="" />
             </div>
-            <div className={styles.blueOverlay}></div>
+            <div className={styles.overlayColor}></div>
             <div className={styles.container}>
                 <div className={styles.burgerMenu} onClick={() => { NavigationStore.openSidebar() }} >
                     <FaBars />

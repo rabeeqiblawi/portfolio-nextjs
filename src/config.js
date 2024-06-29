@@ -1,9 +1,8 @@
 export const config = {
     content:{
-        logo:"/choroidLogo.jpg",
+        logo:"/choroidLogo.png",
         brand:"Choroid",
         heroHeadLine:"Transfoming visions Into Immersive experiences"
-
     },
     screenSizes: {
         small: 768,
