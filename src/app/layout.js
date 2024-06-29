@@ -4,6 +4,7 @@ import Navbar from "@/components/navigation/navbar/Navbar";
 import Sidebar from "@/components/navigation/sidebar/Sidebar";
 import Footer from "@/components/footer/Footer";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <Sidebar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
