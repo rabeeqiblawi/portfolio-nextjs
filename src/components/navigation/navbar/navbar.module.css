@@ -1,26 +1,25 @@
 .container {
-    display:flex;
+    display: flex;
     align-items: center;
     padding: 20px 0px;
     width: 1200px;
     margin: 0px auto;
+    z-index: 10;
 }
 
-.fadedGridLeft {
+.topPageVectors {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    z-index: -10;
+}
+
+.topPageVectors img {
     position: absolute;
     left: 0;
-    top:0;
-    width: 700px;
-    height: 500px;
-    opacity: 0.2;
-}
-
-.fadedGridRight {
-    position: absolute;
-    right: 0;
-    width: 700px;
-    height: 500px;
-    opacity: 0.2;
+    top: 0;
+    height: max-content;
+    width: 100%;
 }
 
 .logo {
@@ -32,7 +31,7 @@
 }
 
 .links {
-    display:flex;
+    display: flex;
     gap: 10px;
 }
 
@@ -50,7 +49,7 @@
 
 .bigButtons {
     margin-left: auto;
-    display:flex;
+    display: flex;
     gap: 10px;
 }
 
@@ -58,8 +57,12 @@
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
-    border:none;
+    border: none;
     font-size: 15px;
+}
+
+.bigButtons button:hover {
+    
 }
 
 .bigButtons button:last-child {

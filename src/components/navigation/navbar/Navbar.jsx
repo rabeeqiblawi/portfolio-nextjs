@@ -12,29 +12,30 @@ import Image from 'next/image.js';
 
 const Navbar = observer(() => {
     return (
-        <div className={styles.container}>
-            {/* <div className={styles.fadedGridLeft}>
-                <Image src="/faded_grid.png" alt="" fill />
+        <>
+            <div className={styles.topPageVectors}>
+                <img src="/topPageVectors.png" alt="" />
             </div>
-            <div className={styles.fadedGridRight}>
-                <Image src="/faded_grid.png" alt="" fill />
-            </div> */}
-            <div className={styles.burgerMenu} onClick={() => { NavigationStore.openSidebar() }} >
-                <FaBars />
+            <div className={styles.container}>
+
+                <div className={styles.burgerMenu} onClick={() => { NavigationStore.openSidebar() }} >
+                    <FaBars />
+                </div>
+                <div className={styles.logo}>
+                    <h1>choroid</h1>
+                </div>
+                <div className={styles.links}>
+                    {links.map((link) => (
+                        <Link href={link.path} key={link.path}>{link.title}</Link>
+                    ))}
+                </div>
+                <div className={styles.bigButtons}>
+                    <button>View Our Work</button>
+                    <button>Hire Us</button>
+                </div>
             </div>
-            <div className={styles.logo}>
-                <h1>choroid</h1>
-            </div>
-            <div className={styles.links}>
-                {links.map((link) => (
-                    <Link href={link.path} key={link.path}>{link.title}</Link>
-                ))}
-            </div>
-            <div className={styles.bigButtons}>
-                <button>Products</button>
-                <button>Demos</button>
-            </div>
-        </div>
+        </>
+
     );
 });
 
