@@ -37,9 +37,6 @@
     text-decoration: none;
     color: var(--text-light);
 }
-.footerCol h2{
-    text-align: center;
-}
 
 .copyrightText {
     font-size: 12px;
