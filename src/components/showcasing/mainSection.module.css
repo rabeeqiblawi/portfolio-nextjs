@@ -38,5 +38,8 @@
     .mainSectionEmptyCol {
         display: none;
     }
+    .mainSectionCol h1 {
+        font-size: 56px;
+    }
 
 }
