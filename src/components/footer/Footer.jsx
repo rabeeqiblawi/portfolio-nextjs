@@ -13,7 +13,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.content}>
 
-        <div className={styles.topContent}>
+        {/* <div className={styles.topContent}>
           <div className={styles.logo}>
             <Image src={websiteInformation.content.logo} alt="" width={35} height={35} className={styles.imgLogo} />
             <h1>{websiteInformation.content.brand}</h1>
@@ -46,11 +46,12 @@ const Footer = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        <div className={styles.bottomContent}>
+        {/* <div className={styles.bottomContent}>
           <p className={styles.copyrightText}>&copy; 2024, Choroid. All rights reserved.</p>
-        </div>
+        </div> */}
+        
       </div>
     </div>
   )
