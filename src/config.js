@@ -1,8 +1,24 @@
+import { action } from "mobx";
+
 export const config = {
-    content:{
-        logo:"/choroidLogo.png",
-        brand:"Choroid",
-        heroHeadLine:"Transfoming visions Into Immersive experiences"
+    content: {
+        logo: "/choroidLogo.png",
+        brand: "Choroid",
+        heroHeadLine: "Transfoming visions Into Immersive experiences",
+        projects: [
+            {
+                imageUrl: "/websiteProjectPlaceholder1.png",
+                title: "Bluehost Design Website",
+                description: "",
+                actionLink: "",
+                actionText: "View Project",
+                isHidden: false,
+            },
+            {
+            }
+        ],
+        services: [],
+        solutions: [],
     },
     screenSizes: {
         small: 768,
@@ -46,10 +62,10 @@ export const config = {
         tiktok: "",
         youtube: "",
     },
-    contact:{
-        phone:"+1 234 567 890",
-        mail:"info@example.com",
-        location:"123 Street Name, City, Country"
+    contact: {
+        phone: "+1 234 567 890",
+        mail: "info@example.com",
+        location: "123 Street Name, City, Country"
     },
     featureFlags: {
     },
