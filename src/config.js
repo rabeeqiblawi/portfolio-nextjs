@@ -23,10 +23,50 @@ export const config = {
                 actionText: "View Project",
                 isHidden: false,
                 visibleHome: true
+            },
+            {
+                imageUrl: "/websiteProjectPlaceholder3.png",
+                title: "iPortfolio",
+                description: "iPortfolio is a modern personal CV and portfolio HTML template. It's creative, minimal and clean design. iPortfolio can be used for many purposes starting from minimal portfolios, freelancers, graphic designers, illustrators, photographers and many others to showcase their work, projects, products, clients and offer services.",
+                actionLink: "",
+                actionText: "View Project",
+                isHidden: false,
+                visibleHome: true
             }
         ],
         services: [],
-        solutions: [],
+        solutions: [
+            {
+                imageUrl: "",
+                icon:"/icons/bot.svg",
+                title: "Custom Discord & Telegram Bots Powered by GPT-4",
+                description: "Transform your Discord and Telegram communities with our custom-built bots enhanced by GPT-4 technology. These bots are designed to elevate user engagement, provide personalized interactions, and automate repetitive tasks seamlessly.",
+                actionLink: "",
+                actionText: "More Info",
+                isHidden: false,
+                visibleHome: true
+            },
+            {
+                imageUrl: "",
+                icon:"/icons/virtual-tour.svg",
+                title: "AutoCAD to VR & AR Experience",
+                description: "Immerse yourself in the future of design with our AutoCAD to VR & AR experience solution. Transform your 2D and 3D designs into interactive virtual and augmented reality environments, allowing for real-time visualization, collaboration, and simulation.",
+                actionLink: "",
+                actionText: "More Info",
+                isHidden: false,
+                visibleHome: true
+            },
+            {
+                imageUrl: "",
+                icon:"/icons/virtual-tour.svg",
+                title: "AutoCAD to VR & AR Experience",
+                description: "Immerse yourself in the future of design with our AutoCAD to VR & AR experience solution. Transform your 2D and 3D designs into interactive virtual and augmented reality environments, allowing for real-time visualization, collaboration, and simulation. AKJDFKLAJL;DFJLA JSDFLKJAKLSDFJLAJSDF LJALSDJF;LJASLDFJLASJDFL",
+                actionLink: "#",
+                actionText: "More Info",
+                isHidden: false,
+                visibleHome: true
+            },
+        ],        
     },
     screenSizes: {
         small: 768,
