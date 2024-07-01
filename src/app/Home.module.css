@@ -19,16 +19,20 @@
 
 
 .loadingContainer{
-    background-color: var(--text-dark);
+    /* background-color: var(--text-dark); */
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-self: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15vh;
+    height: 50vh;
 }
 
 .loadingContainer h3{
-    font-size: 15rem;
+    font-size: 3rem;
     color: transparent;
-    -webkit-text-stroke: 3px var(--main-color);
+    -webkit-text-stroke: 1px var(--main-color);
     position: relative;
 }
 .loadingContainer h3::before{
@@ -38,8 +42,7 @@
     height: 100%;
     overflow: hidden;
     color: var(--main-color);
-    border-right: 8px solid var(--main-color);
-    /* transition: 2s ease-in-out; */
+    border-right: 2px solid var(--main-color);
     animation: rightLeftAnimation 2.5s infinite;
 }
 
@@ -55,3 +58,54 @@
     }
 }
 
+
+/* loading Page */
+.loadingBox{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: var(--text-dark);
+    border-radius: 50%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingBox::before{
+    content: '';
+    position: absolute;
+    inset: -1.25px 18px;
+    background: linear-gradient(315deg, var(--main-color), var(--text-light));
+    animation: animate 2.5s linear infinite;
+}
+.loadingBox:hover::before{
+    inset: -20px 0px;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.loadingBox::after{
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.loadingBox .imgLogo
+ {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 3;
+ }
