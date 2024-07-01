@@ -2,12 +2,12 @@
 
 :root {
   --bg: #121180;
-  /* --text-light: #ffffff; */
   --text-light: #dfdfdf;
   --text-dark: #11224d;
   --text-gray: #797979;
   --main-color: #0089ff;
-  /* --navigationBarHight: 15vh; */
+  --btn-blue-1: #2c599d;
+  --btn-orange: #f98125;
   --logoAbundantColor: red;
 }
 

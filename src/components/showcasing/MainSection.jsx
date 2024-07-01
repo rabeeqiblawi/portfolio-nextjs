@@ -1,21 +1,15 @@
 import React from 'react';
-import styles from './mainSection.module.css'
-import { config as websiteInformation } from '@/config'
-import Image from 'next/image';
+import styles from './MainSection.module.scss'
+import Link from 'next/link';
 
 const MainSection = () => {
     return (
         <div className={styles.container}>
-            <section className={styles.mainSection}>
-                <div className={styles.mainSectionCol}>
-                    <h1>Transfoming <span style={{color:"#f98125"}}>Visions</span> into Immersive <span style={{color:"#f98125"}}>Experiences</span></h1>
-                    <button>Projects</button>
-                </div>
-                
-                <div className={`${styles.mainSectionCol} ${styles.mainSectionEmptyCol}`}>
-
-                </div>
-            </section>
+            <div className={styles.mainSection}>
+                <h1>Transfoming <span style={{ color: "#f98125" }}>Visions</span> into Immersive <span style={{ color: "#f98125" }}>Experiences</span></h1>
+                <div className={styles.line}></div>
+                <Link href="/services">Services</Link>
+            </div>
         </div>
     );
 };

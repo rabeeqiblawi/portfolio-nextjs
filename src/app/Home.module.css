@@ -11,12 +11,6 @@
     /* margin: 20px auto; */
 }
 
-.title h1 {
-    /* font-size: 60px; */
-    /* color: var(--text-light); */
-}
-
-
 .cardContainer{
     width: 1200px;
     display: flex;
