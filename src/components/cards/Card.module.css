@@ -1,6 +1,6 @@
 /* This css file should only do stuff for Card.jsx component and here I see you put class ".project" which makes no sense because there is no such thing as "project" className in Card.jsx file.*/
 .project {
-    display:flex;
+    display: flex;
     gap: 20px;
     background: #f6faff;
     padding: 20px 0px;
@@ -23,7 +23,7 @@
 
 .content {
     padding: 20px;
-    position:relative;
+    position: relative;
 }
 
 .content .title {
@@ -63,12 +63,15 @@
         flex-direction: column;
         width: 90%;
     }
-    .project .media{
+
+    .project .media {
         width: 100%;
     }
+
     .project .content div {
         text-align: center;
     }
+
     .project .content .previewWebsiteButton {
         position: relative;
         margin-bottom: 0px;
@@ -78,47 +81,46 @@
 }
 
 /* Solution Styles */
-.solution{
-    display:flex;
+.solution {
+    display: flex;
     flex-direction: column;
     gap: 20px;
-    background: #f6faff;
+    /* background: #f6faff; */
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 1px 1px 3px #00000030;
+    box-shadow: 0px 0px 3px #00000040;
     transition: 0.6s;
     width: 28%;
 }
+
 .solution:hover {
-    box-shadow: 0px 0px 10px #00000050;
+    box-shadow: 0px 5px 6px #00000050;
     transform: translateY(10px);
 }
 
-.solution .title{
+.solution .title {
     margin-bottom: 20px;
     margin-top: 5px;
     font-weight: 550;
     font-size: 23px;
     height: 70px;
 }
-.solution p{
+
+.solution p {
     margin-bottom: 50px;
 }
 
-.solution .buttonDiv{
-    /* display: flex;
-    justify-content: center;
-    margin-top: 20px; */
-
+.solution .buttonDiv {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0px);
 }
 
-.solution .icon{
+.solution .icon {
     scale: 1.1;
 }
+
 .solution .content .previewWebsiteButton {
     padding: 15px;
     border: 1px solid var(--main-color);
