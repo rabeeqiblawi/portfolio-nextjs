@@ -15,7 +15,7 @@
 .mainSectionCol h1 {
     font-size: 50px;
     transition: all 0.75s;
-    color: var(--text-dark);
+    color: #11224d;
 }
 
 .mainSectionCol h1:hover {

@@ -4,7 +4,7 @@ export const config = {
     content: {
         logo: "/choroidLogo.png",
         brand: "Choroid",
-        heroHeadLine: "Transfoming visions Into immersive Experiences",
+        // heroHeadLine: "Transfoming visions Into immersive Experience",
         projects: [
             {
                 imageUrl: "/websiteProjectPlaceholder1.png",
@@ -19,6 +19,15 @@ export const config = {
                 imageUrl: "/websiteProjectPlaceholder2.png",
                 title: "Sweetkick",
                 description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+                actionLink: "",
+                actionText: "View Project",
+                isHidden: false,
+                visibleHome: true
+            },
+            {
+                imageUrl: "/websiteProjectPlaceholder3.png",
+                title: "iPortfolio",
+                description: "iPortfolio is a modern personal CV and portfolio HTML template. It's creative, minimal and clean design. iPortfolio can be used for many purposes starting from minimal portfolios, freelancers, graphic designers, illustrators, photographers and many others to showcase their work, projects, products, clients and offer services.",
                 actionLink: "",
                 actionText: "View Project",
                 isHidden: false,

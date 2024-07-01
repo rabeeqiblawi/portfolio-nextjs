@@ -23,7 +23,8 @@ export default function Home() {
               />
           ))}
 
-          <h2>Your Solutions</h2>
+          <h2 style={{fontSize:"50px", margin:"40px 0px", color:"var(--text-dark)"}}>Our <span style={{color:"#f98125"}}>Solutions</span></h2>
+
           <div className={styles.cardContainer}>
             {filteredSolutions.map(project => (
               <Card

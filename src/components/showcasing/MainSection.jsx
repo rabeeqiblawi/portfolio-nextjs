@@ -8,10 +8,10 @@ const MainSection = () => {
         <div className={styles.container}>
             <section className={styles.mainSection}>
                 <div className={styles.mainSectionCol}>
-                    <h1>
-                        {websiteInformation.content.heroHeadLine}
-                    </h1>
+                    <h1>Transfoming <span style={{color:"#f98125"}}>Visions</span> into Immersive <span style={{color:"#f98125"}}>Experiences</span></h1>
+                    <button>Projects</button>
                 </div>
+                
                 <div className={`${styles.mainSectionCol} ${styles.mainSectionEmptyCol}`}>
 
                 </div>
