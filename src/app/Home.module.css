@@ -17,6 +17,7 @@
 }
 
 
+/* loading Page */
 
 .loadingContainer{
     /* background-color: var(--text-dark); */
@@ -58,8 +59,6 @@
     }
 }
 
-
-/* loading Page */
 .loadingBox{
     position: relative;
     width: 60px;

@@ -60,9 +60,13 @@
 @media screen and (max-width: 768px) {
     .card {
         flex-direction: column;
+        width: 90%;
     }
     .media{
         width: 100%;
+    }
+    .content div {
+        text-align: center;
     }
     .content .previewWebsiteButton {
         position: relative;

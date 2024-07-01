@@ -8,7 +8,9 @@ const ResponsiveMediaCard = ({ imageUrl, title, description }) => {
             <div className={styles.content}>
                 <h2 className={styles.title}>{title}</h2>
                 <p className={styles.description}>{description}</p>
-                <button className={styles.previewWebsiteButton}>Check the Website</button>
+                <div>
+                    <button className={styles.previewWebsiteButton}>Check the Website</button>
+                </div>
             </div>
         </div>
     );
