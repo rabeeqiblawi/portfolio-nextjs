@@ -27,7 +27,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
-    /* width: 1200px; */
-    width: 100%;
+    width: 1200px;
+    /* width: 100%; */
     margin: 20px auto;
 }

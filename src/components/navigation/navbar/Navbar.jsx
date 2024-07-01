@@ -25,7 +25,7 @@ const Navbar = observer(() => {
                 </div>
                 <div className={styles.logoDiv}>
                     <Link href="/" className={styles.logoLink}>
-                        <Image src={websiteInformation.content.logo} alt="" width={20} height={20} className={styles.imgLogo}/>
+                        <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className={styles.imgLogo}/>
                         <h1>{websiteInformation.content.brand}</h1>
                     </Link>
                 </div>

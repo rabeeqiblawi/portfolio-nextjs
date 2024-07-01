@@ -43,11 +43,6 @@
     text-decoration: none;
 }
 
-.imgLogo {
-    width: 60px;
-    height: 100%;
-}
-
 .logoLink h1 {
     color: var(--text-dark);
 }
