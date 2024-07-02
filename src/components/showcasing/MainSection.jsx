@@ -13,7 +13,7 @@ const MainSection = () => {
                     <Link href="/services">Services</Link>
                 </div>
                 <div className={styles.imgContainer}>
-                    <Image src="/heroImage.png" width={400} height={450} />
+                    <Image src="/heroImage.png" width={450} height={550} />
                 </div>
             </div>
         </div>

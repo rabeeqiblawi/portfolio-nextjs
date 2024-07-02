@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Footer.module.css'
+import styles from './Footer.module.scss'
 import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaMapMarker, FaPhone, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa'
 import Image from 'next/image'
 import { config as websiteInformation } from '@/config'
