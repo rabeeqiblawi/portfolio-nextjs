@@ -4,7 +4,14 @@ export const config = {
     content: {
         logo: "/choroidLogo.png",
         brand: "Choroid",
-        // heroHeadLine: "Transfoming visions Into immersive Experience",
+        hero: {
+            heroHeadLine: "Transfoming Visions Into immersive Experiences",
+            heroSubHeadLine: "",
+            heroImageUrl: "",
+            heroActionText: "",
+            highlightedHeadlineWords: ["Visions", "Experiences"],
+        },
+
         projects: [
             {
                 imageUrl: "/websiteProjectPlaceholder1.png",
@@ -38,7 +45,7 @@ export const config = {
         solutions: [
             {
                 imageUrl: "",
-                icon:"/icons/bot.svg",
+                icon: "/icons/bot.svg",
                 title: "Custom Discord & Telegram Bots Powered by GPT-4",
                 description: "Transform your Discord and Telegram communities with our custom-built bots enhanced by GPT-4 technology. These bots are designed to elevate user engagement, provide personalized interactions, and automate repetitive tasks seamlessly.",
                 actionLink: "",
@@ -48,7 +55,7 @@ export const config = {
             },
             {
                 imageUrl: "",
-                icon:"/icons/virtual-tour.svg",
+                icon: "/icons/virtual-tour.svg",
                 title: "AutoCAD to VR & AR Experience",
                 description: "Immerse yourself in the future of design with our AutoCAD to VR & AR experience solution. Transform your 2D and 3D designs into interactive virtual and augmented reality environments, allowing for real-time visualization, collaboration, and simulation.",
                 actionLink: "",
@@ -58,7 +65,7 @@ export const config = {
             },
             {
                 imageUrl: "",
-                icon:"/icons/virtual-tour.svg",
+                icon: "/icons/virtual-tour.svg",
                 title: "AutoCAD to VR & AR Experience",
                 description: "Immerse yourself in the future of design with our AutoCAD to VR & AR experience solution. Transform your 2D and 3D designs into interactive virtual and augmented reality environments, allowing for real-time visualization, collaboration, and simulation. AKJDFKLAJL;DFJLA JSDFLKJAKLSDFJLAJSDF LJALSDJF;LJASLDFJLASJDFL",
                 actionLink: "#",
@@ -66,7 +73,7 @@ export const config = {
                 isHidden: false,
                 visibleHome: true
             },
-        ],        
+        ],
     },
     screenSizes: {
         small: 768,

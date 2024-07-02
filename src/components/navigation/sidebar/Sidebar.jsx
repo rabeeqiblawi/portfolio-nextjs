@@ -4,7 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import NavigationStore from '../NavigationStore.js';
 import { IoMdClose } from "react-icons/io";
-import links from '../links.js'; // Import links
+import links from '../links.js';
+import './Sidebar.scss';
 
 const Sidebar = ({ logo, children }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(NavigationStore.isSidebarOpen);
@@ -19,20 +20,19 @@ const Sidebar = ({ logo, children }) => {
     };
 
     return isSidebarOpen ? (
-        <div style={{ backgroundColor: 'red' }}>
-            <div>
-                {/* <div>{logo}</div> */}
-                <div></div>
-                <div onClick={handleSidebarClose}>
+        <div className="sidebar">
+            <div className="sidebar-header">
+                {logo && <div className="sidebar-logo">{logo}</div>}
+                <button className="sidebar-close" onClick={handleSidebarClose}>
                     <IoMdClose />
-                </div>
+                </button>
             </div>
-            <nav>
+            <nav className="sidebar-nav">
                 {children}
-                <ul>
+                <ul className="sidebar-links">
                     {links.map(link => (
-                        <li key={link.path}>
-                            <a href={link.path}>{link.title}</a>
+                        <li key={link.path} className="sidebar-link-item">
+                            <a href={link.path} className="sidebar-link">{link.title}</a>
                         </li>
                     ))}
                 </ul>
