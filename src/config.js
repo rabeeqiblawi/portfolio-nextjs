@@ -46,8 +46,12 @@ export const config = {
             {
                 imageUrl: "",
                 icon: "/icons/bot.svg",
-                title: "Custom Discord & Telegram Bots Powered by GPT-4",
-                description: "Transform your Discord and Telegram communities with our custom-built bots enhanced by GPT-4 technology. These bots are designed to elevate user engagement, provide personalized interactions, and automate repetitive tasks seamlessly.",
+                title: "Custom Bots in XR! Powered by GPT-4 Technology",
+                description: `
+                 We create AI-powered virtual assistants for XR environments.
+                 Our custom bots use GPT-4 technology to provide intelligent,
+                 context-aware interactions in VR and AR,
+                 enhancing user experiences across various applications.`,
                 actionLink: "",
                 actionText: "More Info",
                 isHidden: false,
@@ -56,8 +60,13 @@ export const config = {
             {
                 imageUrl: "",
                 icon: "/icons/virtual-tour.svg",
-                title: "AutoCAD to VR & AR Experience",
-                description: "Immerse yourself in the future of design with our AutoCAD to VR & AR experience solution. Transform your 2D and 3D designs into interactive virtual and augmented reality environments, allowing for real-time visualization, collaboration, and simulation.",
+                title: "Architectural Visualization & Virtual Tours",
+                description: `We transform architectural concepts into immersive experiences.
+                 Our team creates detailed 3D models of apartments and scenes, bringing them
+                 to life in virtual reality (VR) and augmented reality (AR).
+                 This allows clients to explore and interact with spaces before they're built,
+                 enhancing decision-making and providing a powerful marketing tool for
+                 real estate developers and architects.`,
                 actionLink: "",
                 actionText: "More Info",
                 isHidden: false,
