@@ -1,43 +1,56 @@
 .container {
-    .mainSection {
-        width: 50%;
+    width: 1200px;
+    margin: 0px auto;
+
+    .content {
         height: 550px;
-        display:flex;
-        flex-direction: column;
+        display: flex;
+        align-items: center;
         justify-content: center;
 
-        h1 {
-            font-size: 50px;
-            transition: all 0.75s;
-            color: #11224d;
-        }
-
-        .line {
-            height: 2px;
-            width: 80px;
-            background: var(--btn-orange);
-            margin: 20px 0px;
-            display:block;
-        }
-
-        a {
-            padding: 20px;
-            border-radius: 15px;
-            border:1px solid var(--btn-orange);
-            cursor: pointer;
-            font-size: 16px;
-            width: 50%;
-            background: var(--btn-orange);
-            color: var(--text-light);
-            font-weight: bold;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.2s ease-in-out;
-
-            &:hover {
-                background: transparent;
-                color: var(--btn-orange);
+        .textContainer {
+            width: 100%;
+            
+            h1 {
+                font-size: 50px;
+                transition: all 0.75s;
+                color: #11224d;
             }
+
+            .line {
+                height: 2px;
+                width: 80px;
+                background: var(--btn-orange);
+                margin: 20px 0px;
+                display: block;
+            }
+
+            a {
+                padding: 20px;
+                border-radius: 15px;
+                border: 1px solid var(--btn-orange);
+                cursor: pointer;
+                font-size: 16px;
+                width: 50%;
+                display:block;
+                background: var(--btn-orange);
+                color: var(--text-light);
+                font-weight: bold;
+                text-decoration: none;
+                text-align: center;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background: transparent;
+                    color: var(--btn-orange);
+                }
+            }
+        }
+
+        .imgContainer {
+            width: 100%;
+            display:flex;
+            justify-content: center;
         }
     }
 }
