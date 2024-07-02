@@ -1,3 +1,4 @@
+/*TODO store pointers to articles on firebase */
 export const fetchRepoFileNames = (repoOwner, repoName) => {
     return fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents`)
         .then(response => response.json())

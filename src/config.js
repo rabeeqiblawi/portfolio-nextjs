@@ -75,8 +75,8 @@ export const config = {
             {
                 imageUrl: "",
                 icon: "/icons/virtual-tour.svg",
-                title: "AutoCAD to VR & AR Experience",
-                description: "Immerse yourself in the future of design with our AutoCAD to VR & AR experience solution. Transform your 2D and 3D designs into interactive virtual and augmented reality environments, allowing for real-time visualization, collaboration, and simulation. AKJDFKLAJL;DFJLA JSDFLKJAKLSDFJLAJSDF LJALSDJF;LJASLDFJLASJDFL",
+                title: "Web & Mobile Apps",
+                description: "We develop custom, user-friendly web and mobile applications. Our solutions are designed to meet your specific business needs, offering seamless functionality across devices and platforms",
                 actionLink: "#",
                 actionText: "More Info",
                 isHidden: false,
