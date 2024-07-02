@@ -11,19 +11,22 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.title}>
         <MainSection />
+
+        <h2 style={{ fontSize: "50px", margin: "40px 0px", color: "var(--text-dark)" }}>Our <span style={{ color: "#f98125" }}>Projects</span></h2>
+
         <div className="responsiveContainer">
           {filteredProjects.map(project => (
-              <Card
-                key={project.title}
-                imageUrl={project.imageUrl}
-                title={project.title}
-                description={project.description}
-                actionText={project.actionText}
-                cssClassName="project"
-              />
+            <Card
+              key={project.title}
+              imageUrl={project.imageUrl}
+              title={project.title}
+              description={project.description}
+              actionText={project.actionText}
+              cssClassName="project"
+            />
           ))}
 
-          <h2 style={{fontSize:"50px", margin:"40px 0px", color:"var(--text-dark)"}}>Our <span style={{color:"#f98125"}}>Solutions</span></h2>
+          <h2 style={{ fontSize: "50px", margin: "40px 0px", color: "var(--text-dark)" }}>Our <span style={{ color: "#f98125" }}>Solutions</span></h2>
 
           <div className={styles.cardContainer}>
             {filteredSolutions.map(project => (

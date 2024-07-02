@@ -5,19 +5,19 @@
     text-align: center;
     background: #11224d;
     color: var(--text-light);
-}
 
-.container .content {
-    width: 1200px;
-    margin: 0px auto;
-}
+    .content {
+        width: 1200px;
+        margin: 0px auto;
 
-.container .content .topContent {
-    display:flex;
-}
+        .topContent {
+            display: flex;
 
-.container .content .topContent .linksColBox {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
+            .linksColBox {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
 }

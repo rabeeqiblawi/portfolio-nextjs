@@ -4,25 +4,25 @@
 }
 
 .title {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     /* margin: 20px auto; */
 }
 
-.cardContainer{
+.cardContainer {
     width: 1200px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 40px;
 }
 
 
 /* loading Page */
 
-.loadingContainer{
+.loadingContainer {
     /* background-color: var(--text-dark); */
     display: flex;
     flex-direction: row;
@@ -33,13 +33,14 @@
     height: 50vh;
 }
 
-.loadingContainer h3{
+.loadingContainer h3 {
     font-size: 3rem;
     color: transparent;
     -webkit-text-stroke: 1px var(--main-color);
     position: relative;
 }
-.loadingContainer h3::before{
+
+.loadingContainer h3::before {
     content: "Loading...";
     position: absolute;
     width: 0%;
@@ -52,17 +53,19 @@
 
 @keyframes rightLeftAnimation {
     0% {
-      width: 0%;
+        width: 0%;
     }
+
     50% {
-      width: 100%;
+        width: 100%;
     }
+
     100% {
-      width:0%;
+        width: 0%;
     }
 }
 
-.loadingBox{
+.loadingBox {
     position: relative;
     width: 60px;
     height: 60px;
@@ -75,26 +78,29 @@
     align-items: center;
 }
 
-.loadingBox::before{
+.loadingBox::before {
     content: '';
     position: absolute;
     inset: -1.25px 18px;
     background: linear-gradient(315deg, var(--main-color), var(--text-light));
     animation: animate 2.5s linear infinite;
 }
-.loadingBox:hover::before{
+
+.loadingBox:hover::before {
     inset: -20px 0px;
 }
+
 @keyframes animate {
-    0%{
+    0% {
         transform: rotate(360deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0deg);
     }
 }
 
-.loadingBox::after{
+.loadingBox::after {
     content: '';
     position: absolute;
     inset: 6px;
@@ -102,12 +108,11 @@
     z-index: 1;
 }
 
-.loadingBox .imgLogo
- {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  transition: 0.5s;
-  pointer-events: none;
-  z-index: 3;
- }
+.loadingBox .imgLogo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+}
