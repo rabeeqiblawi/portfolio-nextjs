@@ -7,7 +7,7 @@ const Card = ({ imageUrl, icon, title, description, actionText, cssClassName }) 
     console.log(icon);
     return (
         <>
-            {cssClassName =="project" && <div className={styles[cssClassName]}>
+            {cssClassName == "project" && <div className={styles[cssClassName]}>
                 {imageUrl && <img src={imageUrl} alt={title} className={styles.media} />}
                 <div className={styles.content}>
                     <h2 className={styles.title}>{title}</h2>
@@ -18,7 +18,7 @@ const Card = ({ imageUrl, icon, title, description, actionText, cssClassName }) 
                 </div>
             </div>}
 
-            {cssClassName =="solution" && <div className={styles[cssClassName]}>
+            {cssClassName == "solution" && <div className={styles[cssClassName]}>
                 <div className={styles.content}>
                     {icon && <Image src={icon} alt={title} className={styles.icon} width={35} height={35} />}
                     <h2 className={styles.title}>{title}</h2>
@@ -29,7 +29,7 @@ const Card = ({ imageUrl, icon, title, description, actionText, cssClassName }) 
                 </div>
             </div>}
 
-            {cssClassName =="contact" && <div className={styles[cssClassName]}>
+            {cssClassName == "contact" && <div className={styles[cssClassName]}>
                 {/* {imageUrl && <img src={imageUrl} alt={title} className={styles.media} />}
                 <div className={styles.content}>
                     <h2 className={styles.title}>{title}</h2>
@@ -39,9 +39,9 @@ const Card = ({ imageUrl, icon, title, description, actionText, cssClassName }) 
                     </div>
                 </div> */}
             </div>}
-            
-            {cssClassName =="team" && <div className={styles[cssClassName]}>
-                {<img src={imageUrl !=="" ? imageUrl : "/team/defaultPerson.png"} alt={title} className={styles.media} />}
+
+            {cssClassName == "team" && <div className={styles[cssClassName]}>
+                {<img src={imageUrl !== "" ? imageUrl : "/team/defaultPerson.png"} alt={title} className={styles.media} />}
                 <div className={styles.content}>
                     <h2 className={styles.title}>{title}</h2>
                     <p className={styles.description}>{description}</p>

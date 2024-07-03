@@ -142,30 +142,47 @@
     }
 }
 
-.team{
+.team {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.4s;
+    transition: 0.2s ease-in-out;
     width: 18%;
+    padding: 15px;
+    border-radius: 15px;
 
+    &:hover {
+        background: #f8f8f8;
+    }
 
-    .media{
-        width: 200px;
-        height: 200px;
+    .media {
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         margin-bottom: 15px;
     }
-    .content .title{
-        font-weight: 500;
-        margin-bottom: 15px;
-        transition: color 0.4s ease-in-out;
+
+    .content {
+        .title {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            text-align: center;
+            transition: color 0.4s ease-in-out;
+        }
+
+        .description {
+            font-size: 14px;
+            text-align: center;
+            color: #777;
+        }
     }
 }
-.team:hover{
+
+.team:hover {
     transform: translateY(-20px);
 
-    .content .title{
+    .content .title {
         color: var(--btn-orange);
     }
 }
