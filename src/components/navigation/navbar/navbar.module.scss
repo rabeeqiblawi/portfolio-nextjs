@@ -1,19 +1,16 @@
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0px;
-    width: 1200px;
-    margin: 0px auto;
-    height: var(--navigationBarHight);
-    z-index: 10;
-}
-
 .topPageVectors {
     display: flex;
     position: relative;
     justify-content: center;
     z-index: -1;
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: max-content;
+        width: 100%;
+    }
 }
 
 .overlayColor {
@@ -24,13 +21,25 @@
     z-index: -10;
 }
 
-.topPageVectors img {
-    position: absolute;
-    left: 0;
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+    width: 1200px;
+    margin: 0px auto;
+    height: var(--navigationBarHight);
+    z-index: 10;
+    transition: all 0.3s;
+
+    position: sticky;
     top: 0;
-    height: max-content;
-    width: 100%;
 }
+
+.scrolled {
+    background: #fff;
+}
+
 
 .logoDiv {
     width: 40vh;
@@ -102,6 +111,7 @@
         display: block;
         cursor: pointer;
     }
+
     .links {
         display: none;
     }
