@@ -6,6 +6,7 @@ import { config as websiteInformation } from '@/config'
 export default function Home() {
   const filteredProjects = websiteInformation.content.projects.filter(project => project.visibleHome);
   const filteredSolutions = websiteInformation.content.solutions.filter(project => project.visibleHome);
+  const filteredTeam = websiteInformation.content.team.filter(project => project.visibleHome);
 
   return (
     <div className={styles.container}>
@@ -32,7 +33,6 @@ export default function Home() {
             {filteredSolutions.map(project => (
               <Card
                 key={project.title}
-                imageUrl={project.imageUrl}
                 icon={project.icon}
                 title={project.title}
                 description={project.description}
@@ -58,18 +58,16 @@ export default function Home() {
             ))}
           </div>
 
-          <h2 className={styles.headers}>Our <span>Team</span></h2>
+          <h2 className={styles.headers}>Meat the <span>Team</span></h2>
 
           <div className={styles.cardContainer}>
-            {filteredSolutions.map(project => (
+            {filteredTeam.map(project => (
               <Card
                 key={project.title}
                 imageUrl={project.imageUrl}
-                icon={project.icon}
                 title={project.title}
                 description={project.description}
-                actionText={project.actionText}
-                cssClassName="contact"
+                cssClassName="team"
               />
             ))}
           </div>

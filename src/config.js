@@ -84,6 +84,56 @@ export const config = {
                 visibleHome: true
             },
         ],
+        team: [
+            {
+                imageUrl: "/team/mohammadOthman.png",
+                title: "Mohmmad Othman",
+                description: "Founder | Graphic Designer",
+                visibleHome: true
+            },
+            {
+                imageUrl: "/team/rabeeQablawi.png",
+                title: "Rabee Qiblawi",
+                description: "Software engineer specializing in front-end development and UI/UX design.",
+                visibleHome: true
+            },
+            {
+                imageUrl: "/team/karloRajić.png",
+                title: "Karlo Rajic",
+                description: "Creative designer with a passion for user experience and visual storytelling.",
+                visibleHome: true
+            },
+            {
+                imageUrl: "/team/hadiDiab.png",
+                title: "Hadi Diab",
+                description: "Software engineer specializing in front-end development and UI/UX design.",
+                visibleHome: true
+            },
+            {
+                imageUrl: "/team/mustafaZabet.png",
+                title: "Mustafa Zabet",
+                description: "Software engineer specializing in front-end development and UI/UX design.",
+                visibleHome: true
+            },
+            {
+                imageUrl: "",
+                title: "Mohammad Shahbaz",
+                description: "Software engineer specializing in front-end development and UI/UX design.",
+                visibleHome: true
+            },
+            {
+                imageUrl: "",
+                title: "Nizar Sadek",
+                description: "Creative designer with a passion for user experience and visual storytelling.",
+                visibleHome: true
+            },
+            {
+                imageUrl: "",
+                title: "Diaa AbuAllul",
+                description: "Creative designer with a passion for user experience and visual storytelling.",
+                visibleHome: true
+            },
+        ],
     },
     screenSizes: {
         small: 768,

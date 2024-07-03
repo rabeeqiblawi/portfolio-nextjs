@@ -30,13 +30,21 @@ const Card = ({ imageUrl, icon, title, description, actionText, cssClassName }) 
             </div>}
 
             {cssClassName =="contact" && <div className={styles[cssClassName]}>
-                {imageUrl && <img src={imageUrl} alt={title} className={styles.media} />}
+                {/* {imageUrl && <img src={imageUrl} alt={title} className={styles.media} />}
                 <div className={styles.content}>
                     <h2 className={styles.title}>{title}</h2>
                     <p className={styles.description}>{description}</p>
                     <div className={styles.buttonDiv}>
                         <button className={styles.previewWebsiteButton}>{actionText}</button>
                     </div>
+                </div> */}
+            </div>}
+            
+            {cssClassName =="team" && <div className={styles[cssClassName]}>
+                {<img src={imageUrl !=="" ? imageUrl : "/team/defaultPerson.png"} alt={title} className={styles.media} />}
+                <div className={styles.content}>
+                    <h2 className={styles.title}>{title}</h2>
+                    <p className={styles.description}>{description}</p>
                 </div>
             </div>}
         </>
