@@ -99,7 +99,7 @@ export const config = {
             },
             {
                 imageUrl: "/team/karloRajić.png",
-                title: "Karlo Rajic",
+                title: "Karlo Rajić",
                 description: "Creative designer with a passion for user experience and visual storytelling.",
                 visibleHome: true
             },

@@ -14,13 +14,18 @@ const Footer = () => {
       <div className={styles.content}>
         <div className={styles.topContent}>
 
+          <div className={styles.logoColBox}>
+            <Image src={websiteInformation.content.logo} alt="" width={60} height={60} />
+            <h1>{websiteInformation.content.brand}</h1>
+          </div>
+
           <div className={styles.linksColBox}>
             <h2>Contact</h2>
             {filteredContact.map(([key, value]) => (
-              <div key={key} className={styles.footerColBox}>
-                {key === 'phone' && <FaPhone />}
-                {key === 'mail' && <FaEnvelope />}
-                {key === 'location' && <FaMapMarker />}
+              <div key={key} className={styles.colBoxContent}>
+                {key === 'phone' && <FaPhone className={styles.icon} />}
+                {key === 'mail' && <FaEnvelope className={styles.icon} />}
+                {key === 'location' && <FaMapMarker className={styles.icon} />}
                 <span>{value}</span>
               </div>
             ))}
@@ -29,7 +34,7 @@ const Footer = () => {
           <div className={styles.linksColBox}>
             <h2>Follow Us</h2>
             {filteredSocialLinks.map(([key, value]) => (
-              <div key={key} className={styles.footerColBox}>
+              <div key={key} className={styles.colBoxContent}>
                 {key === 'facebook' && <FaFacebook className={styles.icon} />}
                 {key === 'twitter' && <FaTwitter className={styles.icon} />}
                 {key === 'instagram' && <FaInstagram className={styles.icon} />}

@@ -58,7 +58,7 @@ export default function Home() {
             ))}
           </div>
 
-          <h2 className={styles.headers}>Meat the <span>Team</span></h2>
+          <h2 className={styles.headers}>Meet the <span>Team</span></h2>
 
           <div className={styles.cardContainer}>
             {filteredTeam.map(project => (

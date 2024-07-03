@@ -1,7 +1,8 @@
 .container {
     width: 100%;
     margin-top: 40px;
-    padding: 60px 0px;
+    // padding: 60px 0px;
+    // padding-bottom: 30px;
     text-align: center;
     background: #11224d;
     color: var(--text-light);
@@ -12,11 +13,59 @@
 
         .topContent {
             display: flex;
+            align-items: flex-start;
+            gap: 80px;
+            padding: 30px 0px 20px 0px;
+
+            .logoColBox {
+                display: flex;
+                align-items: center;
+
+                h1 {
+                    margin-left: 15px;
+                }
+            }
 
             .linksColBox {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                .colBoxContent {
+                    padding: 10px 0px;
+                    display:flex;
+                    align-items: center;
+
+                    .icon {
+                        margin-right: 10px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        color: var(--text-light);
+                        font-size: 14px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .bottomContent {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0px;
+            border-top: 1px solid #ffffff20;
+
+            p {
+                font-size: 14px; 
+                color: var(--text-light);
             }
         }
     }
