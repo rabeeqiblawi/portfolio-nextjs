@@ -12,7 +12,7 @@ export default function Home() {
       <div className={styles.title}>
         <MainSection />
 
-        <h2 style={{ fontSize: "50px", margin: "40px 0px", color: "var(--text-dark)" }}>Our <span style={{ color: "#f98125" }}>Projects</span></h2>
+        <h2 id='project' className={styles.headers}>Our <span>Projects</span></h2>
 
         <div className="responsiveContainer">
           {filteredProjects.map(project => (
@@ -26,7 +26,7 @@ export default function Home() {
             />
           ))}
 
-          <h2 style={{ fontSize: "50px", margin: "40px 0px", color: "var(--text-dark)" }}>Our <span style={{ color: "#f98125" }}>Solutions</span></h2>
+          <h2 id='solution' className={styles.headers} >Our <span>Solutions</span></h2>
 
           <div className={styles.cardContainer}>
             {filteredSolutions.map(project => (
@@ -38,6 +38,38 @@ export default function Home() {
                 description={project.description}
                 actionText={project.actionText}
                 cssClassName="solution"
+              />
+            ))}
+          </div>
+
+          <h2 id='contact' className={styles.headers}>Contact <span>Us</span></h2>
+
+          <div className={styles.cardContainer}>
+            {filteredSolutions.map(project => (
+              <Card
+                key={project.title}
+                imageUrl={project.imageUrl}
+                icon={project.icon}
+                title={project.title}
+                description={project.description}
+                actionText={project.actionText}
+                cssClassName="contact"
+              />
+            ))}
+          </div>
+
+          <h2 className={styles.headers}>Our <span>Team</span></h2>
+
+          <div className={styles.cardContainer}>
+            {filteredSolutions.map(project => (
+              <Card
+                key={project.title}
+                imageUrl={project.imageUrl}
+                icon={project.icon}
+                title={project.title}
+                description={project.description}
+                actionText={project.actionText}
+                cssClassName="contact"
               />
             ))}
           </div>

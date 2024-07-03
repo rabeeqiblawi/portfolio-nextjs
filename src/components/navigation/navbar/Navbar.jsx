@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import links from '../links.js';
 import styles from './navbar.module.css';
@@ -13,14 +13,38 @@ import { config as websiteInformation } from '@/config'
 
 
 const Navbar = observer(() => {
+
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+    const handleScroll = () => {
+        const currentScrollPos = window.pageYOffset;
+
+        setVisible(
+            (prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos < 70) ||
+            currentScrollPos < 10
+        );
+
+        if (currentScrollPos <= 175) {
+            document.querySelector(`.${styles.container}`).classList.remove(styles.show);
+        }
+
+        setPrevScrollPos(currentScrollPos);
+    };
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [prevScrollPos, visible]);
     return (
         <>
-            <div className={styles.topPageVectors}>
+            <div className={`${styles.topPageVectors} ${!visible ? styles.hidden : styles.show}`}>
                 <img src="/topPageVectors.png" alt="" />
             </div>
             <div className={styles.overlayColor}></div>
-            <div className={styles.container}>
-                <div className={styles.burgerMenu} onClick={() => { NavigationStore.openSidebar() }} >
+            <div className={`${styles.container} ${!visible ? styles.hidden : ''} ${prevScrollPos > 175 ? styles.show : ''}`}>
+                <div className={styles.burgerMenu} onClick={() => { NavigationStore.openSidebar()}} >
                     <FaBars />
                 </div>
                 <div className={styles.logoDiv}>

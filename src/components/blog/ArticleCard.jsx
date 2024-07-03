@@ -8,20 +8,20 @@ const ArticleCard = ({ title, intro, content, lastUpdatedDate, thumbnail }) => {
         <>
             <article className="article-card">
                 <img src={thumbnail} alt={title} className="article-card-thumbnail" />
-                <div className="article-card-content-wrapper">
-                    <header>
+                <section className="article-card-content-wrapper">
+                    <div>
                         <h2 className="article-card-title">{title}</h2>
-                    </header>
-                    <section className="article-card-content">
+                    </div>
+                    <div className="article-card-content">
                         <p>{intro}</p>
-                    </section>
-                </div>
-                <footer className="article-card-footer">
+                    </div>
+                </section>
+                <div className="article-card-footer">
                     <p className="article-card-footer-update-info">Last Updated: {lastUpdatedDate}</p>
                     <Link href={`/blog/${encodeURIComponent(content)}`} className="article-card-footer-read-more">
                         continue reading...
                     </Link>
-                </footer>
+                </div>
             </article>
         </>
     );

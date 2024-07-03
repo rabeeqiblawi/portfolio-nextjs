@@ -5,11 +5,12 @@ export const config = {
         logo: "/choroidLogo.png",
         brand: "Choroid",
         hero: {
-            heroHeadLine: "Transfoming Visions Into immersive Experiences",
+            heroHeadLine: "Transfoming Visions Into Immersive Experiences",
             heroSubHeadLine: "",
             heroImageUrl: "",
             heroActionText: "",
             highlightedHeadlineWords: ["Visions", "Experiences"],
+            breakLineAfter:["Visions", "Immersive"],
         },
 
         projects: [
@@ -74,7 +75,7 @@ export const config = {
             },
             {
                 imageUrl: "",
-                icon: "/icons/virtual-tour.svg",
+                icon: "/icons/MobileWeb.svg",
                 title: "Web & Mobile Apps",
                 description: "We develop custom, user-friendly web and mobile applications. Our solutions are designed to meet your specific business needs, offering seamless functionality across devices and platforms",
                 actionLink: "#",

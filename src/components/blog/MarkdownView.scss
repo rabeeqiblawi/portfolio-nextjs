@@ -7,7 +7,11 @@
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin-top: var(--navigationBarHight);
 
+    &-navigation{
+        // margin-top: ;
+    }
     &-content {
         font-family: Arial, sans-serif;
         line-height: 1.6;
@@ -161,9 +165,9 @@
         overflow-y: auto;
         height: 100vh;
         transition: left 0.3s;
-        z-index: 999;
-        position: sticky; // Add this line
-        top: 0; // And this line
+        z-index: 10;
+        position: sticky;
+        top: 0;
         margin-right: 40px;
         &.visible {
             left: -20px;

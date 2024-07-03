@@ -11,6 +11,16 @@
     /* margin: 20px auto; */
 }
 
+.title .headers {
+    font-size: 50px;
+    margin: 40px 0px;
+    color: var(--text-dark);
+}
+
+.title .headers span{
+    color: var(--btn-orange);
+}
+
 .cardContainer {
     width: 1200px;
     display: flex;
@@ -82,7 +92,7 @@
     content: '';
     position: absolute;
     inset: -1.25px 18px;
-    background: linear-gradient(315deg, var(--main-color), var(--text-light));
+    background: linear-gradient(315deg, var(--main-color), var(--btn-orange));
     animation: animate 2.5s linear infinite;
 }
 
@@ -115,4 +125,7 @@
     transition: 0.5s;
     pointer-events: none;
     z-index: 3;
+    
+    background: var(--text-light);
+    border-radius: 50%;
 }
