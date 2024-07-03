@@ -1,32 +1,13 @@
 .container {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px 0px;
-    /* width: 1200px; */
-    width: 100%;
+    width: 1200px;
     margin: 0px auto;
     height: var(--navigationBarHight);
     z-index: 10;
-    background-color: transparent;
-    position: fixed;
-    transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
-
 }
-
-.show {
-    background-color: var(--text-light);
-}
-    .show .links a:hover {
-        background: var(--btn-orange);
-        color: var(--text-light);
-    }
-
-.hidden {
-    transform: translateY(-100%); /* Move the navbar off-screen when hidden */
-}
-
 
 .topPageVectors {
     display: flex;
@@ -82,7 +63,7 @@
 }
 
 .links a:hover {
-    background: var(--main-color);
+    background: #2c599d;
     color: var(--text-light);
 }
 

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import links from '../links.js';
-import styles from './navbar.module.css';
+import styles from './navbar.module.scss';
 import { FaBars } from 'react-icons/fa';
 import NavigationStore from '../NavigationStore.js';
 
