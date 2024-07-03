@@ -86,21 +86,21 @@ export const config = {
         ],
         team: [
             {
-                imageUrl: "/team/mohammadOthman.png",
-                title: "Mohmmad Othman",
-                description: "Founder | Graphic Designer",
-                visibleHome: true
-            },
-            {
                 imageUrl: "/team/rabeeQablawi.png",
                 title: "Rabee Qiblawi",
-                description: "Software engineer specializing in front-end development and UI/UX design.",
+                description: "Founder | Software engineer specializing in front-end development and UI/UX design.",
                 visibleHome: true
             },
             {
                 imageUrl: "/team/karloRajić.png",
-                title: "Karlo Rajić",
-                description: "Creative designer with a passion for user experience and visual storytelling.",
+                title: "Karlo Rajic",
+                description: "Co-Founder | Creative designer with a passion for user experience and visual storytelling.",
+                visibleHome: true
+            },
+            {
+                imageUrl: "",
+                title: "Mohammad Shahbaz",
+                description: "Co-Founder | Software engineer specializing in front-end development and UI/UX design.",
                 visibleHome: true
             },
             {
@@ -116,9 +116,9 @@ export const config = {
                 visibleHome: true
             },
             {
-                imageUrl: "",
-                title: "Mohammad Shahbaz",
-                description: "Software engineer specializing in front-end development and UI/UX design.",
+                imageUrl: "/team/mohammadOthman.png",
+                title: "Mohmmad Othman",
+                description: "Graphic Designer",
                 visibleHome: true
             },
             {
