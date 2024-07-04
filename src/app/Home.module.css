@@ -33,14 +33,13 @@
     width: 1200px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 50px;
-    /* position: relative; */
     padding: 2rem;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
 }
 .contact-img {
     flex: 1;
@@ -51,28 +50,6 @@
     flex: 1;
     padding: 1rem;
   }
-
-
-
-
-
-
-
-
-
-.contactContainer {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    background-color: transparent;
-    border-radius: 10px;
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
-}
-  
-  
-  
-
   
   .contact-content h2 {
     font-size: 2rem;
@@ -83,7 +60,7 @@
   
   .contact-content p {
     font-size: 1rem;
-    color: #666;
+    color: var(--text-gray);
     line-height: 1.6;
     margin-bottom: 1rem;
   }
@@ -104,7 +81,7 @@
   
   .contact-content ul li::before {
     content: '•';
-    color: var(--btn-orange);
+    color: var(--main-color);
     font-size: 1.4rem;
     margin-right: 0.5rem;
   }
@@ -113,7 +90,7 @@
   }
   .contact-content .contactButton {
     background-color: var(--main-color);
-    color: white;
+    color: var(--text-light);
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -125,29 +102,6 @@
   .contact-content .contactButton:hover {
     background-color: var(--btn-orange);
   }
-/*   
-  @media (max-width: 768px) {
-    .contactContainer {
-      flex-direction: column;
-    }
-  
-    .contact-img {
-      width: 100%;
-      height: 200px;
-    }
-  
-    .contact-content {
-      width: 100%;
-    }
-  }
-   */
-
-
-
-
-
-
-
 
 
 /* loading Page */
