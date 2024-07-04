@@ -3,7 +3,7 @@ import Card from '@/components/cards/Card';
 import { config as websiteInformation } from '@/config'
 
 const Projects = () => {
-    const filteredSolutions = websiteInformation.content.solutions.filter(project => project.visibleHome && !project.isHidden);
+    const filteredSolutions = websiteInformation.content.solutions.data.filter(project => project.visibleHome && !project.isHidden);
 
     return (
         <section className={styles.container}>

@@ -13,77 +13,83 @@ export const config = {
             breakLineAfter:["Visions", "Immersive"],
         },
 
-        projects: [
-            {
-                imageUrl: "/websiteProjectPlaceholder1.png",
-                title: "Bluehost Design Website",
-                description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-                actionLink: "",
-                actionText: "View Project",
-                isHidden: false,
-                visibleHome: true
-            },
-            {
-                imageUrl: "/websiteProjectPlaceholder2.png",
-                title: "Sweetkick",
-                description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
-                actionLink: "",
-                actionText: "View Project",
-                isHidden: false,
-                visibleHome: true
-            },
-            {
-                imageUrl: "/websiteProjectPlaceholder3.png",
-                title: "iPortfolio",
-                description: "iPortfolio is a modern personal CV and portfolio HTML template. It's creative, minimal and clean design. iPortfolio can be used for many purposes starting from minimal portfolios, freelancers, graphic designers, illustrators, photographers and many others to showcase their work, projects, products, clients and offer services.",
-                actionLink: "",
-                actionText: "View Project",
-                isHidden: false,
-                visibleHome: true
-            },
-        ],
+        projects: {
+            isHidden: false, 
+            data:[
+                {
+                    imageUrl: "/websiteProjectPlaceholder1.png",
+                    title: "Bluehost Design Website",
+                    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                    actionLink: "",
+                    actionText: "View Project",
+                    isHidden: false,
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/websiteProjectPlaceholder2.png",
+                    title: "Sweetkick",
+                    description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+                    actionLink: "",
+                    actionText: "View Project",
+                    isHidden: false,
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/websiteProjectPlaceholder3.png",
+                    title: "iPortfolio",
+                    description: "iPortfolio is a modern personal CV and portfolio HTML template. It's creative, minimal and clean design. iPortfolio can be used for many purposes starting from minimal portfolios, freelancers, graphic designers, illustrators, photographers and many others to showcase their work, projects, products, clients and offer services.",
+                    actionLink: "",
+                    actionText: "View Project",
+                    isHidden: false,
+                    visibleHome: true
+                },
+            ]
+        },
         services: [],
-        solutions: [
-            {
-                imageUrl: "",
-                icon: "/icons/bot.svg",
-                title: "Custom Bots in XR! Powered by GPT-4 Technology",
-                description: `
-                 We create AI-powered virtual assistants for XR environments.
-                 Our custom bots use GPT-4 technology to provide intelligent,
-                 context-aware interactions in VR and AR,
-                 enhancing user experiences across various applications.`,
-                actionLink: "",
-                actionText: "More Info",
-                isHidden: false,
-                visibleHome: true
-            },
-            {
-                imageUrl: "",
-                icon: "/icons/virtual-tour.svg",
-                title: "Architectural Visualization & Virtual Tours",
-                description: `We transform architectural concepts into immersive experiences.
-                 Our team creates detailed 3D models of apartments and scenes, bringing them
-                 to life in virtual reality (VR) and augmented reality (AR).
-                 This allows clients to explore and interact with spaces before they're built,
-                 enhancing decision-making and providing a powerful marketing tool for
-                 real estate developers and architects.`,
-                actionLink: "",
-                actionText: "More Info",
-                isHidden: false,
-                visibleHome: true
-            },
-            {
-                imageUrl: "",
-                icon: "/icons/MobileWeb.svg",
-                title: "Web & Mobile Apps",
-                description: "We develop custom, user-friendly web and mobile applications. Our solutions are designed to meet your specific business needs, offering seamless functionality across devices and platforms",
-                actionLink: "#",
-                actionText: "More Info",
-                isHidden: false,
-                visibleHome: true
-            },
-        ],
+        solutions: {
+            isHidden: false, 
+            data:[
+                {
+                    imageUrl: "",
+                    icon: "/icons/bot.svg",
+                    title: "Custom Bots in XR! Powered by GPT-4 Technology",
+                    description: `
+                    We create AI-powered virtual assistants for XR environments.
+                    Our custom bots use GPT-4 technology to provide intelligent,
+                    context-aware interactions in VR and AR,
+                    enhancing user experiences across various applications.`,
+                    actionLink: "",
+                    actionText: "More Info",
+                    isHidden: false,
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "",
+                    icon: "/icons/virtual-tour.svg",
+                    title: "Architectural Visualization & Virtual Tours",
+                    description: `We transform architectural concepts into immersive experiences.
+                    Our team creates detailed 3D models of apartments and scenes, bringing them
+                    to life in virtual reality (VR) and augmented reality (AR).
+                    This allows clients to explore and interact with spaces before they're built,
+                    enhancing decision-making and providing a powerful marketing tool for
+                    real estate developers and architects.`,
+                    actionLink: "",
+                    actionText: "More Info",
+                    isHidden: false,
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "",
+                    icon: "/icons/MobileWeb.svg",
+                    title: "Web & Mobile Apps",
+                    description: "We develop custom, user-friendly web and mobile applications. Our solutions are designed to meet your specific business needs, offering seamless functionality across devices and platforms",
+                    actionLink: "#",
+                    actionText: "More Info",
+                    isHidden: false,
+                    visibleHome: true
+                },
+            ]
+        },
         team: {
             isHidden: false,
             members: [
@@ -182,9 +188,17 @@ export const config = {
         youtube: "",
     },
     contact: {
-        phone: "+1 234 567 890",
-        mail: "info@example.com",
-        location: "123 Street Name, City, Country"
+        imageUrl: "/contactUs.png",
+        title: "Get in Touch",
+        description: "We're here to help and answer any question you might have. We look forward to hearing from you!",
+        buttonText: "Send us a message",
+        isHidden: false,
+
+        contactInfo:{
+            phone: "+961 23 567 890",
+            mail: "care@choroid.com",
+            location: "123 Street Name, Saida, Lebanon",
+        }
     },
     featureFlags: {
     },

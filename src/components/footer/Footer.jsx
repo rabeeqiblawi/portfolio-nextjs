@@ -7,7 +7,7 @@ import { config as websiteInformation } from '@/config'
 
 const Footer = () => {
   const filteredSocialLinks = Object.entries(websiteInformation.socialLinks).filter(([key, value]) => value !== '');
-  const filteredContact = Object.entries(websiteInformation.contact).filter(([key, value]) => value !== '');
+  const filteredContact = Object.entries(websiteInformation.contact.contactInfo).filter(([key, value]) => value !== '');
 
   return (
     <div className={styles.container}>
