@@ -17,7 +17,7 @@
     color: var(--text-dark);
 }
 
-.title .headers span{
+.title .headers span {
     color: var(--btn-orange);
 }
 
@@ -36,59 +36,67 @@
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 50px;
     padding: 2rem;
+    gap: 50px;
     border-radius: 10px;
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
 }
+
 .contact-img {
     flex: 1;
     position: relative;
     height: 400px;
-  }
-  .contact-content {
+}
+
+.contact-img img {
+    object-fit: contain;
+}
+
+.contact-content {
     flex: 1;
     padding: 1rem;
-  }
-  
-  .contact-content h2 {
+}
+
+.contact-content h2 {
     font-size: 2rem;
     color: var(--text-dark);
     margin-bottom: 1rem;
     font-weight: 600;
-  }
-  
-  .contact-content p {
+}
+
+.contact-content p {
     font-size: 1rem;
     color: var(--text-gray);
     line-height: 1.6;
     margin-bottom: 1rem;
-  }
-  
-  .contact-content ul {
+}
+
+.contact-content ul {
     list-style-type: none;
     padding: 0;
     margin-bottom: 1rem;
-  }
-  
-  .contact-content ul li {
+}
+
+.contact-content ul li {
     font-size: 1rem;
     color: #444;
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
-  }
-  
-  .contact-content ul li::before {
+}
+
+.contact-content ul li::before {
     content: '•';
     color: var(--main-color);
     font-size: 1.4rem;
     margin-right: 0.5rem;
-  }
-  .icon{
+}
+
+.icon {
     margin-right: 10px;
-  }
-  .contact-content .contactButton {
+}
+
+.contact-content .contactButton {
     background-color: var(--main-color);
     color: var(--text-light);
     border: none;
@@ -97,11 +105,11 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .contact-content .contactButton:hover {
+}
+
+.contact-content .contactButton:hover {
     background-color: var(--btn-orange);
-  }
+}
 
 
 /* loading Page */
@@ -199,7 +207,7 @@
     transition: 0.5s;
     pointer-events: none;
     z-index: 3;
-    
+
     background: var(--text-light);
     border-radius: 50%;
 }

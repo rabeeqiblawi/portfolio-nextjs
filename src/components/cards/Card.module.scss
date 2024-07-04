@@ -182,7 +182,8 @@
 }
 
 .team:hover {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
+    cursor: pointer;
 
     .content .title {
         color: var(--btn-orange);
