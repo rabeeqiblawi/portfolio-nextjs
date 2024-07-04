@@ -1,4 +1,5 @@
 import { action } from "mobx";
+import { notFound } from "next/navigation";
 
 export const config = {
     content: {
@@ -12,6 +13,7 @@ export const config = {
             highlightedHeadlineWords: ["Visions", "Experiences"],
             breakLineAfter:["Visions", "Immersive"],
         },
+        notFoundURL: "/notFound.png",
 
         projects: {
             isHidden: false, 
