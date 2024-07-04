@@ -1,8 +1,7 @@
 const links = [
   { path: '/projects', title: 'Projects' },
   { path: '/blog', title: 'Blog' },
-  // { path: '/services', title: 'Services' },
-  { path: '/#solution', title: 'Solution' },
+  { path: '/solutions', title: 'Solutions' },
   // { path: '/contact', title: 'Contact' },
   { path: '/#contact', title: 'Contact' },
 ];
