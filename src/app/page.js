@@ -4,9 +4,10 @@ import Card from '@/components/cards/Card';
 import { config as websiteInformation } from '@/config'
 
 export default function Home() {
-  const filteredProjects = websiteInformation.content.projects.filter(project => project.visibleHome);
-  const filteredSolutions = websiteInformation.content.solutions.filter(project => project.visibleHome);
-  const filteredTeam = websiteInformation.content.team.filter(project => project.visibleHome);
+  const filteredProjects = websiteInformation.content.projects.filter(project => project.visibleHome && !project.isHidden);
+  const filteredSolutions = websiteInformation.content.solutions.filter(project => project.visibleHome && !project.isHidden);
+  const teamSectionShow = !websiteInformation.content.team.isHidden;
+  const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
 
   return (
     <div className={styles.container}>
@@ -57,20 +58,24 @@ export default function Home() {
               />
             ))}
           </div>
+          
+          {teamSectionShow && (
+            <>
+              <h2 className={styles.headers}>Meet the <span>Team</span></h2>
 
-          <h2 className={styles.headers}>Meet the <span>Team</span></h2>
-
-          <div className={styles.cardContainer}>
-            {filteredTeam.map(project => (
-              <Card
-                key={project.title}
-                imageUrl={project.imageUrl}
-                title={project.title}
-                description={project.description}
-                cssClassName="team"
-              />
-            ))}
-          </div>
+              <div className={styles.cardContainer}>
+                {filteredTeam.map(project => (
+                  <Card
+                    key={project.title}
+                    imageUrl={project.imageUrl}
+                    title={project.title}
+                    description={project.description}
+                    cssClassName="team"
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
