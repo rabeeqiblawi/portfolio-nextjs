@@ -15,9 +15,9 @@ const ArticleCard = ({ title, intro, content, lastUpdatedDate, thumbnail }) => {
                     <div className="article-card-content">
                         <p>{intro}</p>
                     </div>
+                    <p className="article-card-footer-update-info">Last Updated: {lastUpdatedDate}</p>
                 </section>
                 <div className="article-card-footer">
-                    <p className="article-card-footer-update-info">Last Updated: {lastUpdatedDate}</p>
                     <Link href={`/blog/${encodeURIComponent(content)}`} className="article-card-footer-read-more">
                         continue reading...
                     </Link>
