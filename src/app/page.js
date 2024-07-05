@@ -63,7 +63,7 @@ export default function Home() {
                   />
                 ))}
               </div>
-              <div className={styles.showMoreContaner}>
+              <div className={styles.showMoreContainer}>
                 <button onClick={showMore}>
                   {!showMoreProjects ? "Show More Projects" : "Show Less Projects"}
                 </button>

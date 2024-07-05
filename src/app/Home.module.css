@@ -39,14 +39,23 @@
     /* width: 100%; */
     margin: 20px auto;
     overflow: hidden;
-    transition: max-height 2s ease;
-  }
+    transition: max-height 1s ease;
+}
 
 
-.showMoreContaner button{
-    padding: 7px;
-    border-radius: 5px;
-    background-color: var(--btn-blue-1);
+.showMoreContainer button {
+    padding: 15px 25px;
+    border-radius: 15px;
+    margin: 30px auto;
+    border:1px solid var(--btn-orange);
+    font-size: 16px;
+    background-color: var(--btn-orange);
     color: var(--text-light);
     cursor: pointer;
-  }
+    transition: 0.2s;
+}
+
+.showMoreContainer button:hover {
+    background: transparent;
+    color: var(--btn-orange);
+}
