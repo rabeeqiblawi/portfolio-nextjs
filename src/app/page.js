@@ -10,6 +10,7 @@ import Contact from '@/components/contact/Contact'
 import TeamMemberCard from '@/components/cards/TeamMemberCard'
 import { useEffect, useState } from 'react';
 
+import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 
 export default function Home() {
   const filteredProjects = websiteInformation.content.projects.data.filter(project => project.visibleHome && !project.isHidden);
@@ -24,17 +25,17 @@ export default function Home() {
   const [maxHeight, setMaxHeight] = useState('420px'); // Initial max-height
 
   useEffect(() => {
-    if (showMoreProjects){
+    if (showMoreProjects) {
       const numProjects = filteredProjects.length;
       const itemHeight = 420; // Height of each item with gap 400 + 20
       const totalHeight = numProjects * (itemHeight);
       setMaxHeight(`${totalHeight}px`);
     }
-    else{
-      const totalHeight= '420';
+    else {
+      const totalHeight = '420';
       setMaxHeight(`${totalHeight}px`);
     }
-  }, [showMoreProjects]); 
+  }, [showMoreProjects]);
 
   const showMore = () => {
     setShowMoreProjects(!showMoreProjects);
@@ -46,30 +47,31 @@ export default function Home() {
         <MainSection />
 
         {projectSectionShow && (
-            <>
-              <h2 id='projects' className={styles.headers}>Our <span>Projects</span></h2>
-              <div
-                // className="responsiveContainer"
-                className={styles.responsiveContainer}
-                style={{ maxHeight: maxHeight }}
-              >
-                {filteredProjects.map(project => (
-                  <ProjectCard
-                    key={project.title}
-                    imageUrl={project.imageUrl}
-                    title={project.title}
-                    description={project.description}
-                    actionText={project.actionText}
-                  />
-                ))}
-              </div>
-              <div className={styles.showMoreContainer}>
-                <button onClick={showMore}>
-                  {!showMoreProjects ? "Show More Projects" : "Show Less Projects"}
-                </button>
-              </div>
-            </>
-          )}
+          <>
+            <h2 id='projects' className={styles.headers}>Our <span>Projects</span></h2>
+            <div
+              // className="responsiveContainer"
+              className={styles.responsiveContainer}
+              style={{ maxHeight: maxHeight }}
+            >
+              {filteredProjects.map(project => (
+                <ProjectCard
+                  key={project.title}
+                  imageUrl={project.imageUrl}
+                  title={project.title}
+                  description={project.description}
+                  actionText={project.actionText}
+                />
+              ))}
+            </div>
+            <div className={styles.showMoreContainer}>
+              <button onClick={showMore}>
+                {!showMoreProjects ? "Show More Projects" : "Show Less Projects"}
+                {!showMoreProjects ? <span><FiPlusCircle /></span> : <span><FiMinusCircle /></span>}
+              </button>
+            </div>
+          </>
+        )}
 
         {solutionsSectionShow && (
           <>
@@ -95,7 +97,7 @@ export default function Home() {
             <Contact />
           </>
         )}
-        
+
         {teamSectionShow && (
           <>
             <h2 className={styles.headers}>Meet the <span>Team</span></h2>
