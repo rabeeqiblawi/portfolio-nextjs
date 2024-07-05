@@ -1,5 +1,5 @@
 import styles from './projects.module.scss'
-import Card from '@/components/cards/Card';
+import ProjectCard from '@/components/cards/ProjectCard';
 import { config as websiteInformation } from '@/config'
 
 const Projects = () => {
@@ -10,7 +10,7 @@ const Projects = () => {
             <h2 id='project' className={styles["container-headers"]}>Our <span>Projects</span></h2>
             <div className={styles["container-cards"]}>
                 {filteredProjects.map(project => (
-                    <Card
+                    <ProjectCard
                     key={project.title}
                     imageUrl={project.imageUrl}
                     title={project.title}

@@ -1,5 +1,5 @@
-import styles from './solution.module.scss'
-import Card from '@/components/cards/Card';
+import styles from './solutions.module.scss'
+import InfoCard from '@/components/cards/InfoCard';
 import { config as websiteInformation } from '@/config'
 
 const Projects = () => {
@@ -11,7 +11,7 @@ const Projects = () => {
 
             <div className={styles["container-cards"]}>
             {filteredSolutions.map(project => (
-                <Card
+                <InfoCard
                 key={project.title}
                 icon={project.icon}
                 title={project.title}

@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/navigation/navbar/Navbar";
 import Sidebar from "@/components/navigation/sidebar/Sidebar";
 import Footer from "@/components/footer/Footer";
+import WhatsAppIcon from "@/components/whatapp/WhatsAppIcon";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <Sidebar />
         {children}
+        <WhatsAppIcon />
         <Footer />
       </body>
     </html>

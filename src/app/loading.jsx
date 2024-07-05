@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from './Home.module.css'
+import styles from "./globals.css";
 import { config as websiteInformation } from '@/config'
 
 const Loading = () => {
