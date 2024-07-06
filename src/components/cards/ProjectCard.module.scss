@@ -8,6 +8,7 @@
     box-shadow: 1px 1px 10px #00000030;
     transition: 0.6s;
     width: 80%;
+    max-height: 400px;
 
     &:first-child {
         margin-top: 0px;
@@ -17,7 +18,7 @@
         border-radius: 15px;
         // margin-left: 10px;
         width: 600px;
-        // object-fit: contain;
+        object-fit: cover;
     }
 
     .content {
