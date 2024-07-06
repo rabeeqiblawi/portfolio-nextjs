@@ -22,17 +22,17 @@ export default function Home() {
   const contactSectionShow = !websiteInformation.contact.isHidden;
 
   const [showMoreProjects, setShowMoreProjects] = useState(false);
-  const [maxHeight, setMaxHeight] = useState('420px'); // Initial max-height
+  const [maxHeight, setMaxHeight] = useState('500px'); // Initial max-height
 
   useEffect(() => {
     if (showMoreProjects) {
       const numProjects = filteredProjects.length;
-      const itemHeight = 420; // Height of each item with gap 400 + 20
+      const itemHeight = 500; // Height of each item with gap 400 + 20
       const totalHeight = numProjects * (itemHeight);
       setMaxHeight(`${totalHeight}px`);
     }
     else {
-      const totalHeight = '420';
+      const totalHeight = '500';
       setMaxHeight(`${totalHeight}px`);
     }
   }, [showMoreProjects]);
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
             <div className={styles.showMoreContainer}>
               <button onClick={showMore}>
-                {!showMoreProjects ? "Show More Projects" : "Show Less Projects"}
+                {!showMoreProjects ? "Show more Projects" : "Show less Projects"}
                 {!showMoreProjects ? <span><FiPlusCircle /></span> : <span><FiMinusCircle /></span>}
               </button>
             </div>

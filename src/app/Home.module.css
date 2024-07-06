@@ -44,16 +44,16 @@
 
 
 .showMoreContainer button {
-    display:flex;
+    display: flex;
     align-items: center;
     padding: 15px 35px;
     padding-left: 20px;
     border-radius: 15px;
     margin: 30px auto;
-    border:1px solid var(--btn-orange);
+    border:1px solid transparent;
     font-size: 16px;
-    background-color: var(--btn-orange);
-    color: var(--text-light);
+    background: none;
+    color: var(--text-dark);
     cursor: pointer;
     transition: 0.2s;
     position: relative;
@@ -69,4 +69,5 @@
 .showMoreContainer button:hover {
     background: transparent;
     color: var(--btn-orange);
+    border:1px solid var(--btn-orange);
 }
