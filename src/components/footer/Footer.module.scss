@@ -1,8 +1,6 @@
 .container {
     width: 100%;
     margin-top: 80px;
-    // padding: 60px 0px;
-    // padding-bottom: 30px;
     text-align: center;
     background: var(--text-dark);
     color: var(--text-light);
@@ -71,6 +69,14 @@
                 font-size: 14px; 
                 color: var(--text-light);
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .container {
+        .content {
+            width: 968px;
         }
     }
 }

@@ -50,7 +50,7 @@
     padding-left: 20px;
     border-radius: 15px;
     margin: 30px auto;
-    border:1px solid transparent;
+    border: 1px solid transparent;
     font-size: 16px;
     background: none;
     color: var(--text-dark);
@@ -69,5 +69,23 @@
 .showMoreContainer button:hover {
     background: transparent;
     color: var(--btn-orange);
-    border:1px solid var(--btn-orange);
+    border: 1px solid var(--btn-orange);
+}
+
+@media screen and (max-width: 1280px) {
+    .responsiveContainer {
+        width: 986px;
+    }
+
+    .cardContainer {
+        width: 986px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .title .headers {
+        font-size: 36px;
+    }
 }

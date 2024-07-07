@@ -59,18 +59,23 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
-    .mainSectionCol h1 {
-        font-size: 62px;
-    }
-}
+@media screen and (max-width: 1280px) {
+    .container {
+        width: 968px;
 
-@media screen and (max-width: 768px) {
-    .mainSectionEmptyCol {
-        display: none;
-    }
+        .content {
+            height: 600px;
 
-    .mainSectionCol h1 {
-        font-size: 56px;
+            .textContainer {
+                h1 {
+                    font-size: 36px;
+                }
+
+                a {
+                    padding: 10px;
+                    width: 30%;
+                }
+            }
+        }
     }
 }
