@@ -28,14 +28,18 @@ const Sidebar = ({ logo, children }) => {
                 </button>
             </div>
             <nav className="sidebar-nav">
-                {children}
-                <ul className="sidebar-links">
-                    {links.map(link => (
-                        <li key={link.path} className="sidebar-link-item">
-                            <a href={link.path} className="sidebar-link">{link.title}</a>
-                        </li>
-                    ))}
-                </ul>
+                <div className="sidebar-injected-content">
+                    {children}
+                </div>
+                {children ? null : (
+                    <ul className="sidebar-links">
+                        {links.map(link => (
+                            <li key={link.path} className="sidebar-link-item">
+                                <a href={link.path} className="sidebar-link">{link.title}</a>
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </nav>
         </div>
     ) : null;
