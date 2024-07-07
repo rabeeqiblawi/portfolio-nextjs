@@ -27,26 +27,34 @@ export default function Home() {
   const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
   const contactSectionShow = !websiteInformation.contact.isHidden;
 
+useEffect(() => {
+  let filteredProjects = [];
 
-  useEffect(() => {
-    if (showAllProjects) {
-      setFilteredProjects (
-        websiteInformation.content.projects.data
-          .filter(project => (!project.isHidden))
-          .sort((a, b) => { // Sort by visibleHome
-            if (a.visibleHome && !b.visibleHome) return -1;
-            if (!a.visibleHome && b.visibleHome) return 1;
-          })
-      );
-    }
-    else {
-      setFilteredProjects (websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
-      console.log("showAllProjects flase")
-    }
-    setNumProjects( filteredProjects.length);
-    setTotalHeight((numProjects) * projectHeight);
+  if (showAllProjects) {
+    filteredProjects = websiteInformation.content.projects.data
+      .filter(project => !project.isHidden)
+      .sort((a, b) => {
+        // Sort by visibleHome
+        if (a.visibleHome && !b.visibleHome) return -1;
+        if (!a.visibleHome && b.visibleHome) return 1;
+        return 0;
+      });
+  } else {
+    filteredProjects = websiteInformation.content.projects.data
+      .filter(project => project.visibleHome && !project.isHidden);
+  }
 
-  }, [showAllProjects, filteredProjects]);
+  // Calculate numProjects and totalHeight based on filteredProjects
+  const numProjects = filteredProjects.length;
+  const totalHeight = numProjects * projectHeight;
+
+  // Update state
+  setFilteredProjects(filteredProjects);
+  setNumProjects(numProjects);
+  setTotalHeight(totalHeight);
+
+}, [showAllProjects, websiteInformation.content.projects.data]); // Dependencies should include showAllProjects and data used to filter
+
 
   const showMore = () => {
     setshowAllProjects(!showAllProjects);
