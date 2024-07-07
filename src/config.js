@@ -47,7 +47,7 @@ export const config = {
                 },
                 {
                     imageUrl: "/notFound.png",
-                    title: "test",
+                    title: "test (not at Home page)",
                     description: "TEST",
                     actionLink: "",
                     actionText: "View Project",

@@ -15,7 +15,6 @@ const Sidebar = ({ logo, children }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(NavigationStore.isSidebarOpen);
 
     useEffect(() => {
-        console.log(NavigationStore.isSidebarOpen);
         setIsSidebarOpen(NavigationStore.isSidebarOpen);
     }, [NavigationStore.isSidebarOpen]);
 
