@@ -75,7 +75,7 @@ const MarkDownView = observer(({ rawMdText }) => {
             <a href={`#${heading}`}>{heading}</a>
           </li>
         ))}
-        </Scrollspy>}>
+      </Scrollspy>}>
       </Sidebar>
 
       <div className='markdown-view-navigation'>

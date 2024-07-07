@@ -16,7 +16,7 @@ export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
   const [showAllProjects, setshowAllProjects] = useState(false);
   const projectHeight = 460; // Height of each item with gap 400 + 40
-  const [numProjects, setNumProjects] = useState(filteredProjects.length); 
+  const [numProjects, setNumProjects] = useState(filteredProjects.length);
   const [totalHeight, setTotalHeight] = useState(numProjects * projectHeight);
 
 
@@ -27,33 +27,33 @@ export default function Home() {
   const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
   const contactSectionShow = !websiteInformation.contact.isHidden;
 
-useEffect(() => {
-  let filteredProjects = [];
+  useEffect(() => {
+    let filteredProjects = [];
 
-  if (showAllProjects) {
-    filteredProjects = websiteInformation.content.projects.data
-      .filter(project => !project.isHidden)
-      .sort((a, b) => {
-        // Sort by visibleHome
-        if (a.visibleHome && !b.visibleHome) return -1;
-        if (!a.visibleHome && b.visibleHome) return 1;
-        return 0;
-      });
-  } else {
-    filteredProjects = websiteInformation.content.projects.data
-      .filter(project => project.visibleHome && !project.isHidden);
-  }
+    if (showAllProjects) {
+      filteredProjects = websiteInformation.content.projects.data
+        .filter(project => !project.isHidden)
+        .sort((a, b) => {
+          // Sort by visibleHome
+          if (a.visibleHome && !b.visibleHome) return -1;
+          if (!a.visibleHome && b.visibleHome) return 1;
+          return 0;
+        });
+    } else {
+      filteredProjects = websiteInformation.content.projects.data
+        .filter(project => project.visibleHome && !project.isHidden);
+    }
 
-  // Calculate numProjects and totalHeight based on filteredProjects
-  const numProjects = filteredProjects.length;
-  const totalHeight = numProjects * projectHeight;
+    // Calculate numProjects and totalHeight based on filteredProjects
+    const numProjects = filteredProjects.length;
+    const totalHeight = numProjects * projectHeight;
 
-  // Update state
-  setFilteredProjects(filteredProjects);
-  setNumProjects(numProjects);
-  setTotalHeight(totalHeight);
+    // Update state
+    setFilteredProjects(filteredProjects);
+    setNumProjects(numProjects);
+    setTotalHeight(totalHeight);
 
-}, [showAllProjects, websiteInformation.content.projects.data]); // Dependencies should include showAllProjects and data used to filter
+  }, [showAllProjects, websiteInformation.content.projects.data]); // Dependencies should include showAllProjects and data used to filter
 
 
   const showMore = () => {
@@ -70,7 +70,8 @@ useEffect(() => {
             <h2 id='projects' className={styles.headers}>Our <span>Projects</span></h2>
             <div
               className={styles.responsiveContainer}
-              style={{ maxHeight: "1840px", maxHeight: totalHeight
+              style={{
+                maxHeight: "1840px", maxHeight: totalHeight
               }}
             >
               {filteredProjects.map(project => (

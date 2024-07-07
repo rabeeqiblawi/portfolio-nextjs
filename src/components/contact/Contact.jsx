@@ -17,14 +17,14 @@ const Contact = () => {
                 <p>{websiteInformation.contact.description}</p>
                 <ul>
                     {filteredContact.map(([key, value]) => (
-                    <div key={key} className={styles.colBoxContent}>
-                        <li>
-                            {key === 'phone' && <FaPhone className={styles.icon} />}
-                            {key === 'mail' && <FaEnvelope className={styles.icon} />}
-                            {key === 'location' && <FaMapMarker className={styles.icon} />}
-                            {value}
-                        </li>
-                    </div>
+                        <div key={key} className={styles.colBoxContent}>
+                            <li>
+                                {key === 'phone' && <FaPhone className={styles.icon} />}
+                                {key === 'mail' && <FaEnvelope className={styles.icon} />}
+                                {key === 'location' && <FaMapMarker className={styles.icon} />}
+                                {value}
+                            </li>
+                        </div>
                     ))}
                 </ul>
                 <p>Feel free to reach out to us through any of these channels. Our team is ready to assist you!</p>

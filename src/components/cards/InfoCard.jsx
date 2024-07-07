@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './InfoCard.module.scss';
 import Image from 'next/image';
 
-const InfoCard = ({icon, title, description, actionText }) => {
+const InfoCard = ({ icon, title, description, actionText }) => {
     return (
         <div className={styles.container}>
             <div className={styles.content}>
