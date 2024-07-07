@@ -25,7 +25,6 @@ const ParallaxGallery = ({ images }) => {
 
     return (
         <div 
-         
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >

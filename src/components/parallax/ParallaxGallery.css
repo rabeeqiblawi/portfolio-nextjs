@@ -1,8 +1,8 @@
 .parallax-container {
     height: 60vh;
-    width: 20vw;
+    width: 25vw;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     perspective: 1px;
   }
   

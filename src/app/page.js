@@ -13,7 +13,13 @@ import { useEffect, useState } from 'react';
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 
 export default function Home() {
-  const filteredProjects = websiteInformation.content.projects.data.filter(project => project.visibleHome && !project.isHidden);
+  const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
+  const [showAllProjects, setshowAllProjects] = useState(false);
+  const projectHeight = 460; // Height of each item with gap 400 + 40
+  const [numProjects, setNumProjects] = useState(filteredProjects.length); 
+  const [totalHeight, setTotalHeight] = useState(numProjects * projectHeight);
+
+
   const projectSectionShow = !websiteInformation.content.projects.isHidden;
   const filteredSolutions = websiteInformation.content.solutions.data.filter(project => project.visibleHome && !project.isHidden);
   const solutionsSectionShow = !websiteInformation.content.solutions.isHidden;
@@ -21,24 +27,29 @@ export default function Home() {
   const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
   const contactSectionShow = !websiteInformation.contact.isHidden;
 
-  const [showMoreProjects, setShowMoreProjects] = useState(false);
-  const [maxHeight, setMaxHeight] = useState('500px'); // Initial max-height
 
   useEffect(() => {
-    if (showMoreProjects) {
-      const numProjects = filteredProjects.length;
-      const itemHeight = 500; // Height of each item with gap 400 + 20
-      const totalHeight = numProjects * (itemHeight);
-      setMaxHeight(`${totalHeight}px`);
+    if (showAllProjects) {
+      setFilteredProjects (
+        websiteInformation.content.projects.data
+          .filter(project => (!project.isHidden))
+          .sort((a, b) => { // Sort by visibleHome
+            if (a.visibleHome && !b.visibleHome) return -1;
+            if (!a.visibleHome && b.visibleHome) return 1;
+          })
+      );
     }
     else {
-      const totalHeight = '500';
-      setMaxHeight(`${totalHeight}px`);
+      setFilteredProjects (websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
+      console.log("showAllProjects flase")
     }
-  }, [showMoreProjects]);
+    setNumProjects( filteredProjects.length);
+    setTotalHeight((numProjects) * projectHeight);
+
+  }, [showAllProjects, filteredProjects]);
 
   const showMore = () => {
-    setShowMoreProjects(!showMoreProjects);
+    setshowAllProjects(!showAllProjects);
   }
 
   return (
@@ -50,9 +61,9 @@ export default function Home() {
           <>
             <h2 id='projects' className={styles.headers}>Our <span>Projects</span></h2>
             <div
-              // className="responsiveContainer"
               className={styles.responsiveContainer}
-              style={{ maxHeight: maxHeight }}
+              style={{ maxHeight: "1840px", maxHeight: totalHeight
+              }}
             >
               {filteredProjects.map(project => (
                 <ProjectCard
@@ -61,13 +72,14 @@ export default function Home() {
                   title={project.title}
                   description={project.description}
                   actionText={project.actionText}
+                  actionLink={project.actionLink}
                 />
               ))}
             </div>
-            <div className={styles.showMoreContainer}>
+            <div className={styles.showMoreContainer} >
               <button onClick={showMore}>
-                {!showMoreProjects ? "Show more Projects" : "Show less Projects"}
-                {!showMoreProjects ? <span><FiPlusCircle /></span> : <span><FiMinusCircle /></span>}
+                {!showAllProjects ? "Show All Projects" : "Show less Projects"}
+                {!showAllProjects ? <span><FiPlusCircle /></span> : <span><FiMinusCircle /></span>}
               </button>
             </div>
           </>

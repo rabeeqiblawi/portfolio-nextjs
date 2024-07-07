@@ -31,7 +31,7 @@ export const config = {
                     imageUrl: "/MirageXR.jpg",
                     title: "MirageXR",
                     description: `Prototype Arduino or ESP projects faster with MirageXR. Our platform connects virtual electronics to your physical hardware, enabling quick testing and development. Using our AR/XR app and Arduino/ESP library, control virtual components with your real board—no extra parts needed.Bridge the physical and virtual worlds in your projects!`,
-                    actionLink: "www.miragexr.com",
+                    actionLink: "https://www.miragexr.com",
                     actionText: "Join Waitlist",
                     isHidden: false,
                     visibleHome: true
@@ -44,6 +44,15 @@ export const config = {
                     actionText: "Order Now",
                     isHidden: false,
                     visibleHome: true
+                },
+                {
+                    imageUrl: "/notFound.png",
+                    title: "test",
+                    description: "TEST",
+                    actionLink: "",
+                    actionText: "View Project",
+                    isHidden: false,
+                    visibleHome: false
                 },
             ]
         },
