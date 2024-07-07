@@ -16,6 +16,14 @@
     align-items: center;
     padding: 1rem;
     border-bottom: 1px solid #e9ecef;
+
+    .logoLink{
+      text-decoration: none;
+        color: var(--text-dark);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
   }
 
   &-logo {

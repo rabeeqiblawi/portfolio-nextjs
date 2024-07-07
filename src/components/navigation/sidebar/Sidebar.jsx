@@ -6,6 +6,10 @@ import NavigationStore from '../NavigationStore.js';
 import { IoMdClose } from "react-icons/io";
 import links from '../links.js';
 import './Sidebar.scss';
+import Image from 'next/image.js';
+import Link from 'next/link.js';
+import { config as websiteInformation } from '@/config'
+
 
 const Sidebar = ({ logo, children }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(NavigationStore.isSidebarOpen);
@@ -26,6 +30,12 @@ const Sidebar = ({ logo, children }) => {
                 <button className="sidebar-close" onClick={handleSidebarClose}>
                     <IoMdClose />
                 </button>
+                <div className="logoDiv">
+                    <Link href="/" className="logoLink">
+                        <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className="imgLogo"/>
+                        <h1>{websiteInformation.content.brand}</h1>
+                    </Link>
+                </div>
             </div>
             <nav className="sidebar-nav">
                 <div className="sidebar-injected-content">

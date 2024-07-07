@@ -118,9 +118,14 @@
 }
 
 @media screen and (max-width: 768px) {
+    .logoLink {
+        display: none;
+    }
     .burgerMenu {
         display: block;
         cursor: pointer;
+        transform: scale(1.5);
+        margin: 33px;
     }
     .links {
         display: none;
