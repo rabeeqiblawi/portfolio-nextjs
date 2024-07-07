@@ -11,37 +11,37 @@ export const config = {
             heroImageUrl: "",
             heroActionText: "",
             highlightedHeadlineWords: ["Visions", "Experiences"],
-            breakLineAfter:["Visions", "Immersive"],
+            breakLineAfter: ["Visions", "Immersive"],
         },
         notFoundURL: "/notFound.png",
 
         projects: {
-            isHidden: false, 
-            data:[
+            isHidden: false,
+            data: [
                 {
                     imageUrl: "/bookifai.jpeg",
                     title: "Bookifai",
-                    description: "Like reading novels? Ever wanted to connect with the characters in the book and chat with them? Bookifai allows you to just do that! You upload your favorite book and we extract the characters and create a chatbots for you to interact with them using discord!",
-                    actionLink: "",
-                    actionText: "View Project",
+                    description: "Ever wanted to connect with the characters in your favourite book and chat with them!? Bookifai allows you to just do that! You upload your favorite book and we extract the characters and create a chatbots for you to interact with them using discord!",
+                    actionLink: "mailto:rabeekiblawi@gmail.com",
+                    actionText: "Request a Demo",
                     isHidden: false,
                     visibleHome: true
                 },
                 {
-                    imageUrl: "/websiteProjectPlaceholder2.png",
-                    title: "Sweetkick",
-                    description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
-                    actionLink: "",
-                    actionText: "View Project",
+                    imageUrl: "/MirageXR.jpg",
+                    title: "MirageXR",
+                    description: `Prototype Arduino or ESP projects faster with MirageXR. Our platform connects virtual electronics to your physical hardware, enabling quick testing and development. Using our AR/XR app and Arduino/ESP library, control virtual components with your real board—no extra parts needed.Bridge the physical and virtual worlds in your projects!`,
+                    actionLink: "www.miragexr.com",
+                    actionText: "Join Waitlist",
                     isHidden: false,
                     visibleHome: true
                 },
                 {
                     imageUrl: "/websiteProjectPlaceholder3.png",
-                    title: "iPortfolio",
-                    description: "iPortfolio is a modern personal CV and portfolio HTML template. It's creative, minimal and clean design. iPortfolio can be used for many purposes starting from minimal portfolios, freelancers, graphic designers, illustrators, photographers and many others to showcase their work, projects, products, clients and offer services.",
+                    title: "OpenAI Wrapper for Unity",
+                    description: "Our package allows you to easily integrate OpenAI's Models into your Unity projects. We provided a simple API that allows you to interact and chain multiple models together to create complex AI behaviors in your game or simulation. Our package is designed to be easy to use and flexible to fit your needs. We also provide a set of example scenes to get you started quickly!",
                     actionLink: "",
-                    actionText: "View Project",
+                    actionText: "Order Now",
                     isHidden: false,
                     visibleHome: true
                 },
@@ -49,8 +49,8 @@ export const config = {
         },
         services: [],
         solutions: {
-            isHidden: false, 
-            data:[
+            isHidden: false,
+            data: [
                 {
                     imageUrl: "",
                     icon: "/icons/bot.svg",
@@ -196,7 +196,7 @@ export const config = {
         buttonText: "Send us a message",
         isHidden: false,
 
-        contactInfo:{
+        contactInfo: {
             phone: "+961 23 567 890",
             mail: "care@choroid.com",
             location: "123 Street Name, Saida, Lebanon",
