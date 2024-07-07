@@ -9,8 +9,21 @@
     line-height: 1.6;
     margin-top: var(--navigationBarHight);
 
-    &-navigation{
-        // margin-top: ;
+    
+    &-navigation a {
+        display: block;
+        padding: 0.5rem;
+        color: #495057;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: #e9ecef;
+            color: #212529;
+        }
+    }
+    li {
+        list-style-type: none;
     }
     &-content {
         font-family: Arial, sans-serif;
