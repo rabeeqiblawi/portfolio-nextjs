@@ -42,17 +42,15 @@ const Navbar = observer(() => {
             <div className={`${styles.topPageVectors} ${!visible ? styles.hidden : styles.show}`}>
                 <img src="/topPageVectors.png" alt="" />
             </div>
-            <div className={styles.overlayColor}></div>
+            {/* <div className={styles.overlayColor}></div> */}
             <div className={`${styles.container} ${!visible ? styles.hidden : ''} ${prevScrollPos > 175 ? styles.show : ''}`}>
-                <div className={styles.burgerMenu} onClick={() => { NavigationStore.openSidebar()}} >
+                <div className={styles.burgerMenu} onClick={() => { NavigationStore.openSidebar() }} >
                     <FaBars />
                 </div>
-                <div className={styles.logoDiv}>
-                    <Link href="/" className={styles.logoLink}>
-                        <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className={styles.imgLogo}/>
-                        <h1>{websiteInformation.content.brand}</h1>
-                    </Link>
-                </div>
+                <Link href="/" className={styles.logoLink}>
+                    <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className={styles.imgLogo} />
+                    <h1>{websiteInformation.content.brand}</h1>
+                </Link>
                 <div className={styles.links}>
                     {links.map((link) => (
                         <Link href={link.path} key={link.path}>{link.title}</Link>

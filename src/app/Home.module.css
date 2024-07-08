@@ -34,6 +34,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 1200px;
+    gap: 30px;
 }
 
 .responsiveContainer {
@@ -131,5 +132,13 @@
 @media screen and (max-width: 842px) {
     .cardContainer {
         width: 640px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .teamContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
     }
 }
