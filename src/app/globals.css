@@ -159,7 +159,6 @@ body {
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background-color: var(--text-light);
 }
 
 .notFoundBox {
