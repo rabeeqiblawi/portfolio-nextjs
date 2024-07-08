@@ -64,3 +64,13 @@
         }
     }
 }
+
+@media screen and  (max-width: 430px) {
+    .container {
+        .content {
+            .description {
+                width: 100%;
+            }
+        }
+    }
+}
