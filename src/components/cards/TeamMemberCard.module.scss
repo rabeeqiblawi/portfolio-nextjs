@@ -45,3 +45,9 @@
         color: var(--btn-orange);
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 25%;
+    }
+}

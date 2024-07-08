@@ -143,7 +143,7 @@ export default function Home() {
           <>
             <h2 className={styles.headers}>Meet the <span>Team</span></h2>
 
-            <div className={styles.cardContainer}>
+            <div className={styles.teamContainer}>
               {filteredTeam.map(project => (
                 <TeamMemberCard
                   key={project.title}

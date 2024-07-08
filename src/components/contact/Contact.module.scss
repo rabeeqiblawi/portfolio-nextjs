@@ -84,3 +84,9 @@
         width: 986px;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 768px;
+    }
+}
