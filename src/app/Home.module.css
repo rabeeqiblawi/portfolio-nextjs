@@ -140,5 +140,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
+        width: 640px;
+    }
+
+    .responsiveContainer {
+        width: 100%;
     }
 }
