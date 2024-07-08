@@ -8,7 +8,7 @@ export const config = {
         hero: {
             heroHeadLine: "Transforming Visions Into Immersive Experiences",
             heroSubHeadLine: "",
-            parallaxEffect: false,
+            parallaxEffect: true,
             heroImageUrl: "/heroImage.png",
             parallaxImages:[
                 'parallax-effect/0.png',
@@ -65,7 +65,39 @@ export const config = {
                 },
             ]
         },
-        services: [],
+        services: {
+            isHidden: false,
+            data: [
+                {
+                    title: "Digital Marketing Strategy",
+                    description: "Craft tailored digital marketing strategies that align with your business goals. From SEO optimization to social media campaigns, we enhance your online presence and drive engagement.",
+                    icon: "/icons/vrIcon.svg",
+                    actionLink: "https://example.com/digital-marketing-services",
+                    actionText: "Learn More",
+                    isHidden: false,
+                    visibleHome: true
+                },
+                {
+                    title: "Cloud Computing Solutions",
+                    description: "Implement scalable cloud solutions tailored to your organization's needs. Whether migrating to the cloud or optimizing existing infrastructure, we ensure reliability and cost-efficiency.",
+                    icon: "/icons/vrIcon.svg",
+                    actionLink: "https://example.com/cloud-computing-services",
+                    actionText: "Get Started",
+                    isHidden: false,
+                    visibleHome: true
+                },
+                {
+                    title: "Virtual Reality Development",
+                    description: "Create immersive VR experiences that captivate your audience. Our team specializes in VR application development, from concept to deployment on leading platforms.",
+                    icon: "/icons/vrIcon.svg",
+                    actionLink: "https://example.com/vr-development-services",
+                    actionText: "See Our Work",
+                    isHidden: false,
+                    visibleHome: true
+                }
+            ]
+        },
+        
         solutions: {
             isHidden: false,
             data: [

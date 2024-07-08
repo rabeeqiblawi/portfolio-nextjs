@@ -24,6 +24,8 @@ export default function Home() {
   const filteredSolutions = websiteInformation.content.solutions.data.filter(project => project.visibleHome && !project.isHidden);
   const solutionsSectionShow = !websiteInformation.content.solutions.isHidden;
   const teamSectionShow = !websiteInformation.content.team.isHidden;
+  const filteredServices = websiteInformation.content.services.data.filter(service => service.visibleHome && !service.isHidden);
+  const servicesSectionShow = !websiteInformation.content.services.isHidden;
   const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
   const contactSectionShow = !websiteInformation.contact.isHidden;
 
@@ -106,6 +108,24 @@ export default function Home() {
                   title={project.title}
                   description={project.description}
                   actionText={project.actionText}
+                />
+              ))}
+            </div>
+          </>
+        )}
+
+        {servicesSectionShow && (
+          <>
+            <h2 id='services' className={styles.headers} >Our <span>Services</span></h2>
+
+            <div className={styles.cardContainer}>
+              {filteredServices.map(service => (
+                <InfoCard
+                  key={service.title}
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                  actionText={service.actionText}
                 />
               ))}
             </div>
