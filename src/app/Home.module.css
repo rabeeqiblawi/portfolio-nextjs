@@ -146,4 +146,15 @@
     .responsiveContainer {
         width: 100%;
     }
+
+    .cardContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .teamContainer {
+        grid-template-columns: 1fr;
+        width: 70%;
+    }
 }
