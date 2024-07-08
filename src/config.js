@@ -8,7 +8,16 @@ export const config = {
         hero: {
             heroHeadLine: "Transforming Visions Into Immersive Experiences",
             heroSubHeadLine: "",
-            heroImageUrl: "",
+            parallaxEffect: false,
+            heroImageUrl: "/heroImage.png",
+            parallaxImages:[
+                'parallax-effect/0.png',
+                'parallax-effect/1.png',
+                'parallax-effect/2.png',
+                'parallax-effect/3.png',
+                'parallax-effect/4.png',
+            ],
+
             heroActionText: "",
             highlightedHeadlineWords: ["Visions", "Experiences"],
             breakLineAfter: ["Visions", "Immersive"],

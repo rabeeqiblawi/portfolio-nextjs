@@ -3,16 +3,10 @@ import styles from './MainSection.module.scss'
 import Link from 'next/link';
 import { config } from '@/config';
 import ParallaxGallery from '../parallax/ParallaxGallery';
+import Image from 'next/image';
 
 const MainSection = () => {
-    const { heroHeadLine, highlightedHeadlineWords, breakLineAfter } = config.content.hero;
-    const images = [
-        'parallax-effect/0.png',
-        'parallax-effect/1.png',
-        'parallax-effect/2.png',
-        'parallax-effect/3.png',
-        'parallax-effect/4.png',
-    ];
+    const { heroHeadLine, highlightedHeadlineWords, breakLineAfter, heroImageUrl, parallaxEffect, parallaxImages } = config.content.hero;
 
     const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
     const containerRef = useRef(null);
@@ -55,7 +49,8 @@ const MainSection = () => {
                     <Link href="/services">Services</Link>
                 </div>
                 <div className={styles.imgContainer}>
-                    <ParallaxGallery images={images} hoverPosition={hoverPosition} />
+                    {parallaxEffect && <ParallaxGallery images={parallaxImages} hoverPosition={hoverPosition} /> }
+                    {!parallaxEffect && <Image src={heroImageUrl} width={400} height={450}/>}
                 </div>
             </div>
         </div>
