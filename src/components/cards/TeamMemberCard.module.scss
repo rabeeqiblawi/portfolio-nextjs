@@ -6,7 +6,7 @@
     width: 18%;
     padding: 15px;
     border-radius: 15px;
-    // position: relative;
+    position: relative;
 
     &:hover {
         background: #f8f8f8;
@@ -14,12 +14,30 @@
         cursor: pointer;
     }
 
-    .photo {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin-bottom: 15px;
-        object-fit: cover;
+    .imgContainer {
+        position: relative;
+
+        .premiumIcon {
+            position: absolute;
+            font-size: 20px;
+            left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--text-dark);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            color: gold;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
     }
 
     .content {

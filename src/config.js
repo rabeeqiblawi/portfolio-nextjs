@@ -150,7 +150,8 @@ export const config = {
                     imageUrl: "/team/rabeeQablawi.png",
                     title: "Rabee Qiblawi",
                     description: "Founder | Software engineer specializing in front-end development and UI/UX design.",
-                    visibleHome: true
+                    visibleHome: true,
+                    isPremium: true
                 },
                 {
                     imageUrl: "/team/karloRajić.png",

@@ -150,6 +150,7 @@ export default function Home() {
                   imageUrl={project.imageUrl}
                   name={project.title}
                   description={project.description}
+                  isPremium={project.isPremium}
                 />
               ))}
             </div>
