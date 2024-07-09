@@ -10,6 +10,8 @@
 
     &:hover {
         background: #f8f8f8;
+        transform: translateY(-10px);
+        cursor: pointer;
     }
 
     .photo {
@@ -37,15 +39,6 @@
     }
 }
 
-.container:hover {
-    transform: translateY(-10px);
-    cursor: pointer;
-
-    .content .name {
-        color: var(--btn-orange);
-    }
-}
-
 @media screen and (max-width: 1024px) {
     .container {
         width: 25%;
@@ -56,16 +49,27 @@
     .container {
         width: 100%;
 
+        &:hover {
+            background: transparent;
+            transform: translateY(0px);
+            cursor: default;
+        }
+
         .content {
+            .name {
+                font-size: 18px;
+            }
+
             .description {
                 width: 60%;
                 margin: 0px auto;
+                font-size: 16px;
             }
         }
     }
 }
 
-@media screen and  (max-width: 430px) {
+@media screen and (max-width: 430px) {
     .container {
         .content {
             .description {

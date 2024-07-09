@@ -132,13 +132,17 @@
         width: 100%;
         justify-content: space-between;
         gap: 20px;
+        position: sticky;
+        top:0;
+        background: #f6f6f6;
 
         .logoLink{
             margin-right: 15px;
             transform: scale(0.8);
+            gap: 0px;
 
             img{
-                transform: scale(0.9); 
+                transform: scale(0.7); 
             }
         }
 
@@ -148,18 +152,6 @@
 
         .links {
             display: none;
-        }
-    }
-}
-@media screen and (max-width: 768px) {
-    .container{
-
-        .logoLink{
-            gap: 0;
-
-            img{
-                transform: scale(0.7); 
-            }
         }
     }
 }
