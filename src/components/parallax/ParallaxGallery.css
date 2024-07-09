@@ -22,3 +22,18 @@
     height: 100%;
     object-fit: cover;
   }
+
+@media screen and (max-width: 1280px) {
+    .parallax-container {
+        height: 90vh;
+        width: 90%;
+        overflow: visible;
+        padding:40vh 0; 
+    }
+}
+
+@media screen and (max-width: 1024px) {
+  .parallax-container {
+      height: 80vh; 
+  }
+}
