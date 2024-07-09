@@ -15,7 +15,7 @@ import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
   const [showAllProjects, setshowAllProjects] = useState(false);
-  const projectHeight = 460; // Height of each item with gap 400 + 40
+  const [projectHeight, setProjectHeight] = useState(460); // Height of each item with gap 400 + 40
   const [numProjects, setNumProjects] = useState(filteredProjects.length);
   const [totalHeight, setTotalHeight] = useState(numProjects * projectHeight);
 

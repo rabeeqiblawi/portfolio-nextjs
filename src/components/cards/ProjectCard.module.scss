@@ -75,13 +75,16 @@
     .container {
         flex-direction: column;
         width: 90%;
+        max-height: fit-content;
 
         .media {
-            width: 200px;
+            // width: 200px;
+            width: 94%;
         }
-
-        .content div {
+        
+        .content {
             text-align: center;
+            height: 250px;
             
             .previewWebsiteButton {
                 position: relative;

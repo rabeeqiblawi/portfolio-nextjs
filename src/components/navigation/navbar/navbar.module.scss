@@ -103,6 +103,8 @@
 .burgerMenu {
     display: none;
     font-size: 24px;
+    position: relative;
+    left: 50px;
     // position: absolute;
     // top: 0;
     // left: 0;
@@ -126,8 +128,19 @@
 
 @media screen and (max-width: 768px) {
     .container {
-        padding: 20px 40px;
+        padding: 20px 0px;
         width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+
+        .logoLink{
+            margin-right: 30px;
+            transform: scale(0.8);
+
+            img{
+                transform: scale(0.9); 
+            }
+        }
 
         .burgerMenu {
             display: block;
