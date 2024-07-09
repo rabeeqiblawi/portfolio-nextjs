@@ -65,6 +65,16 @@
 
 @media screen and (max-width: 1280px) {
     .container {
+        max-height: none;
+
+        .content {
+            height: auto;
+
+            .previewWebsiteButton {
+                position: relative;
+                margin-top: 20px;
+            }
+        }
         .media {
             width: 350px;
         }
