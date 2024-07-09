@@ -21,6 +21,11 @@
     color: var(--btn-orange);
 }
 
+/* .middlePageVectors img {
+    position: absolute;
+    left: 0;
+} */
+
 .cardContainer {
     width: 1200px;
     display: flex;

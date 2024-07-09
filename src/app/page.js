@@ -69,6 +69,9 @@ export default function Home() {
 
         {projectSectionShow && (
           <>
+            {/* <div className={styles.middlePageVectors}>
+              <img src="/middlePageVectors.png" alt="" />
+            </div> */}
             <h2 id='projects' className={styles.headers}>Our <span>Projects</span></h2>
             <div
               className={styles.responsiveContainer}
