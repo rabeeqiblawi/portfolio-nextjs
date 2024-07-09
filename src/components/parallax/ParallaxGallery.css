@@ -1,6 +1,6 @@
 .parallax-container {
-    height: 60vh;
-    width: 25vw;
+    height: 80vh;
+    width: 33vw;
     overflow-x: hidden;
     overflow-y: hidden;
     perspective: 1px;
@@ -25,15 +25,16 @@
 
 @media screen and (max-width: 1280px) {
     .parallax-container {
-        height: 90vh;
-        width: 90%;
+      height: 75vh;
+      width: 90%;
         overflow: visible;
-        padding:40vh 0; 
+        padding:30vh 0; 
     }
 }
 
 @media screen and (max-width: 1024px) {
   .parallax-container {
-      height: 80vh; 
+    height: 67vh;
+    padding: 30vh;
   }
 }
