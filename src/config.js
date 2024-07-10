@@ -259,7 +259,6 @@ export const config = {
             phone: "+961  71971287",
             mail: "choroid.studios@gmail.com",
             location: "Saida, LB",
-            whatsappMessage:"Hello there! I would like to get in touch with you.",
         }
     },
     featureFlags: {
