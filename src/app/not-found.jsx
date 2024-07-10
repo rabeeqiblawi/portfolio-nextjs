@@ -16,7 +16,7 @@ const NotFound = () => {
             </div>
             <h2 className="notFoundSubtitle">Page Not Found</h2>
             <p className="notFoundText">
-                Oops! The page you're looking for doesn't exist or has been moved.
+                Oops! The page you&apos;re looking for doesn&apos;t exist or has been moved.
             </p>
             <Link href="/" className="notFoundButton">
                 Go Back Home

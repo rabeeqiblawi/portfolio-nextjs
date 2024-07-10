@@ -46,7 +46,7 @@ export const config = {
                     visibleHome: true
                 },
                 {
-                    imageUrl: "/websiteProjectPlaceholder3.png",
+                    imageUrl: "/unity_chatgpt.png",
                     title: "OpenAI Wrapper for Unity",
                     description: "Our package allows you to easily integrate OpenAI's Models into your Unity projects. We provided a simple API that allows you to interact and chain multiple models together to create complex AI behaviors in your game or simulation. Our package is designed to be easy to use and flexible to fit your needs. We also provide a set of example scenes to get you started quickly!",
                     actionLink: "",
