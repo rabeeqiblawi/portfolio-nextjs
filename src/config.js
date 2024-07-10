@@ -257,7 +257,7 @@ export const config = {
         isHidden: false,
 
         contactInfo: {
-            phone: "+961 71971297",
+            phone: "+961  71971287",
             mail: "choroid.studios@gmail.com",
             location: "Saida, LB",
         }
