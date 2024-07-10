@@ -4,6 +4,7 @@ import styles from './Footer.module.scss'
 import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaMapMarker, FaPhone, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa'
 import Image from 'next/image'
 import { config as websiteInformation } from '@/config'
+import WhatsAppIcon from '../whatapp/WhatsAppIcon'
 
 const Footer = () => {
   const filteredSocialLinks = Object.entries(websiteInformation.socialLinks).filter(([key, value]) => value !== '');
@@ -11,6 +12,7 @@ const Footer = () => {
 
   return (
     <div className={styles.container}>
+      <WhatsAppIcon />
       <div className={styles.content}>
         <div className={styles.topContent}>
 

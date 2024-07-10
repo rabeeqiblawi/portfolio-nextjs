@@ -2,8 +2,9 @@
     width: 100%;
     margin-top: 80px;
     text-align: center;
-    background: var(--text-dark);
-    color: var(--text-light);
+    background: var(--text-light);
+    color: var(--text-dark);
+    position: relative;
 
     .content {
         width: 1200px;
@@ -47,7 +48,7 @@
                     }
 
                     a {
-                        color: var(--text-light);
+                        color: inherit;
                         font-size: 14px;
                         text-decoration: none;
 
