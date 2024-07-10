@@ -1,5 +1,4 @@
 import MarkDownView from '@/components/blog/MarkDownView';
-export const config = { runtime: 'edge' };
 
 async function fetchMarkdown(fileUrl) {
   try {
