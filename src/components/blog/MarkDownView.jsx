@@ -8,7 +8,7 @@ import Scrollspy from 'react-scrollspy';
 import NavigationStore from '../navigation/NavigationStore';
 import './MarkdownView.scss';
 import { observer } from 'mobx-react';
-import Sidebar from '@/components/navigation/sidebar/Sidebar'
+import Sidebar from '@/components/navigation/sidebar/Sidebar';
 
 const components = {
   code({ node, inline, className, children, ...props }) {
@@ -18,9 +18,10 @@ const components = {
         style={oneLight}
         language={match[1]}
         PreTag="div"
-        children={String(children).replace(/\n$/, '')}
         {...props}
-      />
+      >
+        {String(children).replace(/\n$/, '')}
+      </SyntaxHighlighter>
     ) : (
       <code className={className} {...props}>
         {children}
@@ -36,14 +37,12 @@ const components = {
   },
 };
 
-const MarkDownView = observer(({ rawMdText }) => {
+const MarkDownView = observer(({ rawMdText, children }) => {
   const [markdown, setMarkdown] = useState('');
   const [headings, setHeadings] = useState([]);
   const [sidebarVisible, setSidebarVisible] = useState(false);
   const timerRef = useRef(null);
   const prevScrollPosRef = useRef(0);
-
-
 
   useEffect(() => {
     setMarkdown(rawMdText);
@@ -58,24 +57,22 @@ const MarkDownView = observer(({ rawMdText }) => {
     NavigationStore.isSidebarOpen = false;
   }, [rawMdText]);
 
-
-
   const toggleSidebar = () => {
     setSidebarVisible(!sidebarVisible);
     NavigationStore.isSidebarOpen = !sidebarVisible;
-
   };
 
   return (
     <div className="markdown-view">
-      {/* <div className={`markdown-view-sidebar ${sidebarVisible ? 'visible' : 'hidden'}`}> */}
-      <Sidebar children={<Scrollspy items={headings} currentClassName="is-current">
-        {headings.map((heading, index) => (
-          <li key={index}>
-            <a href={`#${heading}`}>{heading}</a>
-          </li>
-        ))}
-      </Scrollspy>}>
+      <Sidebar>
+        <Scrollspy items={headings} currentClassName="is-current">
+          {headings.map((heading, index) => (
+            <li key={index}>
+              <a href={`#${heading}`}>{heading}</a>
+            </li>
+          ))}
+        </Scrollspy>
+        {children}
       </Sidebar>
 
       <div className='markdown-view-navigation'>
@@ -90,7 +87,7 @@ const MarkDownView = observer(({ rawMdText }) => {
 
       <div className="markdown-view">
         <div className="markdown-view-content">
-          <ReactMarkdown components={components} children={markdown} />
+          <ReactMarkdown components={components}>{markdown}</ReactMarkdown>
         </div>
       </div>
     </div>

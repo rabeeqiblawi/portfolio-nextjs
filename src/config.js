@@ -43,16 +43,25 @@ export const config = {
                     actionLink: "https://www.miragexr.com",
                     actionText: "Join Waitlist",
                     isHidden: false,
+                    visibleHome: false
+                },
+                {
+                    imageUrl: "/unity_chatgpt.png",
+                    title: "OpenAI Wrapper for Unity",
+                    description: "Our Unity package allows you to easily integrate OpenAI's Models into your Unity projects. We provided a simple API that allows you to interact and chain multiple models together to create complex AI behaviors in your game or simulation. Our package is designed to be easy to use and flexible to fit your needs. We also provide a set of example scenes to get you started quickly!",
+                    actionLink: "https://github.com/rabeeqiblawi/Choroid-Input-System",
+                    actionText: "View On Github",
+                    isHidden: false,
                     visibleHome: true
                 },
                 {
-                    imageUrl: "/websiteProjectPlaceholder3.png",
-                    title: "OpenAI Wrapper for Unity",
-                    description: "Our package allows you to easily integrate OpenAI's Models into your Unity projects. We provided a simple API that allows you to interact and chain multiple models together to create complex AI behaviors in your game or simulation. Our package is designed to be easy to use and flexible to fit your needs. We also provide a set of example scenes to get you started quickly!",
-                    actionLink: "",
-                    actionText: "Order Now",
+                    imageUrl: "/cfwm2.jpg",
+                    title: "Come Fly With Me (Protoype)",
+                    description: `Ever wanted to fly like a bird? Come Fly With Me is a VR experience that allows you to do just that! You can fly and explore the world from a bird's eye view!`,
+                    actionLink: "https://www.youtube.com/watch?v=oted6xBF0z8",
+                    actionText: "More",
                     isHidden: false,
-                    visibleHome: true
+                    visibleHome: false
                 },
                 {
                     imageUrl: "/notFound.png",
@@ -60,13 +69,13 @@ export const config = {
                     description: "TEST",
                     actionLink: "",
                     actionText: "View Project",
-                    isHidden: false,
+                    isHidden: true,
                     visibleHome: false
                 },
             ]
         },
         services: {
-            isHidden: false,
+            isHidden: true,
             data: [
                 {
                     title: "Digital Marketing Strategy",
@@ -233,10 +242,10 @@ export const config = {
     },
     socialLinks: {
         github: "",
-        linkedin: "",
-        twitter: "https://twitter.com",
+        linkedin: "https://www.linkedin.com/company/103909655/",
+        twitter: "",
         facebook: "https://facebook.com",
-        instagram: "https://instgram.com",
+        instagram: "",
         tiktok: "",
         youtube: "",
     },
@@ -248,12 +257,13 @@ export const config = {
         isHidden: false,
 
         contactInfo: {
-            phone: "+961 23 567 890",
-            mail: "care@choroid.com",
-            location: "123 Street Name, Saida, Lebanon",
+            phone: "+961 71971297",
+            mail: "choroid.studios@gmail.com",
+            location: "Saida, LB",
         }
     },
     featureFlags: {
+
     },
     apiEndpoints: {
         githubBlogs: "/api/github-blogs",
