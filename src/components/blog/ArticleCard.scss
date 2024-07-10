@@ -1,5 +1,6 @@
 .article-card {
     display: flex;
+    flex-wrap: wrap;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -7,7 +8,8 @@
     margin: 20px 0;
     padding: 40px;
     transition: box-shadow 0.3s ease;
-    width: 100%;
+    min-width: 320px;
+    width: 90%;
 
     &:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -65,5 +67,17 @@
                 text-decoration: none;
             }
         }
+    }
+
+    @media screen and (max-width: 768px) {
+        align-items: center;
+        gap: 5px;
+        // justify-content: center;
+        
+        &-thumbnail {
+            margin:auto;
+            margin-bottom: 20px;
+        }
+        
     }
 }
