@@ -30,11 +30,11 @@ export default function Home() {
   const contactSectionShow = !websiteInformation.contact.isHidden;
 
   const handleCardHeightChange = (height) => {
-    if (height > projectHeight){
+    if (height > projectHeight) {
       setProjectHeight(height);
     }
   };
-  
+
   useEffect(() => {
     let filteredProjects = [];
 
@@ -54,7 +54,7 @@ export default function Home() {
 
     // Calculate numProjects and totalHeight based on filteredProjects
     const numProjects = filteredProjects.length;
-    const totalHeight = numProjects * (projectHeight +60); // height + gap
+    const totalHeight = numProjects * (projectHeight + 60); // height + gap
 
     // Update state
     setFilteredProjects(filteredProjects);
@@ -145,13 +145,6 @@ export default function Home() {
           </>
         )}
 
-        {contactSectionShow && (
-          <>
-            <h2 id='contact' className={styles.headers}>Contact <span>Us</span></h2>
-            <Contact />
-          </>
-        )}
-
         {teamSectionShow && (
           <>
             <h2 className={styles.headers}>Meet the <span>Team</span></h2>
@@ -167,6 +160,13 @@ export default function Home() {
                 />
               ))}
             </div>
+          </>
+        )}
+
+        {contactSectionShow && (
+          <>
+            <h2 id='contact' className={styles.headers}>Contact <span>Us</span></h2>
+            <Contact />
           </>
         )}
       </div>
