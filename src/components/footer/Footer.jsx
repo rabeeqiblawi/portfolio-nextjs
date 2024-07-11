@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from './Footer.module.scss'
-import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaMapMarker, FaPhone, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhone, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa'
 import Image from 'next/image'
 import { config as websiteInformation } from '@/config'
 import WhatsAppIcon from '../whatapp/WhatsAppIcon'
@@ -27,7 +27,7 @@ const Footer = () => {
               <div key={key} className={styles.colBoxContent}>
                 {key === 'phone' && <FaPhone className={styles.icon} />}
                 {key === 'mail' && <FaEnvelope className={styles.icon} />}
-                {key === 'location' && <FaMapMarker className={styles.icon} />}
+                {key === 'location' && <FaMapMarkerAlt className={styles.icon} />}
                 <span>{value}</span>
               </div>
             ))}

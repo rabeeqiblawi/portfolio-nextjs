@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Contact.module.scss';
 import Image from 'next/image';
 import { config as websiteInformation } from '@/config'
-import { FaEnvelope, FaMapMarker, FaPhone } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
 
 const Contact = () => {
@@ -21,7 +21,7 @@ const Contact = () => {
                             <li>
                                 {key === 'phone' && <FaPhone className={styles.icon} />}
                                 {key === 'mail' && <FaEnvelope className={styles.icon} />}
-                                {key === 'location' && <FaMapMarker className={styles.icon} />}
+                                {key === 'location' && <FaMapMarkerAlt className={styles.icon} />}
                                 {value}
                             </li>
                         </div>
