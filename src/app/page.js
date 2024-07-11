@@ -15,7 +15,7 @@ import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
   const [showAllProjects, setshowAllProjects] = useState(false);
-  const [projectHeight, setProjectHeight] = useState(460); // Height of each item with gap 400 + 40
+  const [projectHeight, setProjectHeight] = useState(460); // project height 
   const [numProjects, setNumProjects] = useState(filteredProjects.length);
   const [totalHeight, setTotalHeight] = useState(numProjects * projectHeight);
 
@@ -29,6 +29,13 @@ export default function Home() {
   const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
   const contactSectionShow = !websiteInformation.contact.isHidden;
 
+  const handleCardHeightChange = (height) => {
+    console.log(height);
+    if (height > projectHeight){
+      setProjectHeight(height);
+    }
+  };
+  
   useEffect(() => {
     let filteredProjects = [];
 
@@ -48,14 +55,14 @@ export default function Home() {
 
     // Calculate numProjects and totalHeight based on filteredProjects
     const numProjects = filteredProjects.length;
-    const totalHeight = numProjects * projectHeight;
+    const totalHeight = numProjects * (projectHeight +60); // height + gap
 
     // Update state
     setFilteredProjects(filteredProjects);
     setNumProjects(numProjects);
     setTotalHeight(totalHeight);
 
-  }, [showAllProjects, websiteInformation.content.projects.data]); // Dependencies should include showAllProjects and data used to filter
+  }, [showAllProjects, websiteInformation.content.projects.data, projectHeight]); // Dependencies should include showAllProjects and data used to filter
 
 
   const showMore = () => {
@@ -79,7 +86,7 @@ export default function Home() {
             <div
               className={styles.responsiveContainer}
               style={{
-                maxHeight: "1840px", maxHeight: totalHeight
+                maxHeight: totalHeight
               }}
             >
               {filteredProjects.map(project => (
@@ -90,6 +97,7 @@ export default function Home() {
                   description={project.description}
                   actionText={project.actionText}
                   actionLink={project.actionLink}
+                  onHeightChange={handleCardHeightChange}
                 />
               ))}
             </div>
