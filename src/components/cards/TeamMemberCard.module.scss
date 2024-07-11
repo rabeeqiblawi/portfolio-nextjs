@@ -73,6 +73,13 @@
             cursor: default;
         }
 
+        .imgContainer {
+            .photo {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
         .content {
             .name {
                 font-size: 18px;
