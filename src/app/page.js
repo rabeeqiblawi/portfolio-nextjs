@@ -60,6 +60,9 @@ export default function Home() {
 
   const showMore = () => {
     setshowAllProjects(!showAllProjects);
+    if (showAllProjects) {
+      window.location.href = "#projects";
+    }
   }
 
   return (
