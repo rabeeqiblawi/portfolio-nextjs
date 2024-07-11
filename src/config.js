@@ -22,6 +22,7 @@ export const config = {
             highlightedHeadlineWords: ["Visions", "Experiences"],
             breakLineAfter: ["Visions", "Immersive"],
         },
+        topPageVectors: "/topPageVectors.png",
         notFoundURL: "/notFound.png",
 
         projects: {

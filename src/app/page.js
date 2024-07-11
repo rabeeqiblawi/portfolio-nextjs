@@ -30,7 +30,6 @@ export default function Home() {
   const contactSectionShow = !websiteInformation.contact.isHidden;
 
   const handleCardHeightChange = (height) => {
-    console.log(height);
     if (height > projectHeight){
       setProjectHeight(height);
     }

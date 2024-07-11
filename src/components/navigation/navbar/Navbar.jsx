@@ -40,7 +40,7 @@ const Navbar = observer(() => {
     return (
         <>
             <div className={`${styles.topPageVectors} ${!visible ? styles.hidden : styles.show}`}>
-                <img src="/topPageVectors.png" alt="" />
+                <img src={websiteInformation.content.topPageVectors} alt="" />
             </div>
             {/* <div className={styles.overlayColor}></div> */}
             <div className={`${styles.container} ${!visible ? styles.hidden : ''} ${prevScrollPos > 175 ? styles.show : ''}`}>
