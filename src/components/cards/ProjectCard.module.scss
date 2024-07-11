@@ -46,12 +46,15 @@
             border: 1px solid var(--main-color);
             background: var(--main-color);
             font-weight: bold;
+            width: 100%;
             border-radius: 15px;
             cursor: pointer;
             font-size: 16px;
             color: var(--text-light);
             margin-bottom: 20px;
+            margin-right: 20px;
             position: absolute;
+            right: 0;
             bottom: 0;
             transition: all 0.2s;
 
@@ -75,6 +78,7 @@
                 margin-top: 20px;
             }
         }
+
         .media {
             width: 350px;
         }
@@ -87,17 +91,17 @@
         width: 90%;
         gap: 0;
         max-height: fit-content;
-        
+
         .media {
             // width: 200px;
             width: 95%;
             margin: 8px 2.5%;
         }
-        
+
         .content {
             text-align: center;
             height: fit-content;
-            
+
             .previewWebsiteButton {
                 position: relative;
                 margin-bottom: 0px;
@@ -106,4 +110,3 @@
         }
     }
 }
-
