@@ -24,8 +24,10 @@ const MainSection = () => {
         const container = containerRef.current;
         if (container) {
             container.addEventListener('mousemove', handleMouseMove);
+            container.addEventListener('touchstart', handleMouseMove);
             return () => {
                 container.removeEventListener('mousemove', handleMouseMove);
+                container.addEventListener('touchend', handleMouseMove);
             };
         }
     }, []);
