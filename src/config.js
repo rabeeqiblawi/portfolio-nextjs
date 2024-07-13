@@ -51,6 +51,15 @@ export const config = {
             ]
         },
 
+        about: {
+            isHidden: false,
+            title: "ABOUT US",
+            description: "We are a team of dedicated professionals committed to delivering innovative web solutions. Our expertise spans across various technologies, ensuring we can meet diverse client needs.",
+            buttonText: "CONTACT NOW",
+            buttonAction: "#contact",
+            aboutImageURL: "/aboutUs.png",
+        },
+
         projects: {
             isHidden: false,
             data: [
@@ -232,6 +241,60 @@ export const config = {
                 }
             ]
         },
+        customerReviews:{
+            isHidden: false,
+            customer: [
+                {
+                    imageUrl: "/team/diaa.jpg",
+                    title: "Diaa AbuAllul",
+                    description: "Creative designer with a passion for user experience and visual storytelling.",
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/team/hadiDiab.png",
+                    title: "Hadi Diab",
+                    description: "Software engineer specializing in front-end development and UI/UX design.",
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/team/karloRajić.png",
+                    title: "Karlo Rajić",
+                    description: "Frontend developer/Game Level Designer, Karlo has the taste for the best designs",
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/team/mohammadOthman.png",
+                    title: "Mohmmad Othman",
+                    description: "Graphic Designer, experienced in creating visual concepts and storytelling.",
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/team/shahbaz.jpg",
+                    title: "Mohammad Shahbaz",
+                    description: "Backend, Mobile, and every thing low level. Currently focusing on mobile and reverse engineering",
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/team/mustafaZabet.png",
+                    title: "Mustafa Zabet",
+                    description: "Software engineer specializing in front-end development and UI/UX design.",
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "",
+                    title: "Nizar Sadek",
+                    description: "Creative Game level artist/designer experienced in creating high quality optimized game props and enviroments.",
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/team/rabeeQablawi.png",
+                    title: "Rabee Qiblawi",
+                    description: "Software Engineer, devoted for problem solving, with epxerience in Game Development and XR.",
+                    visibleHome: true,
+                    isPremium: false
+                }
+            ]
+        }
     },
     screenSizes: {
         small: 768,

@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 import CoreFeatures from '@/components/CoreFeatures/CoreFeatures';
+import About from '@/components/about/about';
 
 export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
@@ -77,6 +78,8 @@ export default function Home() {
       <div className={styles.title}>
         <MainSection />
         <CoreFeatures />
+        <About />
+
 
         {projectSectionShow && (
           <>
