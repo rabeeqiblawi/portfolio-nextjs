@@ -52,7 +52,7 @@ const MainSection = () => {
                 </div>
                 <div className={styles.imgContainer}>
                     {parallaxEffect && <ParallaxGallery images={parallaxImages} hoverPosition={hoverPosition} /> }
-                    {!parallaxEffect && <Image src={heroImageUrl} width={400} height={450}/>}
+                    {!parallaxEffect && <Image src={heroImageUrl} width={600} height={450}/>}
                 </div>
             </div>
         </div>

@@ -3,13 +3,13 @@ import { notFound } from "next/navigation";
 
 export const config = {
     content: {
-        logo: "/choroidLogo.png",
-        brand: "Choroid",
+        logo: "/CyberWeavers.png",
+        brand: "Cyber Weavers",
         hero: {
-            heroHeadLine: "Transforming Visions Into Immersive Experiences",
+            heroHeadLine: "Empowering Websites for Engaging User Experiences",
             heroSubHeadLine: "",
-            parallaxEffect: true,
-            heroImageUrl: "/heroImage.png",
+            parallaxEffect: false,
+            heroImageUrl: "/heroImage2.png",
             parallaxImages:[
                 'parallax-effect/0.png',
                 'parallax-effect/1.png',
@@ -19,10 +19,10 @@ export const config = {
             ],
 
             heroActionText: "",
-            highlightedHeadlineWords: ["Visions", "Experiences"],
-            breakLineAfter: ["Visions", "Immersive"],
+            highlightedHeadlineWords: ["Websites", "Engaging", "Experiences"],
+            breakLineAfter: ["Websites", "User"],
         },
-        topPageVectors: "/topPageVectors.png",
+        topPageVectors: "https://img.freepik.com/free-photo/water-background_23-2147795245.jpg?t=st=1720859708~exp=1720863308~hmac=99c4fa2d5d8e8936aeb4d90e8bbf33d90352c957703dbb0a9581eb928014cf8b&w=740",
         notFoundURL: "/notFound.png",
 
         projects: {
