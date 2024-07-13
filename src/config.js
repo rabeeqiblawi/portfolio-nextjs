@@ -260,57 +260,56 @@ export const config = {
                 { name: "Instagram", logo: "/logos/instagram.svg" }
             ]
         },
-        customerReviews:{
+        customerReviews: {
             isHidden: false,
             customer: [
                 {
                     imageUrl: "/team/diaa.jpg",
-                    title: "Diaa AbuAllul",
-                    description: "Creative designer with a passion for user experience and visual storytelling.",
-                    visibleHome: true
+                    title: "Stella Larson",
+                    description: "The store experience was fantastic! The user interface was intuitive and visually appealing. I loved how easy it was to find and purchase products.",
+                    visibleHome: true,
                 },
                 {
                     imageUrl: "/team/hadiDiab.png",
-                    title: "Hadi Diab",
-                    description: "Software engineer specializing in front-end development and UI/UX design.",
+                    title: "Nick Jhonson",
+                    description: "Incredible attention to detail in the store design. The checkout process was smooth, and I appreciated the personalized product recommendations.",
                     visibleHome: true
                 },
                 {
                     imageUrl: "/team/karloRajić.png",
-                    title: "Karlo Rajić",
-                    description: "Frontend developer/Game Level Designer, Karlo has the taste for the best designs",
+                    title: "Glen Davies",
+                    description: "The store's layout and functionality exceeded my expectations. It was a pleasure to shop here, and I'll definitely be returning!",
                     visibleHome: true
                 },
                 {
                     imageUrl: "/team/mohammadOthman.png",
-                    title: "Mohmmad Othman",
-                    description: "Graphic Designer, experienced in creating visual concepts and storytelling.",
+                    title: "Emily Thompson",
+                    description: "I was impressed by how well the store worked on both my desktop and mobile. The consistent experience across devices made shopping a breeze.",
                     visibleHome: true
                 },
                 {
                     imageUrl: "/team/shahbaz.jpg",
-                    title: "Mohammad Shahbaz",
-                    description: "Backend, Mobile, and every thing low level. Currently focusing on mobile and reverse engineering",
+                    title: "Michael Chen",
+                    description: "The store's performance was outstanding. Pages loaded quickly, and the search function helped me find exactly what I needed in no time.",
                     visibleHome: true
                 },
                 {
                     imageUrl: "/team/mustafaZabet.png",
-                    title: "Mustafa Zabet",
-                    description: "Software engineer specializing in front-end development and UI/UX design.",
-                    visibleHome: true
-                },
-                {
-                    imageUrl: "",
-                    title: "Nizar Sadek",
-                    description: "Creative Game level artist/designer experienced in creating high quality optimized game props and enviroments.",
+                    title: "Sarah Johnson",
+                    description: "I love how the store showcases products. The high-quality images and detailed descriptions made me confident in my purchases.",
                     visibleHome: true
                 },
                 {
                     imageUrl: "/team/rabeeQablawi.png",
-                    title: "Rabee Qiblawi",
-                    description: "Software Engineer, devoted for problem solving, with epxerience in Game Development and XR.",
-                    visibleHome: true,
-                    isPremium: false
+                    title: "Alex Rodriguez",
+                    description: "The customer service integration within the store is top-notch. I had a question, and the live chat feature provided instant, helpful assistance.",
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/team/rabeeQablawi.png",
+                    title: "Lisa Wong",
+                    description: "This store experience sets a new standard for online shopping. The seamless navigation and beautiful design made my shopping experience enjoyable and efficient.",
+                    visibleHome: true
                 }
             ]
         }
