@@ -26,6 +26,32 @@ export const config = {
         topPageVectors: "/topPageVectors.png",
         notFoundURL: "/notFound.png",
 
+        coreFeatures: {
+            isHidden: false,
+            data: [
+                {
+                    icon: "⚡",
+                    title: "Swift",
+                    description: "Blazing fast load times"
+                },
+                {
+                    icon: "📱",
+                    title: "Adaptive",
+                    description: "Seamless on all devices"
+                },
+                {
+                    icon: "🎨",
+                    title: "Sleek",
+                    description: "Modern, eye-catching designs"
+                },
+                {
+                    icon: "🛠️",
+                    title: "Flexible",
+                    description: "Easily customizable"
+                }
+            ]
+        },
+
         projects: {
             isHidden: false,
             data: [
