@@ -15,8 +15,10 @@ const CustomerReviews = () => {
                             <div className={styles.imageWrapper}>
                                 {review.imageUrl && <img src={review.imageUrl} alt={review.title} className={styles.avatar} />}
                             </div>
-                            <h3 className={styles.reviewTitle}>{review.title}</h3>
-                            <p className={styles.reviewDescription}>{review.description}</p>
+                            <div className={styles.textContainer}>
+                                <h3 className={styles.reviewTitle}>{review.title}</h3>
+                                <p className={styles.reviewDescription}>{review.description}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
