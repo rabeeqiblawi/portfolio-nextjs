@@ -1,4 +1,4 @@
-import styles from './clients.module.scss'
+import styles from './Clients.module.scss'
 import { config as websiteInformation } from '@/config'
 
 const Clients = () => {

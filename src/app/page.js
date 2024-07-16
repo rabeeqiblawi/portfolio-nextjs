@@ -13,8 +13,8 @@ import { useEffect, useState } from 'react';
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 import CoreFeatures from '@/components/CoreFeatures/CoreFeatures';
 import About from '@/components/about/about';
-import Clients from '@/components/clients/clients';
-import CustomerReviews from '@/components/customerReviews/customerReviews';
+import Testimonial from '@/components/testimonial/Testimonial';
+import Clients from '@/components/customerReviews/Clients';
 
 export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
@@ -177,8 +177,9 @@ export default function Home() {
           </>
         )}
 
+
         <Clients />
-        <CustomerReviews />
+        <Testimonial />
       </div>
     </div>
   );
