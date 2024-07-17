@@ -12,8 +12,12 @@
         
         .title {
             font-size: 2.5rem;
-            color: var(--btn-orange);
+            color: var(--text-dark);
             margin-bottom: 1rem;
+
+            span {
+                color: var(--btn-orange);
+            }
         }
         
         .description {

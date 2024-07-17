@@ -8,7 +8,7 @@ import ProjectCard from '@/components/cards/ProjectCard';
 import InfoCard from '@/components/cards/InfoCard';
 import Contact from '@/components/contact/Contact'
 import TeamMemberCard from '@/components/cards/TeamMemberCard'
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 import CoreFeatures from '@/components/CoreFeatures/CoreFeatures';
@@ -87,7 +87,16 @@ export default function Home() {
             {/* <div className={styles.middlePageVectors}>
               <img src="/middlePageVectors.png" alt="" />
             </div> */}
-            <h2 id='projects' className={styles.headers}>Our <span>Projects</span></h2>
+            <h2 id='projects' className={styles.headers}>
+                {websiteInformation.content.projects.mainTitle.split(' ').map((word, index) => (
+                    <React.Fragment key={index}>
+                        {websiteInformation.content.projects.mainTitleHighlightedWord.includes(word) ?
+                            <span>{word}</span>
+                            : ` ${word} `
+                        }
+                    </React.Fragment>
+                ))}
+            </h2>
             <div
               className={styles.responsiveContainer}
               style={{
@@ -117,8 +126,16 @@ export default function Home() {
 
         {solutionsSectionShow && (
           <>
-            <h2 id='solutions' className={styles.headers} >Our <span>Solutions</span></h2>
-
+            <h2 id='solutions' className={styles.headers}>
+                {websiteInformation.content.solutions.mainTitle.split(' ').map((word, index) => (
+                    <React.Fragment key={index}>
+                        {websiteInformation.content.solutions.mainTitleHighlightedWord.includes(word) ?
+                            <span>{word}</span>
+                            : ` ${word} `
+                        }
+                    </React.Fragment>
+                ))}
+            </h2>
             <div className={styles.cardContainer}>
               {filteredSolutions.map(project => (
                 <InfoCard
@@ -135,8 +152,16 @@ export default function Home() {
 
         {servicesSectionShow && (
           <>
-            <h2 id='services' className={styles.headers} >Our <span>Services</span></h2>
-
+            <h2 id='services' className={styles.headers}>
+                {websiteInformation.content.services.mainTitle.split(' ').map((word, index) => (
+                    <React.Fragment key={index}>
+                        {websiteInformation.content.services.mainTitleHighlightedWord.includes(word) ?
+                            <span>{word}</span>
+                            : ` ${word} `
+                        }
+                    </React.Fragment>
+                ))}
+            </h2>
             <div className={styles.cardContainer}>
               {filteredServices.map(service => (
                 <InfoCard
@@ -153,8 +178,16 @@ export default function Home() {
 
         {teamSectionShow && (
           <>
-            <h2 className={styles.headers}>Meet the <span>Team</span></h2>
-
+            <h2 className={styles.headers}>
+                {websiteInformation.content.team.mainTitle.split(' ').map((word, index) => (
+                    <React.Fragment key={index}>
+                        {websiteInformation.content.team.mainTitleHighlightedWord.includes(word) ?
+                            <span>{word}</span>
+                            : ` ${word} `
+                        }
+                    </React.Fragment>
+                ))}
+            </h2>
             <div className={styles.teamContainer}>
               {filteredTeam.map(project => (
                 <TeamMemberCard
@@ -171,7 +204,16 @@ export default function Home() {
 
         {contactSectionShow && (
           <>
-            <h2 id='contact' className={styles.headers}>Contact <span>Us</span></h2>
+            <h2 id='contact' className={styles.headers}>
+                {websiteInformation.contact.mainTitle.split(' ').map((word, index) => (
+                    <React.Fragment key={index}>
+                        {websiteInformation.contact.mainTitleHighlightedWord.includes(word) ?
+                            <span>{word}</span>
+                            : ` ${word} `
+                        }
+                    </React.Fragment>
+                ))}
+            </h2>
             <Contact />
           </>
         )}

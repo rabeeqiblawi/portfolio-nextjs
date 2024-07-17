@@ -27,7 +27,9 @@ export const config = {
         notFoundURL: "/notFound.png",
 
         coreFeatures: {
-            isHidden: true,
+            isHidden: false,
+            title:"Core Features",
+            highlightedWord: "Features",
             data: [
                 {
                     icon: "⚡",
@@ -51,18 +53,19 @@ export const config = {
                 }
             ]
         },
-
         about: {
             isHidden: true,
-            title: "ABOUT US",
+            mainTitle: "ABOUT US",
+            mainTitleHighlightedWord: "US",
             description: "We are a team of dedicated professionals committed to delivering innovative web solutions. Our expertise spans across various technologies, ensuring we can meet diverse client needs.",
             buttonText: "CONTACT NOW",
             buttonAction: "#contact",
             aboutImageURL: "/aboutUs.png",
         },
-
         projects: {
             isHidden: false,
+            mainTitle: "Our Projects",
+            mainTitleHighlightedWord: "Projects",
             data: [
                 {
                     imageUrl: "/bookifai.jpeg",
@@ -113,6 +116,8 @@ export const config = {
         },
         services: {
             isHidden: true,
+            mainTitle: "Our Services",
+            mainTitleHighlightedWord: "Services",
             data: [
                 {
                     title: "Digital Marketing Strategy",
@@ -142,10 +147,11 @@ export const config = {
                     visibleHome: true
                 }
             ]
-        },
-        
+        },  
         solutions: {
             isHidden: false,
+            mainTitle: "Our Solutions",
+            mainTitleHighlightedWord: "Solutions",
             data: [
                 {
                     imageUrl: "",
@@ -190,6 +196,8 @@ export const config = {
         },
         team: {
             isHidden: false,
+            mainTitle: "Meet the Team",
+            mainTitleHighlightedWord: "Team",
             members: [
                 {
                     imageUrl: "/team/diaa.jpg",
@@ -249,20 +257,50 @@ export const config = {
             buttonText: "Try our path",
             buttonAction: "",
             clientList: [
-                { name: "BBC", logo: "/logos/bbc.svg" },
-                { name: "The New York Times", logo: "/logos/nyt.svg" },
-                { name: "The Economist", logo: "/logos/economist.svg" },
-                { name: "Aston Martin", logo: "/logos/aston-martin.svg" },
-                { name: "Tesco", logo: "/logos/tesco.svg" },
-                { name: "Arsenal", logo: "/logos/arsenal.svg" },
-                { name: "London 2012", logo: "/logos/london-2012.svg" },
-                { name: "Mercedes-Benz", logo: "/logos/mercedes.svg" },
-                { name: "Google", logo: "/logos/google.svg" },
-                { name: "Instagram", logo: "/logos/instagram.svg" }
+                { 
+                    name: "BBC",
+                    logo: "/logos/bbc.svg"
+                },
+                { 
+                    name: "The New York Times",
+                    logo: "/logos/nyt.svg"
+                },
+                { 
+                    name: "The Economist",
+                    logo: "/logos/economist.svg"
+                },
+                { 
+                    name: "Aston Martin",
+                    logo: "/logos/aston-martin.svg"
+                },
+                { 
+                    name: "Tesco",
+                    logo: "/logos/tesco.svg"
+                },
+                { 
+                    name: "Arsenal",
+                    logo: "/logos/arsenal.svg"
+                },
+                { 
+                    name: "London 2012",
+                    logo: "/logos/london-2012.svg"
+                },
+                { 
+                    name: "Mercedes-Benz",
+                    logo: "/logos/mercedes.svg"
+                },
+                { 
+                    name: "Google",
+                    logo: "/logos/google.svg"
+                },
+                { 
+                    name: "Instagram",
+                    logo: "/logos/instagram.svg"
+                }
             ]
         },
         testimonial:{
-            isHidden: false,
+            isHidden: true,
             leftQuoteIconURL: "/icons/left-quote.svg",
             rightQuoteIconURL: "/icons/right-quote.svg",
             data :[
@@ -343,6 +381,8 @@ export const config = {
     },
     contact: {
         imageUrl: "/contactUs.png",
+        mainTitle: "Contact Us",
+        mainTitleHighlightedWord: "Us",
         title: "Get in Touch",
         description: "We're here to help and answer any question you might have. We look forward to hearing from you!",
         buttonText: "Send us a message",
