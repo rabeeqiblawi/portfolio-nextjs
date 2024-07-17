@@ -58,8 +58,8 @@
             padding: 2rem;
             margin-bottom: 1rem;
             flex: 1;
-            min-width: 320px;
-            max-width: 320px;
+            min-width: 350px;
+            max-width: 350px;
         
             .reviewText{
                 .leftQuoteDiv{
@@ -142,5 +142,12 @@
   
     @media (max-width: 480px) {
         width: 400px;
+
+        .reviewsContainer {
+            .review {
+                min-width: 300px;
+                max-width: 300px;
+            }
+        }
     }
 }

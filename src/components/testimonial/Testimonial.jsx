@@ -10,7 +10,7 @@ export default function ReviewsSection() {
     const touchStartX = useRef(null);
     const containerRef = useRef(null);
     const containerWidth = containerRef.current ? containerRef.current.offsetWidth : 0;
-    const cardwidth= 350;
+    const cardwidth= 380;
 
     let sliderStyle = {};
 
@@ -52,6 +52,7 @@ export default function ReviewsSection() {
         }
     }
     else{
+        const cardwidth= 330;
         sliderStyle = {
             transform: `translateX(-${currentReview * cardwidth}px)`,
         }; 
