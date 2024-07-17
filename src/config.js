@@ -27,7 +27,7 @@ export const config = {
         notFoundURL: "/notFound.png",
 
         coreFeatures: {
-            isHidden: false,
+            isHidden: true,
             data: [
                 {
                     icon: "⚡",
@@ -53,7 +53,7 @@ export const config = {
         },
 
         about: {
-            isHidden: false,
+            isHidden: true,
             title: "ABOUT US",
             description: "We are a team of dedicated professionals committed to delivering innovative web solutions. Our expertise spans across various technologies, ensuring we can meet diverse client needs.",
             buttonText: "CONTACT NOW",
@@ -243,7 +243,7 @@ export const config = {
             ]
         },
         clients: {
-            isHidden: false,
+            isHidden: true,
             title: "Take a look at our clients",
             subtitle: "We did a great job with these companies. You can be next in such elite!",
             buttonText: "Try our path",
@@ -262,7 +262,7 @@ export const config = {
             ]
         },
         testimonial:{
-            isHidden: false,
+            isHidden: true,
             testimonialData :[
                 {
                     text: "Hasan's skills in web development are outstanding. We worked together on building websites for four international NGOs, and his creativity and professionalism were impressive. He's a reliable teammate and a valuable addition to any project.",
