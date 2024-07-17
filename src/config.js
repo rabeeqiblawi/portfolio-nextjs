@@ -233,6 +233,25 @@ export const config = {
                 }
             ]
         },
+        clients: {
+            isHidden: false,
+            title: "Take a look at our clients",
+            subtitle: "We did a great job with these companies. You can be next in such elite!",
+            buttonText: "Try our path",
+            buttonAction: "",
+            clientList: [
+                { name: "BBC", logo: "/logos/bbc.svg" },
+                { name: "The New York Times", logo: "/logos/nyt.svg" },
+                { name: "The Economist", logo: "/logos/economist.svg" },
+                { name: "Aston Martin", logo: "/logos/aston-martin.svg" },
+                { name: "Tesco", logo: "/logos/tesco.svg" },
+                { name: "Arsenal", logo: "/logos/arsenal.svg" },
+                { name: "London 2012", logo: "/logos/london-2012.svg" },
+                { name: "Mercedes-Benz", logo: "/logos/mercedes.svg" },
+                { name: "Google", logo: "/logos/google.svg" },
+                { name: "Instagram", logo: "/logos/instagram.svg" }
+            ]
+        },
         testimonial:{
             isHidden: false,
             testimonialData :[
