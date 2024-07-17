@@ -10,6 +10,7 @@ export default function ReviewsSection() {
     const touchStartX = useRef(null);
     const containerRef = useRef(null);
     const containerWidth = containerRef.current ? containerRef.current.offsetWidth : 0;
+    const cardwidth= 350;
 
     let sliderStyle = {};
 
@@ -17,38 +18,43 @@ export default function ReviewsSection() {
 
         if(currentReview < reviews.length - 2){
             sliderStyle = {
-                transform: `translateX(-${currentReview * 380}px)`,
+                transform: `translateX(-${currentReview * cardwidth}px)`,
             };
         }
         else{
             sliderStyle = {
-                transform: `translateX(-${(reviews.length - 3) * 380}px)`,
+                transform: `translateX(-${(reviews.length - 3) * cardwidth}px)`,
             };
         }
     }
     else if(containerWidth > 700){
         if(currentReview < reviews.length - 1){
             sliderStyle = {
-                transform: `translateX(-${currentReview * 380}px)`,
+                transform: `translateX(-${currentReview * cardwidth}px)`,
             };
         }
         else{
             sliderStyle = {
-                transform: `translateX(-${(reviews.length - 2) * 380}px)`,
+                transform: `translateX(-${(reviews.length - 2) * cardwidth}px)`,
             };
         }
     }
     else if(containerWidth > 500){
         if(currentReview < reviews.length - 1){
             sliderStyle = {
-                transform: `translateX(-${currentReview * 380}px)`,
+                transform: `translateX(-${currentReview * cardwidth}px)`,
             };
         }
         else{
             sliderStyle = {
-                transform: `translateX(-${(reviews.length - 1.49) * 380}px)`,
+                transform: `translateX(-${(reviews.length - 1.49) * cardwidth}px)`,
             };
         }
+    }
+    else{
+        sliderStyle = {
+            transform: `translateX(-${currentReview * cardwidth}px)`,
+        }; 
     }
 
 
