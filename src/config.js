@@ -52,6 +52,15 @@ export const config = {
             ]
         },
 
+        about: {
+            isHidden: false,
+            title: "ABOUT US",
+            description: "We are a team of dedicated professionals committed to delivering innovative web solutions. Our expertise spans across various technologies, ensuring we can meet diverse client needs.",
+            buttonText: "CONTACT NOW",
+            buttonAction: "#contact",
+            aboutImageURL: "/aboutUs.png",
+        },
+
         projects: {
             isHidden: false,
             data: [
