@@ -11,6 +11,10 @@ import TeamMemberCard from '@/components/cards/TeamMemberCard'
 import { useEffect, useState } from 'react';
 
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
+import CoreFeatures from '@/components/CoreFeatures/CoreFeatures';
+import About from '@/components/about/about';
+import Testimonial from '@/components/testimonial/Testimonial';
+import Clients from '@/components/customerReviews/Clients';
 
 export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
@@ -75,6 +79,8 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.title}>
         <MainSection />
+        <CoreFeatures />
+        <About />
 
         {projectSectionShow && (
           <>
@@ -169,6 +175,9 @@ export default function Home() {
             <Contact />
           </>
         )}
+
+        <Clients />
+        <Testimonial />
       </div>
     </div>
   );
