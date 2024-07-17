@@ -262,31 +262,38 @@ export const config = {
             ]
         },
         testimonial:{
-            isHidden: true,
-            testimonialData :[
+            isHidden: false,
+            leftQuoteIconURL: "/icons/left-quote.svg",
+            rightQuoteIconURL: "/icons/right-quote.svg",
+            data :[
                 {
                     text: "Hasan's skills in web development are outstanding. We worked together on building websites for four international NGOs, and his creativity and professionalism were impressive. He's a reliable teammate and a valuable addition to any project.",
                     author: "1Abdallah Kpbrosli",
+                    authorImageURL: "/team/defaultPerson.png",
                     title: "CDMP"
                 },
                 {
                     text: "Hasan is a WordPress magician, a wizard of his craft. Whenever I have a WordPress project, no matter how complicated, I know I can count on him to take on and deliver what is beyond my expectations. HIGHLY recommended.",
                     author: "2Amadeus Awad",
+                    authorImageURL: "/team/defaultPerson.png",
                     title: "Business Coach - Founder of alt^ people"
                 },
                 {
                     text: "Hasan is an exceptional developer with expertise in both back-end and front-end development. His collaborative spirit and patience make him a pleasure to work with. He's more than just a coder; he's a great team player.",
                     author: "3Aghny Jreige",
+                    authorImageURL: "/team/defaultPerson.png",
                     title: "Brand Strategist - Mute Designs"
                 },
                 {
                     text: "Hasan is an exceptional developer with expertise in both back-end and front-end development. His collaborative spirit and patience make him a pleasure to work with. He's more than just a coder; he's a great team player.",
                     author: "4Aghny Jreige",
+                    authorImageURL: "/team/defaultPerson.png",
                     title: "Brand Strategist - Mute Designs"
                 },
                 {
                     text: "Hasan is an exceptional developer with expertise in both back-end and front-end development. His collaborative spirit and patience make him a pleasure to work with. He's more than just a coder; he's a great team player.",
                     author: "5Aghny Jreige",
+                    authorImageURL: "/team/defaultPerson.png",
                     title: "Brand Strategist - Mute Designs"
                 }
             ],

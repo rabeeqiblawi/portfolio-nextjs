@@ -177,7 +177,11 @@ export default function Home() {
         )}
 
         <Clients />
-        <Testimonial />
+
+        <Testimonial
+          isHidden={websiteInformation.content.testimonial.isHidden}
+          data={websiteInformation.content.testimonial.data}
+        />
       </div>
     </div>
   );
