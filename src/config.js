@@ -269,6 +269,57 @@ export const config = {
                 { name: "Instagram", logo: "/logos/instagram.svg" }
             ]
         },
+        clientProjects: {
+            isHidden: false,
+            mainTitle: "Other Projects",
+            mainTitleHighlightedWord: "Projects",
+            data: [
+                {
+                    imageUrl: "/bookifai.jpeg",
+                    title: "Bookifai",
+                    description: "Ever wanted to connect",
+                    actionLink: "mailto:rabeekiblawi@gmail.com",
+                    actionText: "Request a Demo",
+                    isHidden: false,
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/MirageXR.jpg",
+                    title: "MirageXR",
+                    description: "Prototype Arduino or ESP miragexr.com",
+                    actionText: "Join Waitlist",
+                    isHidden: false,
+                    visibleHome: false
+                },
+                {
+                    imageUrl: "/unity_chatgpt.png",
+                    title: "OpenAI Wrapper for Unity",
+                    description: "Our Unity package allows you to easily",
+                    actionLink: "https://github.com/rabeeqiblawi/Choroid-Input-System",
+                    actionText: "View On Github",
+                    isHidden: false,
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/cfwm2.jpg",
+                    title: "Come Fly With Me (Protoype)",
+                    description: "Ever wanted to fly like a bird?",
+                    actionLink: "https://www.youtube.com/watch?v=oted6xBF0z8",
+                    actionText: "More",
+                    isHidden: false,
+                    visibleHome: false
+                },
+                {
+                    imageUrl: "/notFound.png",
+                    title: "test (not at Home page)",
+                    description: "TEST",
+                    actionLink: "",
+                    actionText: "View Project",
+                    isHidden: true,
+                    visibleHome: false
+                },
+            ]
+        },
         testimonial:{
             isHidden: true,
             leftQuoteIconURL: "/icons/left-quote.svg",
