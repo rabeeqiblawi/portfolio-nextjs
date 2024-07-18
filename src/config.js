@@ -1,6 +1,3 @@
-import { action } from "mobx";
-import { notFound } from "next/navigation";
-
 export const config = {
     content: {
         logo: "/choroidLogo.png",
