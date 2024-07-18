@@ -15,6 +15,7 @@ import CoreFeatures from '@/components/CoreFeatures/CoreFeatures';
 import About from '@/components/about/about';
 import Testimonial from '@/components/testimonial/Testimonial';
 import Clients from '@/components/customerReviews/Clients';
+import ClientProjects from '@/components/clientProjects/clientProjects';
 
 export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
@@ -219,6 +220,12 @@ export default function Home() {
         )}
 
         <Clients />
+        <ClientProjects
+          isHidden= {websiteInformation.content.clientProjects.isHidden}
+          title={websiteInformation.content.clientProjects.mainTitle}
+          highlightedWord= {websiteInformation.content.clientProjects.mainTitleHighlightedWord}
+          data={websiteInformation.content.clientProjects.data}
+        />
 
         <Testimonial
           isHidden={websiteInformation.content.testimonial.isHidden}
