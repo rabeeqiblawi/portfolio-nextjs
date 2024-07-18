@@ -279,7 +279,6 @@ export const config = {
                     title: "Bookifai",
                     description: "Ever wanted to connect",
                     actionLink: "mailto:rabeekiblawi@gmail.com",
-                    actionText: "Request a Demo",
                     isHidden: false,
                     visibleHome: true
                 },
@@ -287,7 +286,7 @@ export const config = {
                     imageUrl: "/MirageXR.jpg",
                     title: "MirageXR",
                     description: "Prototype Arduino or ESP miragexr.com",
-                    actionText: "Join Waitlist",
+                    actionLink: "https://github.com/rabeeqiblawi/Choroid-Input-System",
                     isHidden: false,
                     visibleHome: false
                 },
@@ -296,7 +295,6 @@ export const config = {
                     title: "OpenAI Wrapper for Unity",
                     description: "Our Unity package allows you to easily",
                     actionLink: "https://github.com/rabeeqiblawi/Choroid-Input-System",
-                    actionText: "View On Github",
                     isHidden: false,
                     visibleHome: true
                 },
@@ -305,7 +303,6 @@ export const config = {
                     title: "Come Fly With Me (Protoype)",
                     description: "Ever wanted to fly like a bird?",
                     actionLink: "https://www.youtube.com/watch?v=oted6xBF0z8",
-                    actionText: "More",
                     isHidden: false,
                     visibleHome: false
                 },
@@ -314,7 +311,6 @@ export const config = {
                     title: "test (not at Home page)",
                     description: "TEST",
                     actionLink: "",
-                    actionText: "View Project",
                     isHidden: true,
                     visibleHome: false
                 },
