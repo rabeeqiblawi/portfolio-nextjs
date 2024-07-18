@@ -19,6 +19,7 @@ import ClientProjects from '@/components/clientProjects/clientProjects';
 
 export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
+  const [filteredClientProjects, setFilteredClientProjects] = useState(websiteInformation.content.clientProjects.data.filter(project => (project.visibleHome && !project.isHidden)));
   const [showAllProjects, setshowAllProjects] = useState(false);
   const [projectHeight, setProjectHeight] = useState(460); // project height 
   const [numProjects, setNumProjects] = useState(filteredProjects.length);
@@ -224,7 +225,7 @@ export default function Home() {
           isHidden= {websiteInformation.content.clientProjects.isHidden}
           title={websiteInformation.content.clientProjects.mainTitle}
           highlightedWord= {websiteInformation.content.clientProjects.mainTitleHighlightedWord}
-          data={websiteInformation.content.clientProjects.data}
+          data={filteredClientProjects}
         />
 
         <Testimonial

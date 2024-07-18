@@ -298,7 +298,7 @@ export const config = {
             ]
         },
         clientProjects: {
-            isHidden: true,
+            isHidden: false,
             mainTitle: "Other Projects",
             mainTitleHighlightedWord: "Projects",
             data: [

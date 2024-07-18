@@ -50,12 +50,13 @@ const Navbar = observer(() => {
                 <Link href="/" className={styles.logoLink}>
                     <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className={styles.imgLogo} />
                     <h1>{websiteInformation.content.brand}</h1>
-
-                    <h3 className={styles.slowgen}>
-                        <sub>
-                            {websiteInformation.content.slogan}
-                        </sub>
-                    </h3>
+                    {websiteInformation.content.slogan &&
+                        <h3 className={styles.slowgen}>
+                            <sub>
+                                {websiteInformation.content.slogan}
+                            </sub>
+                        </h3>
+                    }
                 </Link>
                 <div className={styles.links}>
                     {links.map((link) => (
