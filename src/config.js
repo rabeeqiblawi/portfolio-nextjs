@@ -1,5 +1,3 @@
-import { action } from "mobx";
-import { notFound } from "next/navigation";
 
 export const config = {
     content: {
@@ -27,6 +25,8 @@ export const config = {
 
         coreFeatures: {
             isHidden: false,
+            title:"Core Features",
+            highlightedWord: "Features",
             data: [
                 {
                     icon: "⚡",
@@ -52,8 +52,9 @@ export const config = {
         },
 
         about: {
-            isHidden: false,
-            title: "ABOUT US",
+            isHidden: true,
+            mainTitle: "ABOUT US",
+            mainTitleHighlightedWord: "US",
             description: "We are a team of dedicated professionals committed to delivering innovative web solutions. Our expertise spans across various technologies, ensuring we can meet diverse client needs.",
             buttonText: "CONTACT NOW",
             buttonAction: "#contact",
@@ -62,6 +63,8 @@ export const config = {
 
         projects: {
             isHidden: false,
+            mainTitle: "Our Projects",
+            mainTitleHighlightedWord: "Projects",
             data: [
                 {
                     imageUrl: "/bookifai.jpeg",
@@ -112,6 +115,8 @@ export const config = {
         },
         services: {
             isHidden: true,
+            mainTitle: "Our Services",
+            mainTitleHighlightedWord: "Services",
             data: [
                 {
                     title: "Digital Marketing Strategy",
@@ -145,6 +150,8 @@ export const config = {
         
         solutions: {
             isHidden: false,
+            mainTitle: "Our Solutions",
+            mainTitleHighlightedWord: "Solutions",
             data: [
                 {
                     imageUrl: "",
@@ -189,6 +196,8 @@ export const config = {
         },
         team: {
             isHidden: false,
+            mainTitle: "Meet the Team",
+            mainTitleHighlightedWord: "Team",
             members: [
                 {
                     imageUrl: "/team/diaa.jpg",
@@ -260,85 +269,39 @@ export const config = {
                 { name: "Instagram", logo: "/logos/instagram.svg" }
             ]
         },
-        customerReviews: {
-            isHidden: false,
-            customer: [
-                {
-                    imageUrl: "/team/diaa.jpg",
-                    title: "Stella Larson",
-                    description: "The store experience was fantastic! The user interface was intuitive and visually appealing. I loved how easy it was to find and purchase products.",
-                    visibleHome: true,
-                },
-                {
-                    imageUrl: "/team/hadiDiab.png",
-                    title: "Nick Jhonson",
-                    description: "Incredible attention to detail in the store design. The checkout process was smooth, and I appreciated the personalized product recommendations.",
-                    visibleHome: true
-                },
-                {
-                    imageUrl: "/team/karloRajić.png",
-                    title: "Glen Davies",
-                    description: "The store's layout and functionality exceeded my expectations. It was a pleasure to shop here, and I'll definitely be returning!",
-                    visibleHome: true
-                },
-                {
-                    imageUrl: "/team/mohammadOthman.png",
-                    title: "Emily Thompson",
-                    description: "I was impressed by how well the store worked on both my desktop and mobile. The consistent experience across devices made shopping a breeze.",
-                    visibleHome: true
-                },
-                {
-                    imageUrl: "/team/shahbaz.jpg",
-                    title: "Michael Chen",
-                    description: "The store's performance was outstanding. Pages loaded quickly, and the search function helped me find exactly what I needed in no time.",
-                    visibleHome: true
-                },
-                {
-                    imageUrl: "/team/mustafaZabet.png",
-                    title: "Sarah Johnson",
-                    description: "I love how the store showcases products. The high-quality images and detailed descriptions made me confident in my purchases.",
-                    visibleHome: true
-                },
-                {
-                    imageUrl: "/team/rabeeQablawi.png",
-                    title: "Alex Rodriguez",
-                    description: "The customer service integration within the store is top-notch. I had a question, and the live chat feature provided instant, helpful assistance.",
-                    visibleHome: true
-                },
-                {
-                    imageUrl: "/team/rabeeQablawi.png",
-                    title: "Lisa Wong",
-                    description: "This store experience sets a new standard for online shopping. The seamless navigation and beautiful design made my shopping experience enjoyable and efficient.",
-                    visibleHome: true
-                }
-            ]
-        },
         testimonial:{
-            isHidden: false,
-            testimonialData :[
+            isHidden: true,
+            leftQuoteIconURL: "/icons/left-quote.svg",
+            rightQuoteIconURL: "/icons/right-quote.svg",
+            data :[
                 {
                     text: "Hasan's skills in web development are outstanding. We worked together on building websites for four international NGOs, and his creativity and professionalism were impressive. He's a reliable teammate and a valuable addition to any project.",
                     author: "1Abdallah Kpbrosli",
+                    authorImageURL: "/team/defaultPerson.png",
                     title: "CDMP"
                 },
                 {
                     text: "Hasan is a WordPress magician, a wizard of his craft. Whenever I have a WordPress project, no matter how complicated, I know I can count on him to take on and deliver what is beyond my expectations. HIGHLY recommended.",
                     author: "2Amadeus Awad",
+                    authorImageURL: "/team/defaultPerson.png",
                     title: "Business Coach - Founder of alt^ people"
                 },
                 {
                     text: "Hasan is an exceptional developer with expertise in both back-end and front-end development. His collaborative spirit and patience make him a pleasure to work with. He's more than just a coder; he's a great team player.",
                     author: "3Aghny Jreige",
+                    authorImageURL: "/team/defaultPerson.png",
                     title: "Brand Strategist - Mute Designs"
                 },
                 {
                     text: "Hasan is an exceptional developer with expertise in both back-end and front-end development. His collaborative spirit and patience make him a pleasure to work with. He's more than just a coder; he's a great team player.",
                     author: "4Aghny Jreige",
+                    authorImageURL: "/team/defaultPerson.png",
                     title: "Brand Strategist - Mute Designs"
                 },
                 {
                     text: "Hasan is an exceptional developer with expertise in both back-end and front-end development. His collaborative spirit and patience make him a pleasure to work with. He's more than just a coder; he's a great team player.",
                     author: "5Aghny Jreige",
+                    authorImageURL: "/team/defaultPerson.png",
                     title: "Brand Strategist - Mute Designs"
                 }
             ],
@@ -388,6 +351,8 @@ export const config = {
     },
     contact: {
         imageUrl: "/contactUs.png",
+        mainTitle: "Contact Us",
+        mainTitleHighlightedWord: "Us",
         title: "Get in Touch",
         description: "We're here to help and answer any question you might have. We look forward to hearing from you!",
         buttonText: "Send us a message",

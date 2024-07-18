@@ -90,12 +90,12 @@ export default function Home() {
             </div> */}
             <h2 id='projects' className={styles.headers}>
                 {websiteInformation.content.projects.mainTitle.split(' ').map((word, index) => (
-                    <React.Fragment key={index}>
-                        {websiteInformation.content.projects.mainTitleHighlightedWord.includes(word) ?
-                            <span>{word}</span>
-                            : ` ${word} `
-                        }
-                    </React.Fragment>
+                  <React.Fragment key={index}>
+                      {websiteInformation.content.projects.mainTitleHighlightedWord.includes(word) ?
+                          <span>{word}</span>
+                          : ` ${word} `
+                      }
+                  </React.Fragment>
                 ))}
             </h2>
             <div
