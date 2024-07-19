@@ -31,7 +31,15 @@ export default function Home() {
 
         <CoreFeatures />
 
-        <About />
+        <About
+          isHidden={websiteInformation.content.about.isHidden}
+          title={websiteInformation.content.about.mainTitle}
+          highlightedWord={websiteInformation.content.about.mainTitleHighlightedWord}
+          description={websiteInformation.content.about.description}
+          buttonText={websiteInformation.content.about.buttonText}
+          buttonAction ={websiteInformation.content.about.buttonAction}
+          aboutImageURL={websiteInformation.content.about.aboutImageURL}
+        />
 
         <ProjectsSection
           isHidden={websiteInformation.content.projects.isHidden}
