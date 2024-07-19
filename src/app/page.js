@@ -11,7 +11,6 @@ import TeamMemberCard from '@/components/cards/TeamMemberCard'
 import React, { useEffect, useState } from 'react';
 
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
-import SectionHeader from '@/components/sectionHeader/SectionHeader';
 import CoreFeatures from '@/components/CoreFeatures/CoreFeatures';
 import About from '@/components/about/about';
 import Testimonial from '@/components/testimonial/Testimonial';
@@ -34,7 +33,6 @@ export default function Home() {
   const filteredServices = websiteInformation.content.services.data.filter(service => service.visibleHome && !service.isHidden);
   const servicesSectionShow = !websiteInformation.content.services.isHidden;
   const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
-  const contactSectionShow = !websiteInformation.contact.isHidden;
 
   const handleCardHeightChange = (height) => {
     if (height > projectHeight) {
