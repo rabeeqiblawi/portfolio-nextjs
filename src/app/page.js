@@ -4,7 +4,7 @@ import MainSection from '@/components/showcasing/MainSection';
 import styles from './Home.module.css'
 import { config as websiteInformation } from '@/config'
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import CoreFeatures from '@/components/CoreFeatures/CoreFeatures';
 import About from '@/components/about/about';
@@ -18,8 +18,8 @@ import SolutionsSection from '@/components/solutionsSection/SolutionsSection';
 import ProjectsSection from '@/components/projectsSection/projectsSection';
 
 export default function Home() {
-  const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
-  const [filteredClientProjects, setFilteredClientProjects] = useState(websiteInformation.content.clientProjects.data.filter(project => (project.visibleHome && !project.isHidden)));
+  const filteredProjects= websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden));
+  const filteredClientProjects= websiteInformation.content.clientProjects.data.filter(project => (project.visibleHome && !project.isHidden));
   const filteredSolutions = websiteInformation.content.solutions.data.filter(project => project.visibleHome && !project.isHidden);
   const filteredServices = websiteInformation.content.services.data.filter(service => service.visibleHome && !service.isHidden);
   const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
