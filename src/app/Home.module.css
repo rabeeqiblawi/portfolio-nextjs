@@ -26,13 +26,13 @@
     left: 0;
 } */
 
-.cardContainer {
+/* .cardContainer {
     width: 1200px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-}
+} */
 /* 
 .teamContainer {
     display: flex;
@@ -88,13 +88,13 @@
         width: 986px;
     }
 
-    .cardContainer {
+    /* .cardContainer {
         width: 986px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 30px;
-    }
+    } */
 
     /* .teamContainer {
         width: 986px;
@@ -116,15 +116,15 @@
         overflow: hidden;
         transition: max-height 1s ease;
     }
-
+/* 
     .cardContainer {
         width: 768px;
         display: flex;
         justify-content: center;
-        /* flex-direction: column; */
+        /* flex-direction: column; /
         flex-wrap: wrap;
         gap: 30px;
-    }
+    } */
 
     /* .teamContainer {
         /* display:grid;
@@ -138,12 +138,12 @@
         margin: 25px auto;
     } */
 }
-
+/* 
 @media screen and (max-width: 842px) {
     .cardContainer {
         width: 640px;
     }
-}
+} */
 
 @media screen and (max-width: 768px) {
     /* .teamContainer {
@@ -157,9 +157,9 @@
         width: 100%;
     }
 
-    .cardContainer {
+    /* .cardContainer {
         width: 100%;
-    }
+    } */
 }
 /* 
 @media screen and (max-width: 650px) {
