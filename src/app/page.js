@@ -5,7 +5,6 @@ import styles from './Home.module.css'
 import { config as websiteInformation } from '@/config'
 
 import ProjectCard from '@/components/cards/ProjectCard';
-import InfoCard from '@/components/cards/InfoCard';
 import Contact from '@/components/contact/Contact'
 import React, { useEffect, useState } from 'react';
 
@@ -17,6 +16,7 @@ import Clients from '@/components/customerReviews/Clients';
 import ClientProjects from '@/components/clientProjects/clientProjects';
 import TeamSection from '@/components/teamSection/TeamSection';
 import ServicesSection from '@/components/servicesSection/servicesSection';
+import SolutionsSection from '@/components/solutionsSection/SolutionsSection';
 
 export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
@@ -29,7 +29,6 @@ export default function Home() {
 
   const projectSectionShow = !websiteInformation.content.projects.isHidden;
   const filteredSolutions = websiteInformation.content.solutions.data.filter(project => project.visibleHome && !project.isHidden);
-  const solutionsSectionShow = !websiteInformation.content.solutions.isHidden;
   const filteredServices = websiteInformation.content.services.data.filter(service => service.visibleHome && !service.isHidden);
   const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
 
@@ -124,31 +123,13 @@ export default function Home() {
           </>
         )}
 
-        {solutionsSectionShow && (
-          <>
-            <h2 id='solutions' className={styles.headers}>
-                {websiteInformation.content.solutions.mainTitle.split(' ').map((word, index) => (
-                    <React.Fragment key={index}>
-                        {websiteInformation.content.solutions.mainTitleHighlightedWord.includes(word) ?
-                            <span>{word}</span>
-                            : ` ${word} `
-                        }
-                    </React.Fragment>
-                ))}
-            </h2>
-            <div className={styles.cardContainer}>
-              {filteredSolutions.map(project => (
-                <InfoCard
-                  key={project.title}
-                  icon={project.icon}
-                  title={project.title}
-                  description={project.description}
-                  actionText={project.actionText}
-                />
-              ))}
-            </div>
-          </>
-        )}
+        <SolutionsSection
+          isHidden={websiteInformation.content.solutions.isHidden}
+          headerTitle={websiteInformation.content.solutions.mainTitle}
+          headerHighlightedWord={websiteInformation.content.solutions.mainTitleHighlightedWord}
+          headerID='solutions'
+          filteredSolutions={filteredSolutions}
+        />
 
         <ServicesSection
           isHidden={websiteInformation.content.services.isHidden}
