@@ -27,7 +27,15 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        <MainSection />
+        <MainSection
+          isHidden={false}
+          heroHeadLine={websiteInformation.content.hero.heroHeadLine}
+          highlightedHeadlineWords={websiteInformation.content.hero.highlightedHeadlineWords}
+          breakLineAfter={websiteInformation.content.hero.breakLineAfter}
+          heroImageUrl={websiteInformation.content.hero.heroImageUrl}
+          parallaxEffect={websiteInformation.content.hero.parallaxEffect}
+          parallaxImages={websiteInformation.content.hero.parallaxImages}
+        />
 
         <CoreFeatures
           isHidden={websiteInformation.content.coreFeatures.isHidden}
