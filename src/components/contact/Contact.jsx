@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Contact.module.scss';
 import Image from 'next/image';
-// import { config as websiteInformation } from '@/config'
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import SectionHeader from '../sectionHeader/sectionHeader';
 

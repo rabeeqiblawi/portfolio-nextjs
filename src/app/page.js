@@ -7,7 +7,6 @@ import { config as websiteInformation } from '@/config'
 import ProjectCard from '@/components/cards/ProjectCard';
 import InfoCard from '@/components/cards/InfoCard';
 import Contact from '@/components/contact/Contact'
-import TeamMemberCard from '@/components/cards/TeamMemberCard'
 import React, { useEffect, useState } from 'react';
 
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
@@ -16,6 +15,7 @@ import About from '@/components/about/about';
 import Testimonial from '@/components/testimonial/Testimonial';
 import Clients from '@/components/customerReviews/Clients';
 import ClientProjects from '@/components/clientProjects/clientProjects';
+import TeamSection from '@/components/teamSection/TeamSection';
 
 export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
@@ -29,7 +29,6 @@ export default function Home() {
   const projectSectionShow = !websiteInformation.content.projects.isHidden;
   const filteredSolutions = websiteInformation.content.solutions.data.filter(project => project.visibleHome && !project.isHidden);
   const solutionsSectionShow = !websiteInformation.content.solutions.isHidden;
-  const teamSectionShow = !websiteInformation.content.team.isHidden;
   const filteredServices = websiteInformation.content.services.data.filter(service => service.visibleHome && !service.isHidden);
   const servicesSectionShow = !websiteInformation.content.services.isHidden;
   const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
@@ -177,32 +176,13 @@ export default function Home() {
           </>
         )}
 
-        {teamSectionShow && (
-          <>
-            <h2 className={styles.headers}>
-                {websiteInformation.content.team.mainTitle.split(' ').map((word, index) => (
-                    <React.Fragment key={index}>
-                        {websiteInformation.content.team.mainTitleHighlightedWord.includes(word) ?
-                            <span>{word}</span>
-                            : ` ${word} `
-                        }
-                    </React.Fragment>
-                ))}
-            </h2>
-            <div className={styles.teamContainer}>
-              {filteredTeam.map(project => (
-                <TeamMemberCard
-                  key={project.title}
-                  imageUrl={project.imageUrl}
-                  name={project.title}
-                  description={project.description}
-                  isPremium={project.isPremium}
-                />
-              ))}
-            </div>
-          </>
-        )}
-
+        <TeamSection 
+            isHidden={websiteInformation.content.team.isHidden}
+            headerTitle={websiteInformation.content.team.mainTitle}
+            headerHighlightedWord={websiteInformation.content.team.mainTitleHighlightedWord}
+            headerID='team'
+            filteredTeam={filteredTeam}
+        />
         <Contact 
           isHidden={websiteInformation.contact.isHidden}
           headerTitle={websiteInformation.contact.mainTitle}
