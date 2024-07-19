@@ -10,7 +10,7 @@
     justify-content: center;
     /* margin: 20px auto; */
 }
-
+/* 
 .title .headers {
     font-size: 50px;
     margin: 40px 0px;
@@ -19,7 +19,7 @@
 
 .title .headers span {
     color: var(--btn-orange);
-}
+} */
 
 /* .middlePageVectors img {
     position: absolute;
@@ -100,9 +100,9 @@
         width: 986px;
     }
 
-    .title .headers {
+    /* .title .headers {
         font-size: 36px;
-    }
+    } */
 }
 
 @media screen and (max-width: 1024px) {
@@ -133,10 +133,10 @@
         gap: 70px;
     }
 
-    .title .headers {
+    /* .title .headers {
         font-size: 28px;
         margin: 25px auto;
-    }
+    } */
 }
 
 @media screen and (max-width: 842px) {

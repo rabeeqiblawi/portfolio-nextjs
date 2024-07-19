@@ -11,6 +11,7 @@ import TeamMemberCard from '@/components/cards/TeamMemberCard'
 import React, { useEffect, useState } from 'react';
 
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
+import SectionHeader from '@/components/sectionHeader/SectionHeader';
 import CoreFeatures from '@/components/CoreFeatures/CoreFeatures';
 import About from '@/components/about/about';
 import Testimonial from '@/components/testimonial/Testimonial';
@@ -206,17 +207,17 @@ export default function Home() {
 
         {contactSectionShow && (
           <>
-            <h2 id='contact' className={styles.headers}>
-                {websiteInformation.contact.mainTitle.split(' ').map((word, index) => (
-                    <React.Fragment key={index}>
-                        {websiteInformation.contact.mainTitleHighlightedWord.includes(word) ?
-                            <span>{word}</span>
-                            : ` ${word} `
-                        }
-                    </React.Fragment>
-                ))}
-            </h2>
-            <Contact />
+            <Contact 
+              headerTitle={websiteInformation.contact.mainTitle}
+              headerHighlightedWord={websiteInformation.contact.mainTitleHighlightedWord}
+              headerID='contact'
+              imageUrl={websiteInformation.contact.imageUrl}
+              title={websiteInformation.contact.title}
+              description={websiteInformation.contact.description}
+              filteredContact={Object.entries(websiteInformation.contact.contactInfo).filter(([key, value]) => value !== '')}
+              mail ={websiteInformation.contact.contactInfo.mail}
+              buttonText ={websiteInformation.contact.buttonText}
+            />
           </>
         )}
         <Clients 
@@ -226,7 +227,6 @@ export default function Home() {
           buttonText={websiteInformation.content.clients.buttonText}
           buttonAction={websiteInformation.content.clients.buttonAction}
           clientList={websiteInformation.content.clients.clientList}
-        
         />
         <ClientProjects
           isHidden= {websiteInformation.content.clientProjects.isHidden}
@@ -235,7 +235,6 @@ export default function Home() {
           filteredData={filteredClientProjects}
           allData={websiteInformation.content.clientProjects.data.filter(project => !project.isHidden)}
         />
-
         <Testimonial
           isHidden={websiteInformation.content.testimonial.isHidden}
           data={websiteInformation.content.testimonial.data}
