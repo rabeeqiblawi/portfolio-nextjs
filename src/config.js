@@ -25,9 +25,9 @@ export const config = {
         notFoundURL: "/notFound.png",
 
         coreFeatures: {
-            isHidden: true,
-            title:"Core Features",
-            highlightedWord: "Features",
+            isHidden: false,
+            mainTitle:"Core Features",
+            mainTitleHighlightedWord: "Features",
             data: [
                 {
                     icon: "⚡",

@@ -29,12 +29,17 @@ export default function Home() {
       <div className={styles.title}>
         <MainSection />
 
-        <CoreFeatures />
+        <CoreFeatures
+          isHidden={websiteInformation.content.coreFeatures.isHidden}
+          headerTitle={websiteInformation.content.coreFeatures.mainTitle}
+          headerTitleHighlightedWord={websiteInformation.content.coreFeatures.mainTitleHighlightedWord}
+          data={websiteInformation.content.coreFeatures.data}
+        />
 
         <About
           isHidden={websiteInformation.content.about.isHidden}
-          title={websiteInformation.content.about.mainTitle}
-          highlightedWord={websiteInformation.content.about.mainTitleHighlightedWord}
+          headerTitle={websiteInformation.content.about.mainTitle}
+          headerTitleHighlightedWord={websiteInformation.content.about.mainTitleHighlightedWord}
           description={websiteInformation.content.about.description}
           buttonText={websiteInformation.content.about.buttonText}
           buttonAction ={websiteInformation.content.about.buttonAction}
