@@ -6,8 +6,9 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import SectionHeader from '../sectionHeader/sectionHeader';
 
 
-const Contact = ({headerTitle, headerHighlightedWord, headerID, imageUrl, title, description, filteredContact, mail ,buttonText }) => {
+const Contact = ({isHidden, headerTitle, headerHighlightedWord, headerID, imageUrl, title, description, filteredContact, mail ,buttonText }) => {
     return (
+        isHidden? null:
         <>
             <SectionHeader 
                 headerTitle={headerTitle} 

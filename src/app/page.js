@@ -205,21 +205,18 @@ export default function Home() {
           </>
         )}
 
-        {contactSectionShow && (
-          <>
-            <Contact 
-              headerTitle={websiteInformation.contact.mainTitle}
-              headerHighlightedWord={websiteInformation.contact.mainTitleHighlightedWord}
-              headerID='contact'
-              imageUrl={websiteInformation.contact.imageUrl}
-              title={websiteInformation.contact.title}
-              description={websiteInformation.contact.description}
-              filteredContact={Object.entries(websiteInformation.contact.contactInfo).filter(([key, value]) => value !== '')}
-              mail ={websiteInformation.contact.contactInfo.mail}
-              buttonText ={websiteInformation.contact.buttonText}
-            />
-          </>
-        )}
+        <Contact 
+          isHidden={websiteInformation.contact.isHidden}
+          headerTitle={websiteInformation.contact.mainTitle}
+          headerHighlightedWord={websiteInformation.contact.mainTitleHighlightedWord}
+          headerID='contact'
+          imageUrl={websiteInformation.contact.imageUrl}
+          title={websiteInformation.contact.title}
+          description={websiteInformation.contact.description}
+          filteredContact={Object.entries(websiteInformation.contact.contactInfo).filter(([key, value]) => value !== '')}
+          mail ={websiteInformation.contact.contactInfo.mail}
+          buttonText ={websiteInformation.contact.buttonText}
+        />
         <Clients 
           isHidden={websiteInformation.content.clients.isHidden}
           title={websiteInformation.content.clients.title}
