@@ -113,7 +113,7 @@ export const config = {
             ]
         },
         services: {
-            isHidden: false,
+            isHidden: true,
             mainTitle: "Our Services",
             mainTitleHighlightedWord: "Services",
             data: [
