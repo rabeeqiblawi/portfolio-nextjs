@@ -219,13 +219,21 @@ export default function Home() {
             <Contact />
           </>
         )}
-
-        <Clients />
+        <Clients 
+          isHidden={websiteInformation.content.clients.isHidden}
+          title={websiteInformation.content.clients.title}
+          subtitle={websiteInformation.content.clients.subtitle}
+          buttonText={websiteInformation.content.clients.buttonText}
+          buttonAction={websiteInformation.content.clients.buttonAction}
+          clientList={websiteInformation.content.clients.clientList}
+        
+        />
         <ClientProjects
           isHidden= {websiteInformation.content.clientProjects.isHidden}
           title={websiteInformation.content.clientProjects.mainTitle}
           highlightedWord= {websiteInformation.content.clientProjects.mainTitleHighlightedWord}
-          data={filteredClientProjects}
+          filteredData={filteredClientProjects}
+          allData={websiteInformation.content.clientProjects.data.filter(project => !project.isHidden)}
         />
 
         <Testimonial
