@@ -4,14 +4,14 @@ import React, { useEffect, useState } from 'react';
 import { observer } from 'mobx-react';
 import NavigationStore from '../NavigationStore.js';
 import { IoMdClose } from "react-icons/io";
-import links from '../links.js';
 import './Sidebar.scss';
 import Image from 'next/image.js';
-import Link from 'next/link.js';
 import { config as websiteInformation } from '@/config'
+import Link from 'next/link.js';
 
 
 const Sidebar = ({ logo, children }) => {
+    const links = websiteInformation.content.links;
     const [isSidebarOpen, setIsSidebarOpen] = useState(NavigationStore.isSidebarOpen);
 
     useEffect(() => {
@@ -29,12 +29,12 @@ const Sidebar = ({ logo, children }) => {
                 <button className="sidebar-close" onClick={handleSidebarClose}>
                     <IoMdClose />
                 </button>
-                {/* <div className="logoDiv">
+                <div className="logoDiv">
                     <Link href="/" className="logoLink">
                         <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className="imgLogo"/>
                         <h1>{websiteInformation.content.brand}</h1>
                     </Link>
-                </div> */}
+                </div>
             </div>
             <nav className="sidebar-nav">
                 <div className="sidebar-injected-content">

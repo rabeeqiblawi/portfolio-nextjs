@@ -23,6 +23,15 @@ export const config = {
         topPageVectors: "https://img.freepik.com/free-photo/water-background_23-2147795245.jpg?t=st=1720859708~exp=1720863308~hmac=99c4fa2d5d8e8936aeb4d90e8bbf33d90352c957703dbb0a9581eb928014cf8b&w=740",
         notFoundURL: "/notFound.png",
 
+        links:[
+            { path: '/#projects', title: 'Projects' },
+            { path: '/blog', title: 'Blog' },
+            { path: '/#solutions', title: 'Solutions' },
+            // { path: '/templates', title: 'Templates' },
+            // { path: '/services', title: 'Services' },
+            { path: '/#contact', title: 'Contact' },
+        ],
+
         coreFeatures: {
             isHidden: false,
             mainTitle:"Core Features",
