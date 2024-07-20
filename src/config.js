@@ -24,8 +24,8 @@ export const config = {
 
         coreFeatures: {
             isHidden: false,
-            title:"Core Features",
-            highlightedWord: "Features",
+            mainTitle:"Core Features",
+            mainTitleHighlightedWord: "Features",
             data: [
                 {
                     icon: "⚡",
