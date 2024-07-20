@@ -5,9 +5,8 @@ import { config } from '@/config';
 import ParallaxGallery from '../parallax/ParallaxGallery';
 import Image from 'next/image';
 
-const MainSection = () => {
-    const { heroHeadLine, highlightedHeadlineWords, breakLineAfter, heroImageUrl, parallaxEffect, parallaxImages } = config.content.hero;
-
+const MainSection = ({isHidden, heroHeadLine, highlightedHeadlineWords, breakLineAfter, heroImageUrl, parallaxEffect, parallaxImages}) => {
+    
     const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
     const containerRef = useRef(null);
 

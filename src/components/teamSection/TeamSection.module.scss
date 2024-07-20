@@ -1,0 +1,25 @@
+.teamContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1200px;
+    gap: 30px;
+
+    @media screen and (max-width: 1280px) {
+        width: 986px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 768px;
+        gap: 70px;
+    }
+    @media screen and (max-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+        width: 640px;
+    }
+    @media screen and (max-width: 650px) {
+        width: 100%;
+    }
+}

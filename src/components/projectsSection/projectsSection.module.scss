@@ -1,0 +1,59 @@
+.responsiveContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 1200px;
+    /* width: 100%; */
+    margin: 20px auto;
+    overflow: hidden;
+    transition: max-height 1s ease;
+
+    @media screen and (max-width: 1280px) {
+        width: 986px;
+    }
+    @media screen and (max-width: 1024px) {
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        width: 768px;
+        gap: 40px;
+        margin: 20px auto;
+        overflow: hidden;
+        transition: max-height 1s ease;
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+    
+}
+
+.showMoreContainer button {
+    display: flex;
+    align-items: center;
+    padding: 15px 35px;
+    padding-left: 20px;
+    border-radius: 15px;
+    margin: 30px auto;
+    border: 1px solid transparent;
+    font-size: 16px;
+    background: none;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+    &:hover {
+        background: transparent;
+        color: var(--btn-orange);
+        border: 1px solid var(--btn-orange);
+    }
+
+    span {
+        display: flex;
+        font-size: 18px;
+        position: absolute;
+        right: 10px;
+    }
+
+}
+

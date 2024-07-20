@@ -57,9 +57,17 @@
     align-items: center;
     gap: 20px;
     text-decoration: none;
+    position: relative;
 
     h1 {
         color: var(--text-dark);
+    }
+    .slowgen{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(150%, 130%);
+        color: var(--btn-orange);
     }
 }
 
@@ -144,6 +152,9 @@
 
             img{
                 transform: scale(0.7); 
+            }
+            .slowgen{
+                transform: translate(135%, 130%);
             }
         }
 

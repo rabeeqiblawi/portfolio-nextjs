@@ -55,11 +55,10 @@
   }
 
   @media (max-width: 768px) {
-    width: 600px;
+    width: 100%;
   }
 
   @media (max-width: 480px) {
-    width: 400px;
     .featureItem {
       min-width: 150px;
       max-width: 150px;
