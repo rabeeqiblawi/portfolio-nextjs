@@ -7,7 +7,7 @@ export const config = {
             heroHeadLine: "Empowering Websites for Engaging User Experiences",
             heroSubHeadLine: "",
             parallaxEffect: false,
-            heroImageUrl: "/heroImage2.png",
+            heroImageUrl: "/cyberWeaversHeroImage.png",
             parallaxImages:[
                 'parallax-effect/0.png',
                 'parallax-effect/1.png',
