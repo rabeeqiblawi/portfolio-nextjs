@@ -61,7 +61,7 @@
     h1 {
         color: var(--text-dark);
     }
-    .slowgen{
+    .slogan{
         position: absolute;
         top: 0;
         left: 0;
@@ -69,6 +69,9 @@
         color: var(--btn-orange);
         font-size: 20px;
         font-weight: 500;
+        background: transparent;
+        border: none;
+        cursor: help;
     }
 }
 
@@ -154,7 +157,7 @@
             img{
                 transform: scale(0.7); 
             }
-            .slowgen{
+            .slogan{
                 transform: translate(135%, 130%);
             }
         }
