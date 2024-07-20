@@ -7,8 +7,8 @@ export const config = {
             heroHeadLine: "Empowering Websites for Engaging User Experiences",
             heroSubHeadLine: "",
             parallaxEffect: false,
-            heroImageUrl: "/cyberWeaversHeroImage.png",
-            parallaxImages:[
+            heroImageUrl: "",
+            parallaxImages: [
                 'parallax-effect/0.png',
                 'parallax-effect/1.png',
                 'parallax-effect/2.png',
@@ -20,10 +20,10 @@ export const config = {
             highlightedHeadlineWords: ["Websites", "Engaging", "Experiences"],
             breakLineAfter: ["Websites", "User"],
         },
-        topPageVectors: "https://img.freepik.com/free-photo/water-background_23-2147795245.jpg?t=st=1720859708~exp=1720863308~hmac=99c4fa2d5d8e8936aeb4d90e8bbf33d90352c957703dbb0a9581eb928014cf8b&w=740",
+        topPageVectors: "landing_page_abstract.png",
         notFoundURL: "/notFound.png",
 
-        links:[
+        links: [
             { path: '/#projects', title: 'Projects' },
             { path: '/blog', title: 'Blog' },
             { path: '/#solutions', title: 'Solutions' },
@@ -33,8 +33,8 @@ export const config = {
         ],
 
         coreFeatures: {
-            isHidden: false,
-            mainTitle:"Core Features",
+            isHidden: true,
+            mainTitle: "Core Features",
             mainTitleHighlightedWord: "Features",
             data: [
                 {
@@ -61,17 +61,16 @@ export const config = {
         },
 
         about: {
-            isHidden: true,
+            isHidden: false,
             mainTitle: "ABOUT US",
             mainTitleHighlightedWord: "US",
             description: "We are a team of dedicated professionals committed to delivering innovative web solutions. Our expertise spans across various technologies, ensuring we can meet diverse client needs.",
             buttonText: "CONTACT NOW",
             buttonAction: "#contact",
-            aboutImageURL: "/aboutUs.png",
+            aboutImageURL: "/about-us.png",
         },
-
         projects: {
-            isHidden: false,
+            isHidden: true,
             mainTitle: "Our Projects",
             mainTitleHighlightedWord: "Projects",
             data: [
@@ -123,42 +122,92 @@ export const config = {
             ]
         },
         services: {
-            isHidden: true,
+            isHidden: false,
             mainTitle: "Our Services",
             mainTitleHighlightedWord: "Services",
             data: [
                 {
-                    title: "Digital Marketing Strategy",
-                    description: "Craft tailored digital marketing strategies that align with your business goals. From SEO optimization to social media campaigns, we enhance your online presence and drive engagement.",
-                    icon: "/icons/vrIcon.svg",
+                    title: "WordPress Development",
+                    description: "We create custom WordPress solutions that fit your business needs perfectly. From adjusting your theme to building special plugins, we work to enhance your online presence and make your site more engaging. Our goal is to help you attract and keep more visitors.",
+                    icon: "/icons/wordpress-svgrepo-com.svg",
                     actionLink: "https://example.com/digital-marketing-services",
                     actionText: "Learn More",
                     isHidden: false,
                     visibleHome: true
                 },
                 {
-                    title: "Cloud Computing Solutions",
-                    description: "Implement scalable cloud solutions tailored to your organization's needs. Whether migrating to the cloud or optimizing existing infrastructure, we ensure reliability and cost-efficiency.",
-                    icon: "/icons/vrIcon.svg",
+                    title: "Headles Wordpress Migration",
+                    description: "We offer seamless migration from WordPress to a headless setup, ensuring no content is lost. We’ll transfer your existing content to a highly customizable front end built from scratch. This modern architecture boosts performance and scalability, giving you a faster, more dynamic website. Let us handle the technical details while you focus on growing your business.",
+                    icon: "/icons/product-request-line-item-svgrepo-com.svg",
                     actionLink: "https://example.com/cloud-computing-services",
                     actionText: "Get Started",
                     isHidden: false,
                     visibleHome: true
                 },
                 {
-                    title: "Virtual Reality Development",
-                    description: "Create immersive VR experiences that captivate your audience. Our team specializes in VR application development, from concept to deployment on leading platforms.",
-                    icon: "/icons/vrIcon.svg",
+                    title: "Mobile App Development",
+                    description: "We create cross-platform mobile apps for iOS and Android, delivering a consistent user experience while saving time and costs. We offer WordPress integration for easy content management or can use another CMS of your choice. Let us build a versatile app tailored to your needs.",
+                    icon: "/icons/mobile-svgrepo-com.svg",
                     actionLink: "https://example.com/vr-development-services",
                     actionText: "See Our Work",
                     isHidden: false,
                     visibleHome: true
+                },
+                {
+                    "title": "Custom Bot Development",
+                    "description": "We build custom bots for Discord, Telegram, and WhatsApp, powered by ChatGPT. These bots enhance community engagement and automate tasks, tailored to your specific needs. Integrate seamlessly with your platform and let us create a smart, responsive bot to streamline your interactions.",
+                    "icon": "/icons/bot.svg",
+                    "actionLink": "https://example.com/bot-development-services",
+                    "actionText": "Explore Our Bots",
+                    "isHidden": false,
+                    "visibleHome": true
+                }, {
+                    "title": "Local AI Document Retrieval",
+                    "description": "We offer local AI-powered document retrieval solutions that ensure privacy and data security. Our system allows you to efficiently search and access your documents while keeping all data stored securely on your premises. Enhance your document management with a solution that prioritizes your privacy.",
+                    "icon": "/icons/ai-file-type-svgrepo-com.svg",
+                    "actionLink": "https://example.com/local-ai-document-retrieval",
+                    "actionText": "Learn More",
+                    "isHidden": false,
+                    "visibleHome": true
+                }, {
+                    "title": "AR Product Visualization",
+                    "description": "We offer advanced AR product visualization services, including solutions for restaurants and jewelry. Enhance customer experiences by showcasing products in 3D, allowing users to interact with and visualize items before making decisions. Our AR technology brings your offerings to life, whether for dining, jewelry, or other industries.",
+                    "icon": "/icons/ar-svgrepo-com.svg",
+                    "actionLink": "https://example.com/ar-product-visualization",
+                    "actionText": "Discover AR Solutions",
+                    "isHidden": false,
+                    "visibleHome": true
+                },
+                {
+                    "title": "Software Development Consultation",
+                    "description": "We offer expert consultation services for all your software development needs. Whether you’re starting a new project or enhancing an existing one, our team provides tailored advice on strategy, technology, and implementation. Let us guide you through the development process and help you achieve your software goals with confidence.",
+                    "icon": "/icons/woman-to-consult-svgrepo-com.svg",
+                    "actionLink": "https://example.com/software-development-consultation",
+                    "actionText": "Schedule a Consultation",
+                    "isHidden": false,
+                    "visibleHome": true
+                }, {
+                    "title": "Yearly Maintenance Contracts",
+                    "description": "Our yearly maintenance contracts provide ongoing support and updates to keep your software running smoothly. Choose from our plans for essential or comprehensive support tailored to your needs.",
+                    "icon": "/icons/fix-ios11-iphone-svgrepo-com.svg",
+                    "actionLink": "https://example.com/yearly-maintenance-contracts",
+                    "actionText": "Explore Our Plans",
+                    "isHidden": false,
+                    "visibleHome": true
+                },
+                {
+                    "title": "Coaching & Teaching Services",
+                    "description": "We offer expert coaching and teaching services to guide you through web, mobile, AI, and XR projects. Join our community for ongoing support and learning opportunities. Whether you're looking to enhance your skills or drive your business forward, our personalized coaching helps you achieve your goals with confidence.",
+                    "icon": "/icons/teach-svgrepo-com.svg",
+                    "actionLink": "https://example.com/coaching-teaching-services",
+                    "actionText": "Learn More",
+                    "isHidden": false,
+                    "visibleHome": true
                 }
             ]
         },
-        
         solutions: {
-            isHidden: false,
+            isHidden: true,
             mainTitle: "Our Solutions",
             mainTitleHighlightedWord: "Solutions",
             data: [
@@ -325,11 +374,11 @@ export const config = {
                 },
             ]
         },
-        testimonial:{
+        testimonial: {
             isHidden: true,
             leftQuoteIconURL: "/icons/left-quote.svg",
             rightQuoteIconURL: "/icons/right-quote.svg",
-            data :[
+            data: [
                 {
                     text: "Hasan's skills in web development are outstanding. We worked together on building websites for four international NGOs, and his creativity and professionalism were impressive. He's a reliable teammate and a valuable addition to any project.",
                     author: "1Abdallah Kpbrosli",
@@ -406,7 +455,7 @@ export const config = {
         youtube: "",
     },
     contact: {
-        imageUrl: "/contactUs.png",
+        imageUrl: "/contact-us.png",
         mainTitle: "Contact Us",
         mainTitleHighlightedWord: "Us",
         title: "Get in Touch",
@@ -418,7 +467,7 @@ export const config = {
             phone: "+961  71971287",
             mail: "choroid.studios@gmail.com",
             location: "Saida, LB",
-            whatsappMessage:""
+            whatsappMessage: ""
         }
     },
     featureFlags: {
