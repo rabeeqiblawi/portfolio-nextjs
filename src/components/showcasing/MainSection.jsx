@@ -50,6 +50,7 @@ const MainSection = ({isHidden, heroHeadLine, highlightedHeadlineWords, breakLin
                     <Link href="/services">Services</Link>
                 </div>
                 <div className={styles.imgContainer}>
+
                     {parallaxEffect && parallaxImages && <ParallaxGallery images={parallaxImages} hoverPosition={hoverPosition} /> }
                     {!parallaxEffect && heroImageUrl && <Image src={heroImageUrl} width={400} height={450}/>}
                 </div>
