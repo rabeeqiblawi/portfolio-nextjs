@@ -2,6 +2,7 @@ export const config = {
     content: {
         logo: "/CyberWeavers.png",
         brand: "Cyber Weavers",
+        slogan: "by Choroid Studios",
         hero: {
             heroHeadLine: "Empowering Websites for Engaging User Experiences",
             heroSubHeadLine: "",
@@ -250,7 +251,7 @@ export const config = {
             ]
         },
         clients: {
-            isHidden: false,
+            isHidden: true,
             title: "Take a look at our clients",
             subtitle: "We did a great job with these companies. You can be next in such elite!",
             buttonText: "Try our path",
@@ -269,7 +270,7 @@ export const config = {
             ]
         },
         clientProjects: {
-            isHidden: false,
+            isHidden: true,
             mainTitle: "Other Projects",
             mainTitleHighlightedWord: "Projects",
             data: [
