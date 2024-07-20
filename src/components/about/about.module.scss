@@ -54,10 +54,15 @@
         position: relative;
         height: 300px;
         z-index: -1;
-    }
+
+        > img{
+            max-width: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+         }
+    } 
+     
 }
-
-
 
 @media screen and (max-width: 1280px) {
     .container {
@@ -70,6 +75,9 @@
         width: 768px;
         .imgDev{
             width: 250px;
+            > img{
+                max-width: 220px;
+            }
         }
     }
 }
