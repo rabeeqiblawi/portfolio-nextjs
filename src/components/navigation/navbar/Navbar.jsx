@@ -2,9 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import links from '../links.js';
 import styles from './navbar.module.scss';
-// import FaBars from 'react-icons/fa';
 import NavigationStore from '../NavigationStore.js';
 import { FaBars } from 'react-icons/fa';
 import { observer } from 'mobx-react';
@@ -13,7 +11,7 @@ import { config as websiteInformation } from '@/config'
 
 
 const Navbar = observer(() => {
-
+    const links = websiteInformation.content.links;
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
 
