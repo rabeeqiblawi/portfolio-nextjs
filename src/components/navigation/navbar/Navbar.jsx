@@ -49,11 +49,11 @@ const Navbar = observer(() => {
                     <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className={styles.imgLogo} />
                     <h1>{websiteInformation.content.brand}</h1>
                     {websiteInformation.content.slogan &&
-                        <h3 className={styles.slowgen}>
+                        <button className={styles.slogan} onClick={() => window.location.href = websiteInformation.content.sloganLink}>
                             <sub>
                                 {websiteInformation.content.slogan}
                             </sub>
-                        </h3>
+                        </button>
                     }
                 </Link>
                 <div className={styles.links}>
