@@ -57,6 +57,13 @@
                 background: var(--main-color);
                 color: var(--text-light);
             }
+
+        }
+        .comingSoon{
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            transform: rotate(45deg);
         }
     }
 }
