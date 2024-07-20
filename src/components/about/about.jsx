@@ -3,7 +3,6 @@ import styles from './about.module.scss'
 import SectionHeader from '../sectionHeader/sectionHeader'
 
 const About = ({isHidden, headerTitle, headerTitleHighlightedWord, description, buttonText, buttonAction, aboutImageURL }) => {
-    // const { isHidden, title, highlightedWord, description, buttonText, buttonAction, aboutImageURL } = websiteInformation.content.about;
 
     return (
         isHidden? null : 
