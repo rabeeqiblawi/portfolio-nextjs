@@ -4,7 +4,7 @@ export const config = {
         brand: "Cyber Weavers",
         slogan: "by Choroid Studios",
         hero: {
-            heroHeadLine: "Empowering Websites for Engaging User Experiences",
+            heroHeadLine: "We Impower Your Business With Creativity and Technology",
             heroSubHeadLine: "",
             parallaxEffect: false,
             heroImageUrl: "",
@@ -17,7 +17,7 @@ export const config = {
             ],
 
             heroActionText: "",
-            highlightedHeadlineWords: ["Websites", "Engaging", "Experiences"],
+            highlightedHeadlineWords: ["Impower", "Business", "Technology"],
             breakLineAfter: ["Websites", "User"],
         },
         topPageVectors: "landing_page_abstract.png",
