@@ -7,11 +7,12 @@
   --text-dark: #11224d;
   --text-gray: #797979;
   /* --main-color: #0089ff; */
-  --main-color: #5b83c3;
+  --main-color: #79abfe;
   --btn-blue-1: #2c599d;
   --btn-orange: #f98125;
   --logoAbundantColor: red;
   --navigationBarHight: 10vh;
+  --bodyBackground: #f6f4f7;
 }
 
 * {
@@ -23,7 +24,7 @@
 }
 
 body {
-  background: #fff;
+  background: var(--bodyBackground);
 }
 
 
