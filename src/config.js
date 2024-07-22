@@ -8,6 +8,8 @@ export const config = {
 
         hero: {
             heroHeadLine: "Transforming Visions Into Immersive Experiences",
+            heroActionText: "Services",
+            heroActionLink: "/services",
             heroSubHeadLine: "",
             parallaxEffect: true,
             heroImageUrl: "/heroImage.png",
@@ -18,8 +20,6 @@ export const config = {
                 'parallax-effect/3.png',
                 'parallax-effect/4.png',
             ],
-
-            heroActionText: "",
             highlightedHeadlineWords: ["Visions", "Experiences"],
             breakLineAfter: ["Visions", "Immersive"],
         },

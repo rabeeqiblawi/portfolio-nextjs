@@ -5,7 +5,7 @@ import { config } from '@/config';
 import ParallaxGallery from '../parallax/ParallaxGallery';
 import Image from 'next/image';
 
-const MainSection = ({isHidden, heroHeadLine, highlightedHeadlineWords, breakLineAfter, heroImageUrl, parallaxEffect, parallaxImages}) => {
+const MainSection = ({isHidden, heroHeadLine, highlightedHeadlineWords, breakLineAfter, heroActionText, heroActionLink, heroSubHeadLine, heroImageUrl, parallaxEffect, parallaxImages}) => {
     
     const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
     const containerRef = useRef(null);
@@ -47,7 +47,9 @@ const MainSection = ({isHidden, heroHeadLine, highlightedHeadlineWords, breakLin
                         ))}
                     </h1>
                     <div className={styles.line}></div>
-                    <Link href="/services">Services</Link>
+                    {heroActionText && heroActionLink && <Link href={heroActionLink}>{heroActionText}</Link>}
+                    {heroSubHeadLine && !heroActionText && <p className={styles.heroSubHeadLine}>{heroSubHeadLine}</p>}
+
                 </div>
                 <div className={styles.imgContainer}>
                     {parallaxEffect && parallaxImages && <ParallaxGallery images={parallaxImages} hoverPosition={hoverPosition} /> }

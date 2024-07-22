@@ -32,6 +32,9 @@ export default function Home() {
           heroHeadLine={websiteInformation.content.hero.heroHeadLine}
           highlightedHeadlineWords={websiteInformation.content.hero.highlightedHeadlineWords}
           breakLineAfter={websiteInformation.content.hero.breakLineAfter}
+          heroActionText={websiteInformation.content.hero.heroActionText}
+          heroActionLink={websiteInformation.content.hero.heroActionLink}
+          heroSubHeadLine={websiteInformation.content.hero.heroSubHeadLine}
           heroImageUrl={websiteInformation.content.hero.heroImageUrl}
           parallaxEffect={websiteInformation.content.hero.parallaxEffect}
           parallaxImages={websiteInformation.content.hero.parallaxImages}
