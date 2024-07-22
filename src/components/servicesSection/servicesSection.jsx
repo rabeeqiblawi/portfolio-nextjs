@@ -22,6 +22,7 @@ const ServicesSection = ({isHidden, headerTitle, headerHighlightedWord, headerID
                         description={service.description}
                         actionText={service.actionText}
                         actionLink={service.actionLink}
+                        comingSoon={project.comingSoon}
                     />
                 ))}
             </div>

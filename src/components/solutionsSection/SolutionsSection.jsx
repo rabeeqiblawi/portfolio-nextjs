@@ -22,6 +22,7 @@ const SolutionsSection = ({isHidden, headerTitle, headerHighlightedWord, headerI
                         description={project.description}
                         actionText={project.actionText}
                         actionLink={project.actionLink}
+                        comingSoon={project.comingSoon}
                     />
                 ))}
             </div>
