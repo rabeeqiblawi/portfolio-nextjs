@@ -1,6 +1,5 @@
 import MarkDownView from '@/components/blog/MarkDownView';
 import Head from 'next/head';
-import Layout from '@/layout';
 
 /*move to utiles or something */
 async function fetchMarkdown(fileUrl) {
@@ -19,15 +18,16 @@ async function fetchMarkdown(fileUrl) {
   return '';
 }
 
+export const metadata = {
+  title: '...',
+  description: '...',
+}
+
+
 export default async function ArticlePage({ params }) {
   const fileUrl = params.slug;
   const markdown = await fetchMarkdown(fileUrl);
 
-  Layout.metadata = {
-    title: "C# Blog",
-    description: "this is a blog about how to code in C#",
-    icon: websiteInformation.content.logo,
-  };
 
   return (
     <>
