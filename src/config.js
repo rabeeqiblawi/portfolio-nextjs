@@ -9,7 +9,9 @@ export const config = {
 
         hero: {
             heroHeadLine: "We Impower Your Business With Creativity and Technology",
-            heroSubHeadLine: "",
+            heroActionText: "",
+            heroActionLink: "/services",
+            heroSubHeadLine: "heroSubHead Text Text Text",
             parallaxEffect: false,
             heroImageUrl: "",
             parallaxImages: [
