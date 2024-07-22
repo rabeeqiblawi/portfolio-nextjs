@@ -1,5 +1,6 @@
 import MarkDownView from '@/components/blog/MarkDownView';
 
+/*move to utiles or something */
 async function fetchMarkdown(fileUrl) {
   try {
     const file = decodeURIComponent(fileUrl);
