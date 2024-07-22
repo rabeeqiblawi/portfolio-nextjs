@@ -5,9 +5,8 @@ import { config } from '@/config';
 import ParallaxGallery from '../parallax/ParallaxGallery';
 import Image from 'next/image';
 
-const MainSection = () => {
-    const { heroHeadLine, highlightedHeadlineWords, breakLineAfter, heroImageUrl, parallaxEffect, parallaxImages } = config.content.hero;
-
+const MainSection = ({isHidden, heroHeadLine, highlightedHeadlineWords, breakLineAfter, heroImageUrl, parallaxEffect, parallaxImages}) => {
+    
     const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
     const containerRef = useRef(null);
 
@@ -51,8 +50,8 @@ const MainSection = () => {
                     <Link href="/services">Services</Link>
                 </div>
                 <div className={styles.imgContainer}>
-                    {parallaxEffect && <ParallaxGallery images={parallaxImages} hoverPosition={hoverPosition} /> }
-                    {!parallaxEffect && <Image src={heroImageUrl} width={400} height={450}/>}
+                    {parallaxEffect && parallaxImages && <ParallaxGallery images={parallaxImages} hoverPosition={hoverPosition} /> }
+                    {!parallaxEffect && heroImageUrl && <Image src={heroImageUrl} width={400} height={450}/>}
                 </div>
             </div>
         </div>

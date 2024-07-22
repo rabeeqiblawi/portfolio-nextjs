@@ -39,6 +39,7 @@
         left: 0;
         top: 0;
         height: max-content;
+        max-height: 125vh;
         width: 100%;
     }
 }
@@ -56,9 +57,26 @@
     align-items: center;
     gap: 20px;
     text-decoration: none;
+    position: relative;
 
     h1 {
         color: var(--text-dark);
+        position: relative;
+    }
+    .slogan{
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        // transform: translate(150%, 130%);
+        color: var(--btn-orange);
+        font-size: 20px;
+        font-weight: 500;
+        background: transparent;
+        border: none;
+        cursor: help;
+        text-align: left;
+        font-size: 20px;
+        width: max-content;
     }
 }
 
@@ -143,6 +161,9 @@
 
             img{
                 transform: scale(0.7); 
+            }
+            .slogan{
+                transform: translate(135%, 130%);
             }
         }
 

@@ -4,180 +4,123 @@ import MainSection from '@/components/showcasing/MainSection';
 import styles from './Home.module.css'
 import { config as websiteInformation } from '@/config'
 
-import ProjectCard from '@/components/cards/ProjectCard';
-import InfoCard from '@/components/cards/InfoCard';
-import Contact from '@/components/contact/Contact'
-import TeamMemberCard from '@/components/cards/TeamMemberCard'
-import { useEffect, useState } from 'react';
+import React from 'react';
 
-import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 import CoreFeatures from '@/components/CoreFeatures/CoreFeatures';
 import About from '@/components/about/about';
+import Contact from '@/components/contact/Contact'
 import Testimonial from '@/components/testimonial/Testimonial';
 import Clients from '@/components/customerReviews/Clients';
+import ClientProjects from '@/components/clientProjects/clientProjects';
+import TeamSection from '@/components/teamSection/TeamSection';
+import ServicesSection from '@/components/servicesSection/servicesSection';
+import SolutionsSection from '@/components/solutionsSection/SolutionsSection';
+import ProjectsSection from '@/components/projectsSection/projectsSection';
 
 export default function Home() {
-  const [filteredProjects, setFilteredProjects] = useState(websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden)));
-  const [showAllProjects, setshowAllProjects] = useState(false);
-  const [projectHeight, setProjectHeight] = useState(460); // project height 
-  const [numProjects, setNumProjects] = useState(filteredProjects.length);
-  const [totalHeight, setTotalHeight] = useState(numProjects * projectHeight);
-
-
-  const projectSectionShow = !websiteInformation.content.projects.isHidden;
+  const filteredProjects= websiteInformation.content.projects.data.filter(project => (project.visibleHome && !project.isHidden));
+  const filteredClientProjects= websiteInformation.content.clientProjects.data.filter(project => (project.visibleHome && !project.isHidden));
   const filteredSolutions = websiteInformation.content.solutions.data.filter(project => project.visibleHome && !project.isHidden);
-  const solutionsSectionShow = !websiteInformation.content.solutions.isHidden;
-  const teamSectionShow = !websiteInformation.content.team.isHidden;
   const filteredServices = websiteInformation.content.services.data.filter(service => service.visibleHome && !service.isHidden);
-  const servicesSectionShow = !websiteInformation.content.services.isHidden;
   const filteredTeam = websiteInformation.content.team.members.filter(project => project.visibleHome && !project.isHidden);
-  const contactSectionShow = !websiteInformation.contact.isHidden;
-
-  const handleCardHeightChange = (height) => {
-    if (height > projectHeight) {
-      setProjectHeight(height);
-    }
-  };
-
-  useEffect(() => {
-    let filteredProjects = [];
-
-    if (showAllProjects) {
-      filteredProjects = websiteInformation.content.projects.data
-        .filter(project => !project.isHidden)
-        .sort((a, b) => {
-          // Sort by visibleHome
-          if (a.visibleHome && !b.visibleHome) return -1;
-          if (!a.visibleHome && b.visibleHome) return 1;
-          return 0;
-        });
-    } else {
-      filteredProjects = websiteInformation.content.projects.data
-        .filter(project => project.visibleHome && !project.isHidden);
-    }
-
-    // Calculate numProjects and totalHeight based on filteredProjects
-    const numProjects = filteredProjects.length;
-    const totalHeight = numProjects * (projectHeight + 60); // height + gap
-
-    // Update state
-    setFilteredProjects(filteredProjects);
-    setNumProjects(numProjects);
-    setTotalHeight(totalHeight);
-
-  }, [showAllProjects, websiteInformation.content.projects.data, projectHeight]); // Dependencies should include showAllProjects and data used to filter
-
-
-  const showMore = () => {
-    setshowAllProjects(!showAllProjects);
-    if (showAllProjects) {
-      window.location.href = "#projects";
-    }
-  }
 
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        <MainSection />
-        <CoreFeatures />
-        <About />
+        <MainSection
+          isHidden={false}
+          heroHeadLine={websiteInformation.content.hero.heroHeadLine}
+          highlightedHeadlineWords={websiteInformation.content.hero.highlightedHeadlineWords}
+          breakLineAfter={websiteInformation.content.hero.breakLineAfter}
+          heroImageUrl={websiteInformation.content.hero.heroImageUrl}
+          parallaxEffect={websiteInformation.content.hero.parallaxEffect}
+          parallaxImages={websiteInformation.content.hero.parallaxImages}
+        />
 
-        {projectSectionShow && (
-          <>
-            {/* <div className={styles.middlePageVectors}>
-              <img src="/middlePageVectors.png" alt="" />
-            </div> */}
-            <h2 id='projects' className={styles.headers}>Our <span>Projects</span></h2>
-            <div
-              className={styles.responsiveContainer}
-              style={{
-                maxHeight: totalHeight
-              }}
-            >
-              {filteredProjects.map(project => (
-                <ProjectCard
-                  key={project.title}
-                  imageUrl={project.imageUrl}
-                  title={project.title}
-                  description={project.description}
-                  actionText={project.actionText}
-                  actionLink={project.actionLink}
-                  onHeightChange={handleCardHeightChange}
-                />
-              ))}
-            </div>
-            <div className={styles.showMoreContainer} >
-              <button onClick={showMore}>
-                {!showAllProjects ? "Show All Projects" : "Show less Projects"}
-                {!showAllProjects ? <span><FiPlusCircle /></span> : <span><FiMinusCircle /></span>}
-              </button>
-            </div>
-          </>
-        )}
+        <CoreFeatures
+          isHidden={websiteInformation.content.coreFeatures.isHidden}
+          headerTitle={websiteInformation.content.coreFeatures.mainTitle}
+          headerTitleHighlightedWord={websiteInformation.content.coreFeatures.mainTitleHighlightedWord}
+          data={websiteInformation.content.coreFeatures.data}
+        />
 
-        {solutionsSectionShow && (
-          <>
-            <h2 id='solutions' className={styles.headers} >Our <span>Solutions</span></h2>
+        <About
+          isHidden={websiteInformation.content.about.isHidden}
+          headerTitle={websiteInformation.content.about.mainTitle}
+          headerTitleHighlightedWord={websiteInformation.content.about.mainTitleHighlightedWord}
+          description={websiteInformation.content.about.description}
+          buttonText={websiteInformation.content.about.buttonText}
+          buttonAction ={websiteInformation.content.about.buttonAction}
+          aboutImageURL={websiteInformation.content.about.aboutImageURL}
+        />
 
-            <div className={styles.cardContainer}>
-              {filteredSolutions.map(project => (
-                <InfoCard
-                  key={project.title}
-                  icon={project.icon}
-                  title={project.title}
-                  description={project.description}
-                  actionText={project.actionText}
-                />
-              ))}
-            </div>
-          </>
-        )}
+        <ProjectsSection
+          isHidden={websiteInformation.content.projects.isHidden}
+          headerTitle={websiteInformation.content.projects.mainTitle}
+          headerHighlightedWord={websiteInformation.content.projects.mainTitleHighlightedWord}
+          headerID='projects'
+          filteredProjects={filteredProjects}
+          allProjects={websiteInformation.content.projects.data.filter(project => !project.isHidden)}
+        />
 
-        {servicesSectionShow && (
-          <>
-            <h2 id='services' className={styles.headers} >Our <span>Services</span></h2>
+        <SolutionsSection
+          isHidden={websiteInformation.content.solutions.isHidden}
+          headerTitle={websiteInformation.content.solutions.mainTitle}
+          headerHighlightedWord={websiteInformation.content.solutions.mainTitleHighlightedWord}
+          headerID='solutions'
+          filteredSolutions={filteredSolutions}
+        />
 
-            <div className={styles.cardContainer}>
-              {filteredServices.map(service => (
-                <InfoCard
-                  key={service.title}
-                  icon={service.icon}
-                  title={service.title}
-                  description={service.description}
-                  actionText={service.actionText}
-                />
-              ))}
-            </div>
-          </>
-        )}
+        <ServicesSection
+          isHidden={websiteInformation.content.services.isHidden}
+          headerTitle={websiteInformation.content.services.mainTitle}
+          headerHighlightedWord={websiteInformation.content.services.mainTitleHighlightedWord}
+          headerID='services'
+          filteredServices={filteredServices}
+        />
 
-        {teamSectionShow && (
-          <>
-            <h2 className={styles.headers}>Meet the <span>Team</span></h2>
+        <TeamSection 
+            isHidden={websiteInformation.content.team.isHidden}
+            headerTitle={websiteInformation.content.team.mainTitle}
+            headerHighlightedWord={websiteInformation.content.team.mainTitleHighlightedWord}
+            headerID='team'
+            filteredTeam={filteredTeam}
+        />
 
-            <div className={styles.teamContainer}>
-              {filteredTeam.map(project => (
-                <TeamMemberCard
-                  key={project.title}
-                  imageUrl={project.imageUrl}
-                  name={project.title}
-                  description={project.description}
-                  isPremium={project.isPremium}
-                />
-              ))}
-            </div>
-          </>
-        )}
+        <Contact 
+          isHidden={websiteInformation.contact.isHidden}
+          headerTitle={websiteInformation.contact.mainTitle}
+          headerHighlightedWord={websiteInformation.contact.mainTitleHighlightedWord}
+          headerID='contact'
+          imageUrl={websiteInformation.contact.imageUrl}
+          title={websiteInformation.contact.title}
+          description={websiteInformation.contact.description}
+          filteredContact={Object.entries(websiteInformation.contact.contactInfo).filter(([key, value]) => value !== '')}
+          mail ={websiteInformation.contact.contactInfo.mail}
+          buttonText ={websiteInformation.contact.buttonText}
+        />
 
-        {contactSectionShow && (
-          <>
-            <h2 id='contact' className={styles.headers}>Contact <span>Us</span></h2>
-            <Contact />
-          </>
-        )}
+        <Clients 
+          isHidden={websiteInformation.content.clients.isHidden}
+          title={websiteInformation.content.clients.title}
+          subtitle={websiteInformation.content.clients.subtitle}
+          buttonText={websiteInformation.content.clients.buttonText}
+          buttonAction={websiteInformation.content.clients.buttonAction}
+          clientList={websiteInformation.content.clients.clientList}
+        />
 
-        <Clients />
-        <Testimonial />
+        <ClientProjects
+          isHidden= {websiteInformation.content.clientProjects.isHidden}
+          title={websiteInformation.content.clientProjects.mainTitle}
+          highlightedWord= {websiteInformation.content.clientProjects.mainTitleHighlightedWord}
+          filteredData={filteredClientProjects}
+          allData={websiteInformation.content.clientProjects.data.filter(project => !project.isHidden)}
+        />
+
+        <Testimonial
+          isHidden={websiteInformation.content.testimonial.isHidden}
+          data={websiteInformation.content.testimonial.data}
+        />
       </div>
     </div>
   );

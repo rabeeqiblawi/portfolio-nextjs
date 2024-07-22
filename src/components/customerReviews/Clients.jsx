@@ -1,9 +1,6 @@
 import styles from './Clients.module.scss'
-import { config as websiteInformation } from '@/config'
 
-const Clients = () => {
-    const { isHidden, title, subtitle, buttonText, buttonAction, clientList } = websiteInformation.content.clients;
-
+const Clients = ({isHidden, title, subtitle, buttonText, buttonAction, clientList}) => {
     return (
         isHidden ? null :
         <div className={styles.container}>

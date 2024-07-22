@@ -2,9 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import links from '../links.js';
 import styles from './navbar.module.scss';
-// import FaBars from 'react-icons/fa';
 import NavigationStore from '../NavigationStore.js';
 import { FaBars } from 'react-icons/fa';
 import { observer } from 'mobx-react';
@@ -13,7 +11,7 @@ import { config as websiteInformation } from '@/config'
 
 
 const Navbar = observer(() => {
-
+    const links = websiteInformation.content.links;
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
 
@@ -49,7 +47,17 @@ const Navbar = observer(() => {
                 </div>
                 <Link href="/" className={styles.logoLink}>
                     <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className={styles.imgLogo} />
-                    <h1>{websiteInformation.content.brand}</h1>
+                    <h1>{websiteInformation.content.brand}
+
+                        {websiteInformation.content.slogan &&
+                            <button className={styles.slogan} onClick={() => window.location.href = websiteInformation.content.sloganLink}>
+                                {/* <sub> */}
+                                    {websiteInformation.content.slogan}
+                                {/* </sub> */}
+                            </button>
+                        }
+
+                    </h1>
                 </Link>
                 <div className={styles.links}>
                     {links.map((link) => (
