@@ -3,8 +3,8 @@ import styles from './InfoCard.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const InfoCard = ({ icon, title, description, actionText, actionLink, commingSoon }) => {
-    commingSoon ="/icons/soon.svg";
+const InfoCard = ({ icon, title, description, actionText, actionLink, comingSoon }) => {
+    comingSoon ="/icons/soon.svg";
     return (
         <div className={styles.container}>
             <div className={styles.content}>
@@ -16,10 +16,9 @@ const InfoCard = ({ icon, title, description, actionText, actionLink, commingSoo
                         <button className={styles.previewWebsiteButton}>{actionText}</button>
                     </Link>
                 }
-                {commingSoon && 
-                    <Image src={commingSoon} alt={title} className={styles.comingSoon} width={70} height={70} />
+                {comingSoon && 
+                    <div className={styles.comingSoon}>Coming Soon</div>
                 }
-
             </div>
         </div>
     );
