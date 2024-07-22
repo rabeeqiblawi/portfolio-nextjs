@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const InfoCard = ({ icon, title, description, actionText, actionLink, comingSoon }) => {
-    comingSoon ="/icons/soon.svg";
     return (
         <div className={styles.container}>
             <div className={styles.content}>
