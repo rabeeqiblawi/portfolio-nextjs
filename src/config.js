@@ -20,8 +20,6 @@ export const config = {
                 'parallax-effect/3.png',
                 'parallax-effect/4.png',
             ],
-
-            heroActionText: "",
             highlightedHeadlineWords: ["Visions", "Experiences"],
             breakLineAfter: ["Visions", "Immersive"],
         },
