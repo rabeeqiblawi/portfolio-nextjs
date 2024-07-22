@@ -17,7 +17,8 @@ const Projects = () => {
                 title={project.title}
                 description={project.description}
                 actionText={project.actionText}
-                cssClassName="solution"
+                actionLink={project.actionLink}
+                comingSoon={project.comingSoon}
                 />
             ))}
             </div>
