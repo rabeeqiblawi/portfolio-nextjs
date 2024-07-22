@@ -148,7 +148,7 @@ export const config = {
                     actionText: "Get Started",
                     isHidden: false,
                     visibleHome: true,
-                    comingSoon: false
+                    comingSoon: true
                 },
                 {
                     title: "Mobile App Development",
@@ -218,7 +218,7 @@ export const config = {
                     actionText: "Learn More",
                     isHidden: false,
                     visibleHome: true,
-                    comingSoon: false
+                    comingSoon: true
                 }
             ]
         },
@@ -484,7 +484,7 @@ export const config = {
 
         contactInfo: {
             phone: "+961  71971287",
-            mail: "choroid.studios@gmail.com",
+            mail: "cyber-weavers@choroid-labs.com",
             location: "Saida, LB",
             whatsappMessage: ""
         }
