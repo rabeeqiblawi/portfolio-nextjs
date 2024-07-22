@@ -27,8 +27,6 @@ body {
   background: var(--bodyBackground);
 }
 
-
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
