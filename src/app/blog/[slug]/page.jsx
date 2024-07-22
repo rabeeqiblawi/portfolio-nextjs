@@ -1,4 +1,5 @@
 import MarkDownView from '@/components/blog/MarkDownView';
+import Head from 'next/head';
 
 /*move to utiles or something */
 async function fetchMarkdown(fileUrl) {
@@ -22,8 +23,15 @@ export default async function ArticlePage({ params }) {
   const markdown = await fetchMarkdown(fileUrl);
 
   return (
-    <div>
-      <MarkDownView rawMdText={markdown}>Hi</MarkDownView>
-    </div>
+    <>
+      <Head>
+        <meta name='title' content='C# Blog' />
+        <meta name="description" content="this is a blog about how to code in C#" />
+      </Head>
+      <div>
+        <MarkDownView rawMdText={markdown}>Hi</MarkDownView>
+      </div>
+    </>
+
   );
 }
