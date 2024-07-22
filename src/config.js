@@ -137,7 +137,8 @@ export const config = {
                     actionLink: "https://example.com/digital-marketing-services",
                     actionText: "Learn More",
                     isHidden: false,
-                    visibleHome: true
+                    visibleHome: true,
+                    comingSoon: false
                 },
                 {
                     title: "Headles Wordpress Migration",
@@ -146,7 +147,8 @@ export const config = {
                     actionLink: "https://example.com/cloud-computing-services",
                     actionText: "Get Started",
                     isHidden: false,
-                    visibleHome: true
+                    visibleHome: true,
+                    comingSoon: false
                 },
                 {
                     title: "Mobile App Development",
@@ -155,58 +157,68 @@ export const config = {
                     actionLink: "https://example.com/vr-development-services",
                     actionText: "See Our Work",
                     isHidden: false,
-                    visibleHome: true
+                    visibleHome: true,
+                    comingSoon: false
                 },
                 {
-                    "title": "Custom Bot Development",
-                    "description": "We build custom bots for Discord, Telegram, and WhatsApp, powered by ChatGPT. These bots enhance community engagement and automate tasks, tailored to your specific needs. Integrate seamlessly with your platform and let us create a smart, responsive bot to streamline your interactions.",
-                    "icon": "/icons/bot.svg",
-                    "actionLink": "https://example.com/bot-development-services",
-                    "actionText": "Explore Our Bots",
-                    "isHidden": false,
-                    "visibleHome": true
-                }, {
-                    "title": "Local AI Document Retrieval",
-                    "description": "We offer local AI-powered document retrieval solutions that ensure privacy and data security. Our system allows you to efficiently search and access your documents while keeping all data stored securely on your premises. Enhance your document management with a solution that prioritizes your privacy.",
-                    "icon": "/icons/ai-file-type-svgrepo-com.svg",
-                    "actionLink": "https://example.com/local-ai-document-retrieval",
-                    "actionText": "Learn More",
-                    "isHidden": false,
-                    "visibleHome": true
-                }, {
-                    "title": "AR Product Visualization",
-                    "description": "We offer advanced AR product visualization services, including solutions for restaurants and jewelry. Enhance customer experiences by showcasing products in 3D, allowing users to interact with and visualize items before making decisions. Our AR technology brings your offerings to life, whether for dining, jewelry, or other industries.",
-                    "icon": "/icons/ar-svgrepo-com.svg",
-                    "actionLink": "https://example.com/ar-product-visualization",
-                    "actionText": "Discover AR Solutions",
-                    "isHidden": false,
-                    "visibleHome": true
+                    title: "Custom Bot Development",
+                    description: "We build custom bots for Discord, Telegram, and WhatsApp, powered by ChatGPT. These bots enhance community engagement and automate tasks, tailored to your specific needs. Integrate seamlessly with your platform and let us create a smart, responsive bot to streamline your interactions.",
+                    icon: "/icons/bot.svg",
+                    actionLink: "https://example.com/bot-development-services",
+                    actionText: "Explore Our Bots",
+                    isHidden: false,
+                    visibleHome: true,
+                    comingSoon: false
                 },
                 {
-                    "title": "Software Development Consultation",
-                    "description": "We offer expert consultation services for all your software development needs. Whether you’re starting a new project or enhancing an existing one, our team provides tailored advice on strategy, technology, and implementation. Let us guide you through the development process and help you achieve your software goals with confidence.",
-                    "icon": "/icons/woman-to-consult-svgrepo-com.svg",
-                    "actionLink": "https://example.com/software-development-consultation",
-                    "actionText": "Schedule a Consultation",
-                    "isHidden": false,
-                    "visibleHome": true
-                }, {
-                    "title": "Yearly Maintenance Contracts",
-                    "description": "Our yearly maintenance contracts provide ongoing support and updates to keep your software running smoothly. Choose from our plans for essential or comprehensive support tailored to your needs.",
-                    "icon": "/icons/fix-ios11-iphone-svgrepo-com.svg",
-                    "actionLink": "https://example.com/yearly-maintenance-contracts",
-                    "actionText": "Explore Our Plans",
-                    "isHidden": false,
-                    "visibleHome": true
+                    title: "Local AI Document Retrieval",
+                    description: "We offer local AI-powered document retrieval solutions that ensure privacy and data security. Our system allows you to efficiently search and access your documents while keeping all data stored securely on your premises. Enhance your document management with a solution that prioritizes your privacy.",
+                    icon: "/icons/ai-file-type-svgrepo-com.svg",
+                    actionLink: "https://example.com/local-ai-document-retrieval",
+                    actionText: "Learn More",
+                    isHidden: false,
+                    visibleHome: true,
+                    comingSoon: false
                 },
                 {
-                    "title": "Coaching & Teaching Services",
-                    "description": "We offer expert coaching and teaching services to guide you through web, mobile, AI, and XR projects. Join our community for ongoing support and learning opportunities. Whether you're looking to enhance your skills or drive your business forward, our personalized coaching helps you achieve your goals with confidence.",
-                    "icon": "/icons/teach-svgrepo-com.svg",
-                    "actionLink": "https://example.com/coaching-teaching-services",
-                    "actionText": "Learn More",
-                    "isHidden": false,
-                    "visibleHome": true
+                    title: "AR Product Visualization",
+                    description: "We offer advanced AR product visualization services, including solutions for restaurants and jewelry. Enhance customer experiences by showcasing products in 3D, allowing users to interact with and visualize items before making decisions. Our AR technology brings your offerings to life, whether for dining, jewelry, or other industries.",
+                    icon: "/icons/ar-svgrepo-com.svg",
+                    actionLink: "https://example.com/ar-product-visualization",
+                    actionText: "Discover AR Solutions",
+                    isHidden: false,
+                    visibleHome: true,
+                    comingSoon: true
+                },
+                {
+                    title: "Software Development Consultation",
+                    description: "We offer expert consultation services for all your software development needs. Whether you’re starting a new project or enhancing an existing one, our team provides tailored advice on strategy, technology, and implementation. Let us guide you through the development process and help you achieve your software goals with confidence.",
+                    icon: "/icons/woman-to-consult-svgrepo-com.svg",
+                    actionLink: "https://example.com/software-development-consultation",
+                    actionText: "Schedule a Consultation",
+                    isHidden: false,
+                    visibleHome: true,
+                    comingSoon: false
+                },
+                {
+                    title: "Yearly Maintenance Contracts",
+                    description: "Our yearly maintenance contracts provide ongoing support and updates to keep your software running smoothly. Choose from our plans for essential or comprehensive support tailored to your needs.",
+                    icon: "/icons/fix-ios11-iphone-svgrepo-com.svg",
+                    actionLink: "https://example.com/yearly-maintenance-contracts",
+                    actionText: "Explore Our Plans",
+                    isHidden: false,
+                    visibleHome: true,
+                    comingSoon: false
+                },
+                {
+                    title: "Coaching & Teaching Services",
+                    description: "We offer expert coaching and teaching services to guide you through web, mobile, AI, and XR projects. Join our community for ongoing support and learning opportunities. Whether you're looking to enhance your skills or drive your business forward, our personalized coaching helps you achieve your goals with confidence.",
+                    icon: "/icons/teach-svgrepo-com.svg",
+                    actionLink: "https://example.com/coaching-teaching-services",
+                    actionText: "Learn More",
+                    isHidden: false,
+                    visibleHome: true,
+                    comingSoon: false
                 }
             ]
         },
@@ -227,7 +239,8 @@ export const config = {
                     actionLink: "",
                     actionText: "More Info",
                     isHidden: false,
-                    visibleHome: true
+                    visibleHome: true,
+                    comingSoon: false
                 },
                 {
                     imageUrl: "",
@@ -242,7 +255,8 @@ export const config = {
                     actionLink: "",
                     actionText: "More Info",
                     isHidden: false,
-                    visibleHome: true
+                    visibleHome: true,
+                    comingSoon: false
                 },
                 {
                     imageUrl: "",
@@ -252,7 +266,8 @@ export const config = {
                     actionLink: "https://cyberweavers.choroidstudios.com",
                     actionText: "More Info",
                     isHidden: false,
-                    visibleHome: true
+                    visibleHome: true,
+                    comingSoon: false
                 },
             ]
         },
