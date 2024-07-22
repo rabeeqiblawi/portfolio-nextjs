@@ -13,9 +13,8 @@ export const fetchSeriesMetaJSON = async (repoOwner, repoName) => {
 };
 
 export const fetchArticlesMetaJSON = async (repoOwner, repoName) => {
-    const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/articles.meta.json`);
-    const data = await response.json();
-    const content = atob(data.content);
+    const response = await fetch(`https://raw.githubusercontent.com/${repoOwner}/${repoName}/master/articles.meta.json`);
+    const content = await response.text();
     const parsedData = JSON.parse(content);
     return parsedData.map(item => ({ ...item, isSeries: false }));
 };
@@ -42,6 +41,19 @@ export const getArticles = async (ids = []) => {
         throw error;
     }
 };
+
+export const getArticleBySlug = async (slug) => {
+    const cachedArticles = await getFromCache(acticlesKey);
+
+    if(cachedArticles){
+        return cachedArticles.find(article => article.blogslug === slug);
+    }else{
+        const articles = await getArticles();
+        const var2 = articles.find(article => article.blogslug === slug);
+        return var2;
+    }
+}
+
 
 export const getSeries = async (slug = "") => {
     const cachedSeries = await getFromCache(seriesKey);

@@ -27,7 +27,7 @@ const BlogFeed = () => {
                     key={index}
                     title={article.title}
                     intro={article.intro}
-                    content={article.articleUrl}
+                    blogslug={article.blogslug}
                     lastUpdatedDate={article.dateModified}
                     thumbnail={article.thumbnailImageUrl}
                     isSeries={article.isSeries}

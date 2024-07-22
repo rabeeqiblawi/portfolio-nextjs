@@ -5,7 +5,7 @@ import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
 
 const cardStyle = { position: 'absolute', top: 0, right: 15, color: 'gray' };
 /*content is actually the url passed in, will fix that later. */
-const ArticleCard = ({ title, intro, content, lastUpdatedDate, thumbnail, isSeries, seriesSlug, articleIds }) => {
+const ArticleCard = ({ title, intro, blogslug, lastUpdatedDate, thumbnail, isSeries, seriesSlug, articleIds }) => {
     return (
         <article className="article-card">
             <img src={thumbnail} alt={title} className="article-card-thumbnail" />
@@ -24,7 +24,7 @@ const ArticleCard = ({ title, intro, content, lastUpdatedDate, thumbnail, isSeri
                         href={`/blog/series/${encodeURIComponent(seriesSlug)}${articleIds && articleIds.length > 0 ? `?articleIds=${encodeURIComponent(articleIds.join(','))}` : ''}`}
                         className="article-card-footer-read-more">
                         continue ... </Link>
-                        : <Link href={`/blog/${encodeURIComponent(content)}`} className="article-card-footer-read-more">
+                        : <Link href={`/blog/${encodeURIComponent(blogslug)}`} className="article-card-footer-read-more">
                             continue reading...
                         </Link>
                 }
