@@ -47,14 +47,17 @@ const Navbar = observer(() => {
                 </div>
                 <Link href="/" className={styles.logoLink}>
                     <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className={styles.imgLogo} />
-                    <h1>{websiteInformation.content.brand}</h1>
-                    {websiteInformation.content.slogan &&
-                        <button className={styles.slogan} onClick={() => window.location.href = websiteInformation.content.sloganLink}>
-                            <sub>
-                                {websiteInformation.content.slogan}
-                            </sub>
-                        </button>
-                    }
+                    <h1>{websiteInformation.content.brand}
+
+                        {websiteInformation.content.slogan &&
+                            <button className={styles.slogan} onClick={() => window.location.href = websiteInformation.content.sloganLink}>
+                                {/* <sub> */}
+                                    {websiteInformation.content.slogan}
+                                {/* </sub> */}
+                            </button>
+                        }
+
+                    </h1>
                 </Link>
                 <div className={styles.links}>
                     {links.map((link) => (
