@@ -9,8 +9,8 @@ const ArticleCard = ({ title, intro, blogslug, lastUpdatedDate, thumbnail, isSer
     return (
         isSeries ?
             <div className='articleContainer'>
-                <div className="seriesBackground1"></div>
-                <div className="seriesBackground2"></div>
+                <div className="seriesBackground seriesBackground1"></div>
+                <div className="seriesBackground seriesBackground2"></div>
                 <article className="article-card article-card-series">
                     <img src={thumbnail} alt={title} className="article-card-thumbnail" />
                     <section className="article-card-content-wrapper">
