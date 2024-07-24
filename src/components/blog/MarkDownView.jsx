@@ -9,6 +9,7 @@ import NavigationStore from '../navigation/NavigationStore';
 import './MarkdownView.scss';
 import { observer } from 'mobx-react';
 import Sidebar from '@/components/navigation/sidebar/Sidebar';
+import RelatedCard from '../cards/relatedCard';
 
 const components = {
   code({ node, inline, className, children, ...props }) {
@@ -90,6 +91,30 @@ const MarkDownView = observer(({ rawMdText, children }) => {
           <ReactMarkdown components={components}>{markdown}</ReactMarkdown>
         </div>
       </div>
+      <div className='markdown-view-related'>
+        <h2>Related Blogs</h2>
+        <RelatedCard
+          imageUrl='/heroImage.png' 
+          title='Choroid Input System'
+          date='Last Updated: 2024-05-09'
+          actionLink='/link'
+          description="This is a description"
+        />
+        <RelatedCard
+          imageUrl='/heroImage2.png' 
+          title='Title'
+          date='Last Updated: 2024-05-09'
+          actionLink='/link'
+          description="This is a description"
+        />
+        <RelatedCard
+          imageUrl='/aboutUS.png' 
+          title='Title'
+          date='Last Updated: 2024-05-09'
+          actionLink='/link'
+          description="This is a description"
+        />
+      </div> 
     </div>
   );
 });

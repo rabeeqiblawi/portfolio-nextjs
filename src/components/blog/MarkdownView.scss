@@ -3,12 +3,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: start;
+    gap: 30px;
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin-top: var(--navigationBarHight);
-
 
     &-navigation a {
         display: block;
@@ -24,7 +23,7 @@
     }
 
     li {
-        list-style-type: none;
+        list-style-type: disclosure-closed;
     }
 
     &-content {
@@ -183,7 +182,6 @@
         z-index: 10;
         position: sticky;
         top: 0;
-        margin-right: 40px;
 
         &.visible {
             left: -20px;
@@ -192,6 +190,19 @@
         &.hidden {
             left: -300px;
         }
+    }
+    &-related{
+        width: 270px;
+        padding: 2px;
+        overflow-y: auto;
+        height: 100vh;
+        transition: left 0.3s;
+        z-index: 10;
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     //mobilw view
