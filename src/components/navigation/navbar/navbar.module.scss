@@ -76,7 +76,7 @@
         cursor: help;
         text-align: left;
         font-size: 20px;
-        width: max-content;
+        width: 100%;
     }
 }
 
@@ -163,7 +163,7 @@
                 transform: scale(0.7); 
             }
             .slogan{
-                transform: translate(135%, 130%);
+                transform: translate(-30%, 0%);
             }
         }
 
