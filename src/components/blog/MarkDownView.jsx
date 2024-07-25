@@ -86,7 +86,7 @@ const MarkDownView = observer(({ rawMdText, children, isSeries }) => {
 
   isSeries=false
   return (
-    <div className="markdown-view">
+    <div className="markdown-view-container">
       <Sidebar>
         <Scrollspy items={headings} currentClassName="is-current">
           {headings.map((heading, index) => (
