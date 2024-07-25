@@ -23,6 +23,7 @@ const Seriespage = ({ params }) => {
                     key={index}
                     title={article.title}
                     intro={article.intro}
+                    blogslug={article.blogslug}
                     content={article.articleUrl}
                     lastUpdatedDate={article.dateModified}
                     thumbnail={article.thumbnailImageUrl}

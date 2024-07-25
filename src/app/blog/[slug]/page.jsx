@@ -38,7 +38,7 @@ export default async function ArticlePage({ params }) {
   return (
     <>
       <div style={{ marginTop: 'var(--navigationBarHight)' }}>
-        <MarkDownView rawMdText={markdown}></MarkDownView>
+        <MarkDownView rawMdText={markdown} isSeries={article.isSeries} ></MarkDownView>
       </div>
     </>
   )
