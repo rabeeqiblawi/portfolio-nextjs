@@ -132,14 +132,21 @@
         top: 10px;
         right: 30px;
         color: var(--text-dark);
-        width: 120px;
+        width: 90px;
         text-align: center;
         border: 1px solid var(--text-gray);
-        border-radius: 4px 20px;
+        border-radius: 4px;
         padding: 3px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
 
         @media screen and (max-width: 768px) {
             right: 10px;
+        }
+        &-icon{
+            color: var(--text-gray);
         }
     }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import './ArticleCard.scss';
 import Link from 'next/link';
 import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
+import { FaNewspaper, FaPager } from 'react-icons/fa';
 
 const cardStyle = { position: 'absolute', top: 0, right: 15, color: 'gray' };
 /*content is actually the url passed in, will fix that later. */
@@ -30,7 +31,10 @@ const ArticleCard = ({ title, intro, blogslug, lastUpdatedDate, thumbnail, isSer
                             continue ... 
                         </Link>
                     </div>
-                    {articleIds.length> 0 && <p className="cardStyle">{articleIds.length} Blogs</p>}
+                    {articleIds.length> 0 && <p className="cardStyle">
+                        {articleIds.length}
+                        <FaNewspaper className='cardStyle-icon' />
+                    </p>}
                 </article>
             </div>
         : 
