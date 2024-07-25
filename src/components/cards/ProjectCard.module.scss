@@ -1,14 +1,15 @@
 .container {
     display: flex;
-    gap: 20px;
+    gap: 8%;
     background: #f6faff;
     // padding: 20px 0px;
     border-radius: 15px;
     margin-top: 20px;
     box-shadow: 1px 1px 10px #00000030;
     transition: 0.6s;
-    width: 80%;
+    width: 100%;
     max-height: 400px;
+    padding: 20px;
 
     &:first-child {
         margin-top: 0px;
@@ -22,12 +23,12 @@
         border-radius: 15px;
         width: 600px;
         object-fit: cover;
-        margin: 20px;
+        // margin: 20px;
     }
 
     .content {
-        padding: 20px;
-        height: 400px;
+        // padding: 20px;
+        height: 360px;
         position: relative;
 
         .title {
@@ -51,7 +52,7 @@
             cursor: pointer;
             font-size: 16px;
             color: var(--text-light);
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
             margin-right: 20px;
             position: absolute;
             right: 0;
