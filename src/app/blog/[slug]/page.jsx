@@ -14,8 +14,7 @@ async function fetchMarkdown(fileUrl) {
   return '';
 }
 
-export async function generateMetadata({ params })
-{
+export async function generateMetadata({ params }) {
   const blogslug = params.slug;
   const article = await getArticleBySlug(blogslug);
 
@@ -24,7 +23,6 @@ export async function generateMetadata({ params })
     description: article.intro,
     image: article.thumbnailImageUrl
   }
-
 }
 
 
@@ -32,8 +30,6 @@ export default async function ArticlePage({ params }) {
   const blogslug = params.slug;
   const article = await getArticleBySlug(blogslug);
   const markdown = await fetchMarkdown(article.articleUrl);
-
-
 
   return (
     <>

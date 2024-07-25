@@ -5,6 +5,7 @@ import ArticleCard from '@/components/blog/ArticleCard';
 import { getArticles } from '@/lib/github'; 
 import { getSeries } from '@/lib/github'; 
 import { config } from '@/config';
+import { FaSearch } from 'react-icons/fa';
 
 const BlogFeed = () => {
     const [fileData, setFileData] = useState([]);
@@ -22,6 +23,15 @@ const BlogFeed = () => {
 
     return (
         <div className='blog-feed'>
+            <div className='blog-feed-filter'>
+                <div className='blog-feed-filter-search'>
+                    <FaSearch className='blog-feed-filter-search-icon' />
+                    <input type="text" placeholder="Search" className='blog-feed-filter-search-input' />
+                </div>
+                {/* <div>
+                    <button>Test</button>
+                </div> */}
+            </div>
             {fileData.map((article, index) => (
                 <ArticleCard
                     key={index}
