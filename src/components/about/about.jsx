@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './about.module.scss'
 import SectionHeader from '../sectionHeader/sectionHeader'
+import Image from 'next/image'
 
 const About = ({isHidden, headerTitle, headerTitleHighlightedWord, description, buttonText, buttonAction, aboutImageURL }) => {
 
@@ -19,7 +20,7 @@ const About = ({isHidden, headerTitle, headerTitleHighlightedWord, description, 
                 }
             </div>
             <div className={styles.imgDev}>
-                <img src={aboutImageURL} alt="" />
+                <Image src={aboutImageURL} alt="" />
             </div>
         </div>
     )

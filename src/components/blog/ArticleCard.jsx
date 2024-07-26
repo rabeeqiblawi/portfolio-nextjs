@@ -3,6 +3,7 @@ import './ArticleCard.scss';
 import Link from 'next/link';
 import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
 import { FaNewspaper, FaPager } from 'react-icons/fa';
+import Image from 'next/image';
 
 const cardStyle = { position: 'absolute', top: 0, right: 15, color: 'gray' };
 /*content is actually the url passed in, will fix that later. */
@@ -13,7 +14,7 @@ const ArticleCard = ({ title, intro, blogslug, lastUpdatedDate, thumbnail, isSer
                 <div className="seriesBackground seriesBackground1"></div>
                 <div className="seriesBackground seriesBackground2"></div>
                 <article className="article-card article-card-series">
-                    <img src={thumbnail} alt={title} className="article-card-thumbnail" />
+                    <Image src={thumbnail} alt={title} className="article-card-thumbnail" />
                     <section className="article-card-content-wrapper">
                         <div>
                             <h2 className="article-card-title">{title}</h2>
@@ -39,7 +40,7 @@ const ArticleCard = ({ title, intro, blogslug, lastUpdatedDate, thumbnail, isSer
             </div>
         : 
             <article className="article-card">
-                <img src={thumbnail} alt={title} className="article-card-thumbnail" />
+                <Image src={thumbnail} alt={title} className="article-card-thumbnail" />
                 <section className="article-card-content-wrapper">
                     <div>
                         <h2 className="article-card-title">{title}</h2>
