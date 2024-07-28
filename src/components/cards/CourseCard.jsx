@@ -13,7 +13,6 @@ const CourseCard = ({ imageUrl, title, description, actionText, actionLink}) => 
             </div>
             <Link href={actionLink} target='_blank' className={styles.link}>
                 {actionText}
-                <span></span>
             </Link>
         </div>
     );
