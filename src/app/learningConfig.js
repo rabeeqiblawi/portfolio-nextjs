@@ -1,7 +1,7 @@
 export const learningConfig = {
     courses:{
         isHidden: false,
-        mainTitle: 'Your Courses',
+        mainTitle: 'Available Courses',
         mainTitleHighlightedWord: 'Courses',
         data: [
             {
