@@ -31,7 +31,7 @@ const Sidebar = ({ logo, children }) => {
                 </button>
                 <div className="logoDiv">
                     <Link href="/" className="logoLink">
-                        <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className="imgLogo"/>
+                        {websiteInformation.content.logo && <Image src={websiteInformation.content.logo} alt="" width={60} height={60} className="imgLogo" />}
                         <h1>{websiteInformation.content.brand}</h1>
                     </Link>
                 </div>

@@ -79,3 +79,13 @@ export const getSeries = async (slug = "") => {
         throw error;
     }
 };
+
+export const getArticlesBySeries = async (seriesSlug) => {
+    console.log("seriesSlug", seriesSlug);
+    const series = await getSeries(seriesSlug);
+    console.log("series", series);
+    if (series) {
+        return getArticles(series.articleIds);
+    }
+    return [];
+}

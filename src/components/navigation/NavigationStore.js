@@ -3,10 +3,16 @@ import { config } from "@/config";
 
 class NavigationStore {
     isSidebarOpen = false;
+    currentSeries = null;
 
     constructor() {
         this.isSidebarOpen = false;
-        makeAutoObservable(this);
+        this.currentSeries = null;
+        makeAutoObservable(this,{
+            isSidebarOpen: false,
+            currentSeries: false
+        });
+        
     }
 
     openSidebar = () => {
@@ -18,6 +24,9 @@ class NavigationStore {
         this.isSidebarOpen = false;
     };
 
+    setCurrentSeries = (seriesSlug) => {
+        this.currentSeries = seriesSlug;
+    }
 }
 
 export default new NavigationStore();
