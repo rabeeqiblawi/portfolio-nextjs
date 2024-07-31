@@ -17,7 +17,7 @@ const Footer = () => {
         <div className={styles.topContent}>
 
           <div className={styles.logoColBox}>
-            <Image src={websiteInformation.content.logo} alt="" width={60} height={60} />
+            {websiteInformation.content.logo && <Image src={websiteInformation.content.logo} alt="" width={60} height={60} />}
             <h1>{websiteInformation.content.brand}</h1>
           </div>
 

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, use } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { solarizedlight, vs, oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -11,8 +11,9 @@ import { observer } from 'mobx-react';
 import Sidebar from '@/components/navigation/sidebar/Sidebar';
 import RelatedCard from '../cards/relatedCard';
 
-import { getArticles } from '@/lib/github'; 
-import { getSeries } from '@/lib/github'; 
+import { getArticles, getArticlesBySeries } from '@/lib/github';
+import { getSeries } from '@/lib/github';
+import { set } from 'mobx';
 
 const components = {
   code({ node, inline, className, children, ...props }) {
@@ -41,10 +42,11 @@ const components = {
   },
 };
 
-const MarkDownView = observer(({ rawMdText, children, isSeries }) => {
+const MarkDownView = observer(({ rawMdText, children }) => {
   const [markdown, setMarkdown] = useState('');
   const [headings, setHeadings] = useState([]);
   const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [isSeries, setIsSeries] = useState(false);
   const timerRef = useRef(null);
   const prevScrollPosRef = useRef(0);
 
@@ -69,22 +71,20 @@ const MarkDownView = observer(({ rawMdText, children, isSeries }) => {
 
   const [fileData, setFileData] = useState([]);
 
-  useEffect(() => {
-    getArticles().then(articles => {
-      getSeries().then(series => {
-        const allData=[];
-        if(isSeries){
-          allData.push(...series);
-        }else{
-          allData.push(...articles);
-        }
-          const sortedData = allData.sort((a, b) => new Date(b.dateModified) - new Date(a.dateModified));
-          setFileData(sortedData);
-      });
-    });
-  }, []);
 
-  isSeries=false
+  useEffect(() => {
+    console.log('isSeries', isSeries);
+    if (NavigationStore.currentSeries !== null) {
+      getArticlesBySeries(NavigationStore.currentSeries).then
+        (articles => {
+          console.log('articles', articles);
+          setFileData(articles);
+          setIsSeries(true);
+        });
+
+    }
+  }, [NavigationStore.currentSeries]);
+
   return (
     <div className="markdown-view-container">
       <Sidebar>
@@ -114,11 +114,16 @@ const MarkDownView = observer(({ rawMdText, children, isSeries }) => {
         </div>
       </div>
       <div className='markdown-view-related'>
-        {isSeries?
+        {isSeries &&
           <>
-            <h2 className='markdown-view-related-title'>Series</h2>
+            <h2 className='markdown-view-related-title'>In Series</h2>
             <div className='markdown-view-related-cardsContainer'>
               {fileData.map((article, index) => (
+
+                
+              ))}
+            </div>
+          </>
                   <RelatedCard
                     key={article.title}
                     imageUrl={article.thumbnailImageUrl}
@@ -147,7 +152,7 @@ const MarkDownView = observer(({ rawMdText, children, isSeries }) => {
           </div>
         </>
         }
-      </div> 
+      </div>
     </div>
   );
 });

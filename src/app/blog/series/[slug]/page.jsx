@@ -3,11 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { getSeries, getArticles } from '@/lib/github';
 import '../../BlogFeed.scss';
 import ArticleCard from '@/components/blog/ArticleCard';
+import { observer } from 'mobx-react';
+import NavigationStore from '@/components/navigation/NavigationStore';
 
-const Seriespage = ({ params }) => {
+const Seriespage = observer(({ params }) => {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
+        NavigationStore.setCurrentSeries(params.slug);
         getSeries(params.slug).then(seriesData => {
             getArticles(seriesData.articleIds).then(articlesData => {
                 setArticles(articlesData);
@@ -34,6 +37,7 @@ const Seriespage = ({ params }) => {
             ))}
         </div>
     );
-}
+});
 
 export default Seriespage;
+
