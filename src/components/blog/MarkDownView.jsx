@@ -119,18 +119,38 @@ const MarkDownView = observer(({ rawMdText, children }) => {
             <h2 className='markdown-view-related-title'>In Series</h2>
             <div className='markdown-view-related-cardsContainer'>
               {fileData.map((article, index) => (
-                <>
-                <RelatedCard
-                  imageUrl={article.thumbnailImageUrl}
-                  title={article.title}
-                  date={'Last Updated: ' + article.dateModified}
-                  actionLink={`/blog/${encodeURIComponent(article.blogslug)}`}
-                  description={"This is a description"}
-                  isSeries={false}
-                /></>
+
+                
               ))}
             </div>
           </>
+                  <RelatedCard
+                    key={article.title}
+                    imageUrl={article.thumbnailImageUrl}
+                    title={article.title}
+                    date={'Last Updated: '+ article.dateModified}
+                    actionLink={`/blog/series/${encodeURIComponent(article.seriesSlug)}${article.articleIds && article.articleIds.length > 0 ? `?articleIds=${encodeURIComponent(article.articleIds.join(','))}` : ''}`}
+                    description="This is a description"
+                  />
+                ))}
+            </div>
+          </>
+        :
+        <>
+          <h2 className='markdown-view-related-title'>Related Blogs</h2>
+          <div className='markdown-view-related-cardsContainer'>
+            {fileData.map((article, index) => (
+              <RelatedCard
+                key={article.title}
+                imageUrl={article.thumbnailImageUrl}
+                title={article.title}
+                date={'Last Updated: '+ article.dateModified}
+                actionLink={`/blog/${encodeURIComponent(article.blogslug)}`}
+                description="This is a description"
+              />
+            ))}   
+          </div>
+        </>
         }
       </div>
     </div>

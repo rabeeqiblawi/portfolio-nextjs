@@ -8,9 +8,9 @@ export const config = {
 
         hero: {
             heroHeadLine: "Transforming Visions Into Immersive Experiences",
-            heroActionText: "Services",
+            heroActionText: "",
             heroActionLink: "/services",
-            heroSubHeadLine: "",
+            heroSubHeadLine: "Software Development | XR | AI | Web Development",
             parallaxEffect: true,
             heroImageUrl: "/heroImage.png",
             parallaxImages: [
@@ -30,7 +30,7 @@ export const config = {
             { path: '/#projects', title: 'Projects' },
             { path: '/blog', title: 'Blog' },
             { path: '/#solutions', title: 'Solutions' },
-            { path: '/learning', title: 'Learning' },
+            // { path: '/learning', title: 'Learning' },
             // { path: '/templates', title: 'Templates' },
             // { path: '/services', title: 'Services' },
             { path: '/#contact', title: 'Contact' },
@@ -307,7 +307,7 @@ export const config = {
             members: [
                 {
                     imageUrl: "/team/diaa.jpg",
-                    title: "Diaa AbuAllul",
+                    title: "Diyaa Abou Alloul",
                     description: "Creative designer with a passion for user experience and visual storytelling.",
                     visibleHome: true
                 },
