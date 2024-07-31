@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './learning.module.css';
+import styles from './learning.module.scss';
 // import { learningConfig as websiteInformation } from '@/learningConfig'
 import { learningConfig as websiteInformation } from '../learningConfig';
 import CourseCard from '@/components/cards/CourseCard';
@@ -23,8 +23,15 @@ const Learning = () => {
                         imageUrl={project.imageUrl}
                         title={project.title}
                         description={project.description}
+                        price={project.price}
+                        duration={project.duration}
+                        startDate={project.startDate}
+                        endDate={project.endDate}
+                        target={project.target}
+                        outcomes={project.outcomes}
                         actionText={project.actionText}
                         actionLink={project.actionLink}
+                        courseLink={project.courseLink}
                     />
                 ))}
 
