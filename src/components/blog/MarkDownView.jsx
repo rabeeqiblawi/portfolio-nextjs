@@ -120,6 +120,7 @@ const MarkDownView = observer(({ rawMdText, children, isSeries }) => {
             <div className='markdown-view-related-cardsContainer'>
               {fileData.map((article, index) => (
                   <RelatedCard
+                    key={article.title}
                     imageUrl={article.thumbnailImageUrl}
                     title={article.title}
                     date={'Last Updated: '+ article.dateModified}
@@ -135,6 +136,7 @@ const MarkDownView = observer(({ rawMdText, children, isSeries }) => {
           <div className='markdown-view-related-cardsContainer'>
             {fileData.map((article, index) => (
               <RelatedCard
+                key={article.title}
                 imageUrl={article.thumbnailImageUrl}
                 title={article.title}
                 date={'Last Updated: '+ article.dateModified}
