@@ -17,6 +17,7 @@ async function fetchMarkdown(fileUrl) {
 export async function generateMetadata({ params }) {
   const blogslug = params.slug;
   const article = await getArticleBySlug(blogslug);
+  
 
   return {
     title: article.title,
