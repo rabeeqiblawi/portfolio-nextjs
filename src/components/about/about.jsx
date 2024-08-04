@@ -20,7 +20,7 @@ const About = ({isHidden, headerTitle, headerTitleHighlightedWord, description, 
                 }
             </div>
             <div className={styles.imgDev}>
-                <Image src={aboutImageURL} alt="" />
+                <img src={aboutImageURL} alt="" />
             </div>
         </div>
     )

@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './learning.module.scss';
-// import { learningConfig as websiteInformation } from '@/learningConfig'
-import { learningConfig as websiteInformation } from '../learningConfig';
+import { learningConfig as websiteInformation } from '@/learningConfig'
 import CourseCard from '@/components/cards/CourseCard';
 import SectionHeader from '@/components/sectionHeader/sectionHeader';
 

@@ -81,7 +81,7 @@ export const config = {
                     imageUrl: "/bookifai.jpeg",
                     title: "Bookifai",
                     description: "Ever wanted to connect with the characters in your favourite book and chat with them!? Bookifai allows you to just do that! You upload your favorite book and we extract the characters and create a chatbots for you to interact with them using discord!",
-                    actionLink: "mailto:rabeekiblawi@gmail.com",
+                    actionLink: "mailto:choroid.studios@gmail.com",
                     actionText: "Request a Demo",
                     isHidden: false,
                     visibleHome: true
@@ -292,7 +292,7 @@ export const config = {
                     icon: "/icons/MobileWeb.svg",
                     title: "Web & Mobile Apps",
                     description: "We develop custom, user-friendly web and mobile applications. Our solutions are designed to meet your specific business needs, offering seamless functionality across devices and platforms",
-                    actionLink: "https://cyberweavers.choroidstudios.com",
+                    actionLink: "https://cw.choroidstudios.com",
                     actionText: "More Info",
                     isHidden: false,
                     visibleHome: true,
@@ -301,7 +301,7 @@ export const config = {
             ]
         },
         team: {
-            isHidden: false,
+            isHidden: true,
             mainTitle: "Meet the Team",
             mainTitleHighlightedWord: "Team",
             members: [
@@ -384,7 +384,7 @@ export const config = {
                     imageUrl: "/bookifai.jpeg",
                     title: "Bookifai",
                     description: "Ever wanted to connect",
-                    actionLink: "mailto:rabeekiblawi@gmail.com",
+                    actionLink: "mailto:choroid.studios@gmail.com",
                     isHidden: false,
                     visibleHome: true
                 },
