@@ -1,5 +1,4 @@
 import { makeAutoObservable } from "mobx";
-import { config } from "@/config";
 
 class NavigationStore {
     isSidebarOpen = false;
@@ -9,7 +8,7 @@ class NavigationStore {
         this.isSidebarOpen = false;
         this.currentSeries = null;
         makeAutoObservable(this,{
-            isSidebarOpen: false,
+            // isSidebarOpen: false,
             currentSeries: false
         });
         
