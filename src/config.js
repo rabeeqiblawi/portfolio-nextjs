@@ -1,7 +1,7 @@
 export const config = {
     content: {
-        logo: "/choroidLogo.png",
-        brand: "Choroid Studios",
+        logo: "",
+        brand: "Rabee Qiblawi",
         slogan: "",
         sloganLink: "https://choroidstudios.com",
         metaDescription: "Software Development | XR | AI | Web Development",
@@ -29,7 +29,7 @@ export const config = {
         links:[
             { path: '/#projects', title: 'Projects' },
             { path: '/blog', title: 'Blog' },
-            { path: '/#solutions', title: 'Solutions' },
+            // { path: '/#solutions', title: 'Solutions' },
             // { path: '/learning', title: 'Learning' },
             // { path: '/templates', title: 'Templates' },
             // { path: '/services', title: 'Services' },
@@ -74,24 +74,33 @@ export const config = {
         },
         projects: {
             isHidden: false,
-            mainTitle: "Our Projects",
+            mainTitle: "My Projects",
             mainTitleHighlightedWord: "Projects",
             data: [
                 {
-                    imageUrl: "/bookifai.jpeg",
+                    imageUrl: "/bookifai2.png",
                     title: "Bookifai",
                     description: "Ever wanted to connect with the characters in your favourite book and chat with them!? Bookifai allows you to just do that! You upload your favorite book and we extract the characters and create a chatbots for you to interact with them using discord!",
-                    actionLink: "mailto:choroid.studios@gmail.com",
+                    actionLink: "mailto:rabeeqiblawi@gmail.com",
                     actionText: "Request a Demo",
                     isHidden: false,
                     visibleHome: true
                 },
                 {
-                    imageUrl: "/MirageXR.jpg",
+                    imageUrl: "/jtXBWs.png",
+                    title: "Perished Truth",
+                    description: "Perished Truth is an upcoming survival horror game looking to Revive classical horror genre with fixed camera and tank controls. The game follows 10 characters kidnapped and trapped in an abandoned facility on an abandoned island. on the way you will meet other kidnapped survivors.",
+                    actionLink: "https://lixmxil.itch.io/perished-truth",
+                    actionText: "checkout Demo",
+                    isHidden: false,
+                    visibleHome: true
+                },
+                {
+                    imageUrl: "/MirageXR.png",
                     title: "MirageXR",
-                    description: `Prototype Arduino or ESP projects faster with MirageXR. Our platform connects virtual electronics to your physical hardware, enabling quick testing and development. Using our AR/XR app and Arduino/ESP library, control virtual components with your real board—no extra parts needed.Bridge the physical and virtual worlds in your projects!`,
-                    actionLink: "https://www.miragexr.com",
-                    actionText: "Join Waitlist",
+                    description: `MirageXR is my thesis work and the summary of years of tinkering and learning, this library lets studnet interface arduino with augmented reality based electronics for rapid prototyping`,
+                    actionLink: "mailto:rabeeqiblawi@gmail.com",
+                    actionText: "contact for more info",
                     isHidden: false,
                     visibleHome: false
                 },
@@ -102,13 +111,38 @@ export const config = {
                     actionLink: "https://github.com/rabeeqiblawi/Choroid-Input-System",
                     actionText: "View On Github",
                     isHidden: false,
-                    visibleHome: true
+                    visibleHome: false
                 },
                 {
                     imageUrl: "/cfwm2.jpg",
                     title: "Come Fly With Me (Protoype)",
                     description: `Ever wanted to fly like a bird? Come Fly With Me is a VR experience that allows you to do just that! You can fly and explore the world from a bird's eye view!`,
                     actionLink: "https://www.youtube.com/watch?v=oted6xBF0z8",
+                    actionText: "More",
+                    isHidden: false,
+                    visibleHome: true
+                },  {
+                    imageUrl: "parashift.jpg",
+                    title: "Parashift @RobocomVR",
+                    description: `Parashift is an arcade VR Game, I was responsible for the Game Mechanics which includes trangulating the player movment as the machine turns, and aslo was resposnisble for integaring the machine with hardware using serial communication `,
+                    actionLink: "https://www.youtube.com/watch?v=kSv7wSCpyys",
+                    actionText: "More",
+                    isHidden: false,
+                    visibleHome: true
+                },
+                ,  {
+                    imageUrl: "ScryptechWebsite.jpg",
+                    title: "Scryptech's website",
+                    description: `Scryptech was the first company I worked for, and I was responsible for integrating threejs within the website`,
+                    actionLink: "https://www.scryptech.com/",
+                    actionText: "Check Website",
+                    isHidden: false,
+                    visibleHome: false
+                }, {
+                    imageUrl: "Tach.jpg",
+                    title: "Takh Tutor Ar @Scryptech",
+                    description: `Takh Tutor was an outsourcing project for a company in Germany that aided patients to use a medical kit in AR`,
+                    actionLink: "https://www.scryptech.com/",
                     actionText: "More",
                     isHidden: false,
                     visibleHome: false
@@ -252,7 +286,7 @@ export const config = {
             ]
         },  
         solutions: {
-            isHidden: false,
+            isHidden: true,
             mainTitle: "Our Solutions",
             mainTitleHighlightedWord: "Solutions",
             data: [
@@ -494,10 +528,10 @@ export const config = {
         },
     },
     socialLinks: {
-        github: "",
-        linkedin: "https://www.linkedin.com/company/103909655/",
+        github: "https://github.com/rabeeqiblawi",
+        linkedin: "https://www.linkedin.com/in/rabee-qiblawi-21503a120/",
         twitter: "",
-        facebook: "https://facebook.com",
+        facebook: "",
         instagram: "",
         tiktok: "",
         youtube: "",
@@ -507,13 +541,13 @@ export const config = {
         mainTitle: "Contact Us",
         mainTitleHighlightedWord: "Us",
         title: "Get in Touch",
-        description: "We're here to help and answer any question you might have. We look forward to hearing from you!",
-        buttonText: "Send us a message",
-        isHidden: false,
+        description: "I am here to help and answer any question you might have!",
+        buttonText: "Message",
+        isHidden: true,
 
         contactInfo: {
             phone: "+961  71971287",
-            mail: "choroid.studios@gmail.com",
+            mail: "rabeeqiblawi@gmail.com",
             location: "Saida, LB",
             whatsappMessage: ""
         }
