@@ -98,7 +98,7 @@ export const config = {
                 {
                     imageUrl: "/MirageXR.png",
                     title: "MirageXR",
-                    description: `MirageXR is my thesis work and the summary of years of tinkering and learning, this library lets studnet interface arduino with augmented reality based electronics for rapid prototyping`,
+                    description: `MirageXR is my thesis work and the summary of years of tinkering and learning, this library lets students interface arduino with augmented reality based electronics for rapid prototyping`,
                     actionLink: "mailto:rabeeqiblawi@gmail.com",
                     actionText: "contact for more info",
                     isHidden: false,
