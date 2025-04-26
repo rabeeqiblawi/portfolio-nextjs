@@ -446,6 +446,14 @@ export const config = {
                     isHidden: false,
                     visibleHome: false
                 },
+                 {
+                    imageUrl: "/cfwm2.jpg",
+                    title: "Afandi Ai bot",
+                    description: "powerfull customer service system powered by ai.",
+                    actionLink: "",
+                    isHidden: false,
+                    visibleHome: false
+                },
                 {
                     imageUrl: "/notFound.png",
                     title: "test (not at Home page)",
@@ -546,7 +554,7 @@ export const config = {
         isHidden: true,
 
         contactInfo: {
-            phone: "+961  71971287",
+            phone: "+961  76532105",
             mail: "rabeeqiblawi@gmail.com",
             location: "Saida, LB",
             whatsappMessage: ""
